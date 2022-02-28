@@ -62,8 +62,9 @@
     <Build Include="Cursos.sql" />
     <Build Include="Propinas.sql" />
     <Build Include="Conta.sql" />
-    <Build Include="Relatorio.sql" />
     <Build Include="Formandos.sql" />
+    <Build Include="RelatorioEntrada.sql" />
+    <Build Include="RelatorioSaida.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SGCC%28Base de Dados).refactorlog" />

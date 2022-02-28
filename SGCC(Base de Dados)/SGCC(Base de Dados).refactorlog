@@ -105,4 +105,39 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="cod_formando" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="14d103f5-157b-49f6-bbf1-d745f717ac58" ChangeDateTime="02/25/2022 20:14:30">
+    <Property Name="ElementName" Value="[dbo].[Propinas].[propina]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Propinas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="mesPropina" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2df8e442-9d07-4b8f-8eec-fb6998c10a30" ChangeDateTime="02/25/2022 20:16:58">
+    <Property Name="ElementName" Value="[dbo].[Propinas].[cod_Aluno]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Propinas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="cod_propina" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f8e3eebe-853e-4e55-a6dc-a6a817c4cee9" ChangeDateTime="02/26/2022 22:29:56">
+    <Property Name="ElementName" Value="[dbo].[Propinas].[março]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Propinas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="marco" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f82fce8b-aee4-4dbb-8b58-643b40f03df3" ChangeDateTime="02/28/2022 11:29:40">
+    <Property Name="ElementName" Value="[dbo].[RelatorioEntrada].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[RelatorioEntrada]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="codRelatorio" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7d674026-fc0e-4dd3-abf7-6b0e383097a0" ChangeDateTime="02/28/2022 11:35:39">
+    <Property Name="ElementName" Value="[dbo].[RelatorioSaida].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[RelatorioSaida]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="codRelatorio" />
+  </Operation>
 </Operations>
