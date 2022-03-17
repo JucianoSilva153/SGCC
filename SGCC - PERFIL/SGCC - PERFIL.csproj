@@ -122,5 +122,116 @@
   <ItemGroup>
     <None Include="Resources\outline_trending_up_black_24dp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apagar_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Atualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Atualizar_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formadores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formadores_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formandos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formandos_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gerenciar contas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gerenciar contas_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notificação.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notificação_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuário.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuário_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formandos_branco1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curso_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apagar_branco1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mensalidade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Opções.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Config_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mensalidade_branco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notificação1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notificação_branco1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Opções_branco.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

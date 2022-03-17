@@ -2,7 +2,6 @@
 (
 	[cod_propina] INT NOT NULL PRIMARY KEY, 
     [aluno] NCHAR(20) NOT NULL, 
-    [mesPropina] NVARCHAR(20) NOT NULL, 
     [janeiro] NCHAR(10) NULL, 
     [feveiro] NCHAR(10) NULL, 
     [marco] NCHAR(10) NULL, 

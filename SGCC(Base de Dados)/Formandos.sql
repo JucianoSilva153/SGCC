@@ -11,11 +11,13 @@
     [numeroPassaporte] NCHAR(20) NOT NULL, 
     [naturalidade] NCHAR(15) NOT NULL, 
     [moradaMunicipio] NCHAR(15) NOT NULL, 
-    [moradaBairro] NCHAR(15) NOT NULL, 
+    [moradaProvincia] NCHAR(15) NOT NULL, 
     [periodo] NCHAR(10) NOT NULL, 
     [data] NCHAR(10) NOT NULL, 
     [horario] NCHAR(10) NOT NULL, 
     [inicioCurso] NCHAR(20) NOT NULL, 
     [fonte] NCHAR(20) NOT NULL, 
-    [valorInscricao] NUMERIC(20, 2) NOT NULL
+    [valorInscricao] NUMERIC(20, 2) NOT NULL, 
+    [pagamentoCert] NCHAR(15) NOT NULL, 
+    [mensalidade] NCHAR(10) NULL
 )
