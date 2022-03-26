@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[RelatorioEntrada]
 (
-	[codRelatorio] INT NOT NULL PRIMARY KEY, 
+	[codRelatorio] INT NOT NULL IDENTITY(1,1) PRIMARY KEY, 
     [inscricoes] NCHAR(20) NOT NULL, 
     [mensalidade] NCHAR(20) NOT NULL, 
     [cartão] NCHAR(20) NOT NULL, 

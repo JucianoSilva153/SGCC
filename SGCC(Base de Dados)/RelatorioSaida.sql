@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[RelatorioSaida]
 (
-	[codRelatorio] INT NOT NULL PRIMARY KEY, 
+	[codRelatorio] INT NOT NULL IDENTITY(1,1) PRIMARY KEY, 
     [pagamentoEnergia] NCHAR(20) NOT NULL, 
     [combustivelGerador] NCHAR(20) NOT NULL, 
     [compraTinteiro] NCHAR(20) NOT NULL, 
