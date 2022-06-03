@@ -1,12 +1,13 @@
 ﻿CREATE TABLE [dbo].[RelatorioEntrada]
 (
 	[codRelatorio] INT NOT NULL IDENTITY(1,1) PRIMARY KEY, 
-    [inscricoes] NCHAR(20) NOT NULL, 
-    [mensalidade] NCHAR(20) NOT NULL, 
-    [cartão] NCHAR(20) NOT NULL, 
-    [certficado] NCHAR(20) NOT NULL, 
-    [curso] NCHAR(30) NOT NULL, 
-    [hora] NCHAR(10) NOT NULL, 
+    [inscricoes] INT NULL, 
+    [mensalidade] INT NULL, 
+    [cartao] INT NULL, 
+    [certficado] INT NULL, 
+    [curso] NCHAR(30) NULL, 
+    [hora] NCHAR(20) NOT NULL, 
     [operador] NCHAR(20) NOT NULL, 
-    [data] NCHAR(10) NOT NULL
+    [data] DATE NOT NULL, 
+    [valorEntrada] INT NULL
 )

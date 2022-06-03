@@ -10,9 +10,10 @@
     [naturalidade] NCHAR(15) NOT NULL, 
     [moradaProvincia] NCHAR(15) NOT NULL, 
     [periodo] NCHAR(10) NOT NULL, 
-    [data] NCHAR(10) NOT NULL, 
+    [data] DATE NOT NULL, 
     [horario] NCHAR(10) NOT NULL, 
     [pagamentoCert] NCHAR(15) NOT NULL, 
+    [pagamentoCart] NCHAR(15) NULL,
     [mensalidade] NCHAR(10) NULL, 
     [mensalidadeAt] NCHAR(30) NULL
 )

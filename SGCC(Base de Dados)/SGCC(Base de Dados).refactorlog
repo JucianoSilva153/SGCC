@@ -161,4 +161,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="cod_pagamento" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="d0b2b6f3-8bc1-46bb-bac7-dccf282d17b5" ChangeDateTime="05/16/2022 21:12:22">
+    <Property Name="ElementName" Value="[dbo].[RelatorioEntrada].[cartão]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[RelatorioEntrada]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="cartao" />
+  </Operation>
 </Operations>

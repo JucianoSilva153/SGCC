@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace SGCC___PERFIL
 {
@@ -60,7 +53,7 @@ namespace SGCC___PERFIL
 
         private void btn_consultar_Click(object sender, EventArgs e)
         {
-             if( txt_cod.Text != string.Empty)
+            if (txt_cod.Text != string.Empty)
             {
                 try
                 {
@@ -74,14 +67,14 @@ namespace SGCC___PERFIL
                     DR = comandoSQL.ExecuteReader();
                     while (DR.Read())
                     {
-                        txt_nome.Text = (string) DR["formando"];
-                        txt_curso.Text = (string) DR["curso"];
+                        txt_nome.Text = (string)DR["formando"];
+                        txt_curso.Text = (string)DR["curso"];
                         txt_contacto.Text = Convert.ToString(DR["numero_tlf"]);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {

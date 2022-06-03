@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SGCC___PERFIL.Properties" GeneratedClassName="Config">
+  <Profiles />
+  <Settings>
+    <Setting Name="DadosGraficoEntrada" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Inscrições</Value>
+    </Setting>
+    <Setting Name="DadosGraficoSaida" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Energia</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

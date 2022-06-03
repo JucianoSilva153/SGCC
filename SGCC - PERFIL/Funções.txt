@@ -1,0 +1,6 @@
+﻿1 - Gestão de Formadores;
+2 - Gestão de Formandos;
+3 - Gestão de Cursos;
+4 - Gerenciamento de Propinas;
+5 - Mostrar Estatísticas;
+6 - Gestão de usuários;
