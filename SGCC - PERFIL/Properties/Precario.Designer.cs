@@ -62,9 +62,9 @@ namespace SGCC___PERFIL.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("3000")]
-        public string certificado {
+        public int certificado {
             get {
-                return ((string)(this["certificado"]));
+                return ((int)(this["certificado"]));
             }
             set {
                 this["certificado"] = value;

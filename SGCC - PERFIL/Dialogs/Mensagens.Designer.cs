@@ -31,8 +31,8 @@ namespace SGCC___PERFIL.Dialogs
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.lbl_tituloMsg = new System.Windows.Forms.Label();
+            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.lbl_msg = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btn_ok = new Guna.UI.WinForms.GunaButton();
@@ -50,6 +50,17 @@ namespace SGCC___PERFIL.Dialogs
             this.panel1.Size = new System.Drawing.Size(489, 35);
             this.panel1.TabIndex = 0;
             // 
+            // lbl_tituloMsg
+            // 
+            this.lbl_tituloMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tituloMsg.ForeColor = System.Drawing.Color.White;
+            this.lbl_tituloMsg.Location = new System.Drawing.Point(5, 2);
+            this.lbl_tituloMsg.Name = "lbl_tituloMsg";
+            this.lbl_tituloMsg.Size = new System.Drawing.Size(291, 30);
+            this.lbl_tituloMsg.TabIndex = 49;
+            this.lbl_tituloMsg.Text = "Titulo da Mensagem";
+            this.lbl_tituloMsg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // gunaControlBox1
             // 
             this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -64,17 +75,6 @@ namespace SGCC___PERFIL.Dialogs
             this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaControlBox1.Size = new System.Drawing.Size(30, 30);
             this.gunaControlBox1.TabIndex = 2;
-            // 
-            // lbl_tituloMsg
-            // 
-            this.lbl_tituloMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tituloMsg.ForeColor = System.Drawing.Color.White;
-            this.lbl_tituloMsg.Location = new System.Drawing.Point(5, 2);
-            this.lbl_tituloMsg.Name = "lbl_tituloMsg";
-            this.lbl_tituloMsg.Size = new System.Drawing.Size(291, 30);
-            this.lbl_tituloMsg.TabIndex = 49;
-            this.lbl_tituloMsg.Text = "Titulo da Mensagem";
-            this.lbl_tituloMsg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_msg
             // 
@@ -123,6 +123,7 @@ namespace SGCC___PERFIL.Dialogs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(489, 269);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.lbl_msg);

@@ -46,5 +46,41 @@ namespace SGCC___PERFIL.Properties {
                 this["DadosGraficoSaida"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstTime {
+            get {
+                return ((bool)(this["FirstTime"]));
+            }
+            set {
+                this["FirstTime"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=J-PC;Initial Catalog=BD;Integrated Security=True")]
+        public string ConexaoPadrao {
+            get {
+                return ((string)(this["ConexaoPadrao"]));
+            }
+            set {
+                this["ConexaoPadrao"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ConexaoPersonalizada {
+            get {
+                return ((string)(this["ConexaoPersonalizada"]));
+            }
+            set {
+                this["ConexaoPersonalizada"] = value;
+            }
+        }
     }
 }

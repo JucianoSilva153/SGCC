@@ -29,17 +29,70 @@ namespace SGCC___PERFIL
 
         Dialogs.Mensagens Mensagem;
 
+        Form login = new Form();
 
-        SqlConnection conexao = new SqlConnection(@"Data Source=(localdb)\CentroPerfilBD;Initial Catalog=BD;Integrated Security=True");
+        SqlConnection conexao = new SqlConnection(Properties.Config.Default.ConexaoPadrao);
         SqlCommand ComandoSQL;
         string StringSQL;
         SqlDataAdapter DA;
         SqlDataReader DR;
-        public Perfil(string usuario, string password)
+        public Perfil(string usuario)
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Minimized;
+
+            AcessoAoSistema(usuario);
+            if (usuario == "root")
+            {
+                lbl_nomeConta.Text = "Juciano Silva";
+            }
+            else
+            {
+                lbl_nomeConta.Text = usuario;
+            }
+
         }
 
+
+
+
+        private void AcessoAoSistema(string user)
+        {
+            try
+            {
+                StringSQL = "select tipo from Conta where usuario = '" + user + "'";
+                SqlDataAdapter DA = new SqlDataAdapter(StringSQL, conexao);
+                DataTable DT = new DataTable();
+                DA.Fill(DT);
+
+                conexao.Open();
+                lblTipoConta.Text = DT.Rows[0].ItemArray[0].ToString().Trim();
+                if (lblTipoConta.Text == "Secretário")
+                {
+                    btnGerenCursos.Enabled = false;
+                    btnGerenCursos.Cursor = Cursors.No;
+                    btnGerenFormadores.Enabled = false;
+                    btnGerenFormadores.Cursor = Cursors.No;
+                    btnGerenUsuarios.Enabled = false;
+                    btnGerenUsuarios.Cursor = Cursors.No;
+                    btn_settings.Cursor = Cursors.No;
+                }
+                else if (lblTipoConta.Text == "Director Geral")
+                {
+                    btnGerenUsuarios.Enabled = false;
+                    btnGerenUsuarios.Cursor = Cursors.No;
+                    btn_settings.Cursor = Cursors.No;
+                }
+            }
+            catch (Exception ex)
+            {
+                Mensagem = new Dialogs.Mensagens(ex.Message, "Erro de Login");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
 
         private void StatsEntrada()
         {
@@ -436,9 +489,6 @@ namespace SGCC___PERFIL
             {
                 conexao.Close();
             }
-
-
-
         }
 
         private void SetarDadosDGV_Cursos()
@@ -1292,40 +1342,50 @@ namespace SGCC___PERFIL
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
-            btn_stats.BaseColor = Color.FromKnownColor(KnownColor.Control);
-            btn_stats.ForeColor = Color.FromArgb(151, 151, 151);
-            btn_stats.Image = Properties.Resources.status;
+            if (lblTipoConta.Text == "Administrador" || lblTipoConta.Text == "SISTEMA")
+            {
+                btn_stats.BaseColor = Color.FromKnownColor(KnownColor.Control);
+                btn_stats.ForeColor = Color.FromArgb(151, 151, 151);
+                btn_stats.Image = Properties.Resources.status;
 
-            btn_cursos.BaseColor = Color.FromKnownColor(KnownColor.Control);
-            btn_cursos.ForeColor = Color.FromArgb(151, 151, 151);
-            btn_cursos.Image = Properties.Resources.curso;
+                btn_cursos.BaseColor = Color.FromKnownColor(KnownColor.Control);
+                btn_cursos.ForeColor = Color.FromArgb(151, 151, 151);
+                btn_cursos.Image = Properties.Resources.curso;
 
-            btn_formadores.BaseColor = Color.FromKnownColor(KnownColor.Control);
-            btn_formadores.ForeColor = Color.FromArgb(151, 151, 151);
-            btn_formadores.Image = Properties.Resources.formadores;
+                btn_formadores.BaseColor = Color.FromKnownColor(KnownColor.Control);
+                btn_formadores.ForeColor = Color.FromArgb(151, 151, 151);
+                btn_formadores.Image = Properties.Resources.formadores;
 
-            btn_formandos.BaseColor = Color.FromKnownColor(KnownColor.Control);
-            btn_formandos.ForeColor = Color.FromArgb(151, 151, 151);
-            btn_formandos.Image = Properties.Resources.formandos;
+                btn_formandos.BaseColor = Color.FromKnownColor(KnownColor.Control);
+                btn_formandos.ForeColor = Color.FromArgb(151, 151, 151);
+                btn_formandos.Image = Properties.Resources.formandos;
 
-            btn_logout.BaseColor = Color.FromKnownColor(KnownColor.Control);
-            btn_logout.ForeColor = Color.FromArgb(151, 151, 151);
-            btn_logout.Image = Properties.Resources.logout;
+                btn_logout.BaseColor = Color.FromKnownColor(KnownColor.Control);
+                btn_logout.ForeColor = Color.FromArgb(151, 151, 151);
+                btn_logout.Image = Properties.Resources.logout;
 
-            btn_mensalidade.BaseColor = Color.FromKnownColor(KnownColor.Control);
-            btn_mensalidade.ForeColor = Color.FromArgb(151, 151, 151);
-            btn_mensalidade.Image = Properties.Resources.Mensalidade;
+                btn_mensalidade.BaseColor = Color.FromKnownColor(KnownColor.Control);
+                btn_mensalidade.ForeColor = Color.FromArgb(151, 151, 151);
+                btn_mensalidade.Image = Properties.Resources.Mensalidade;
 
-            btn_opc.BaseColor = Color.FromKnownColor(KnownColor.Control);
-            btn_opc.ForeColor = Color.FromArgb(151, 151, 151);
-            btn_opc.Image = Properties.Resources.Opções;
+                btn_opc.BaseColor = Color.FromKnownColor(KnownColor.Control);
+                btn_opc.ForeColor = Color.FromArgb(151, 151, 151);
+                btn_opc.Image = Properties.Resources.Opções;
 
-            btn_settings.BaseColor = Color.DodgerBlue;
-            btn_settings.ForeColor = Color.FromArgb(151, 151, 151);
-            btn_settings.Image = Properties.Resources.Config_branco;
-            //paginas.SelectedTab = ;
+                btn_settings.BaseColor = Color.DodgerBlue;
+                btn_settings.ForeColor = Color.FromArgb(151, 151, 151);
+                btn_settings.Image = Properties.Resources.Config_branco;
+                //paginas.SelectedTab = ;
 
-            paginas.SelectedTab = definicoes;
+                paginas.SelectedTab = definicoes;
+                CarregarDefinicoes();
+            }
+            else
+            {
+                Mensagem = new Dialogs.Mensagens("Não tem acesso para isso!", "Acesso Negado");
+                Mensagem.ShowDialog();
+                btn_settings.Cursor = Cursors.No;
+            }
         }
 
         private void btn_logout_Click(object sender, EventArgs e)
@@ -1616,13 +1676,51 @@ namespace SGCC___PERFIL
             }
         }
 
+        private bool ValidacaoCampos(string campos)
+        {
+            bool erro = false;
+
+            if (campos == "formandos")
+            {
+                //Campos de Gerenciamento dos Formandos
+
+                if (txtNomeFormando.Text.Contains("0") || txtNomeFormando.Text.Contains("1") || txtNomeFormando.Text.Contains("2") || txtNomeFormando.Text.Contains("3") || txtNomeFormando.Text.Contains("4") || txtNomeFormando.Text.Contains("5") || txtNomeFormando.Text.Contains("6") || txtNomeFormando.Text.Contains("7") || txtNomeFormando.Text.Contains("8") || txtNomeFormando.Text.Contains("9"))
+                {
+                    erro = true;
+                }
+
+                if (txtIDBI.Text.Length == 14)
+                {
+                    for (int i = 0; i <= 14; i++)
+                    {
+                        if (i == 9 || i == 10)
+                        {
+                            //if(txtNumeroBIFormador.Text[i] != 'A' || txtNumeroBIFormador.Text[i] != 'B' || txtNumeroBIFormador.Text[i] != 'C' || txtNumeroBIFormador.Text[i] != 'D' || txtNumeroBIFormador.Text[i] != 'E' || txtNumeroBIFormador.Text[i] != 'F' || txtNumeroBIFormador.Text[i] != 'G' || txtNumeroBIFormador.Text[i] != 'H' || txtNumeroBIFormador.Text[i] != 'I' || txtNumeroBIFormador.Text[i] != 'J' || txtNumeroBIFormador.Text[i] != 'K' || txtNumeroBIFormador.Text[i] != 'L' || txtNumeroBIFormador.Text[i] != 'M' || txtNumeroBIFormador.Text[i] != 'N' || txtNumeroBIFormador.Text[i] != 'O' || txtNumeroBIFormador.Text[i] != 'P' || txtNumeroBIFormador.Text[i] != 'Q' || txtNumeroBIFormador.Text[i] != 'R' || txtNumeroBIFormador.Text[i] != 'S' || txtNumeroBIFormador.Text[i] != 'T' || txtNumeroBIFormador.Text[i] != 'U' || txtNumeroBIFormador.Text[i] != 'V' || txtNumeroBIFormador.Text[i] != 'W' || txtNumeroBIFormador.Text[i] != 'X' || txtNumeroBIFormador.Text[i] != 'Y' || txtNumeroBIFormador.Text[i] != 'Z')
+                            //{
+
+                            //}
+
+                            if (txtIDBI.Text[i] == '0' || txtIDBI.Text[i] == '1' || txtIDBI.Text[i] == '2' || txtIDBI.Text[i] == '3' || txtIDBI.Text[i] == '4' || txtIDBI.Text[i] == '5' || txtIDBI.Text[i] == '6' || txtIDBI.Text[i] == '7' || txtIDBI.Text[i] == '8' || txtIDBI.Text[i] == '9')
+                            {
+                                erro = true;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+            return erro;
+        }
+
         private void btnNovoFormando_Click(object sender, EventArgs e)
         {
 
 
             if (Modo == "Adição")
             {
-                if (!ErroCampos("formandos"))
+                if (!ErroCampos("formandos") && !ValidacaoCampos("formandos"))
                 {
                     try
                     {
@@ -1780,7 +1878,6 @@ namespace SGCC___PERFIL
         private void LimpaCampos()
         {
             txtCodFormador.Text = "";
-            txtCodFormando.Text = "";
             txtIDBI.Text = "";
             txtIDPassaporte.Text = "";
             txtMoradaProv.Text = "";
@@ -2007,6 +2104,7 @@ namespace SGCC___PERFIL
 
         private void Perfil_Load(object sender, EventArgs e)
         {
+
             date = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
             SetarDadosGerais();
             Campos("formador", "desativar");
@@ -2017,6 +2115,8 @@ namespace SGCC___PERFIL
             StatsEntrada();
             StatsSaida();
             SetarDados_Grafico();
+
+            this.WindowState = FormWindowState.Maximized;
 
         }
 
@@ -2623,6 +2723,8 @@ namespace SGCC___PERFIL
 
             paginas.SelectedTab = relatorioSaida;
             SetarDadosDGV_RelatoriosSaida();
+            CrystalReport1 cr = new CrystalReport1();
+
         }
 
         private void btnVerRelatorioEntrada_Click(object sender, EventArgs e)
@@ -2714,6 +2816,738 @@ namespace SGCC___PERFIL
                 btn_addUsuario.Text = "Adicionar Usuário";
                 Campos("conta", "ativar");
             }
+        }
+
+        private void txtNumeroTlfFormando_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumeroTlfFormando.Text.Contains("a") || txtNumeroTlfFormando.Text.Contains("A"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("b") || txtNumeroTlfFormando.Text.Contains("B"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("c") || txtNumeroTlfFormando.Text.Contains("C"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("d") || txtNumeroTlfFormando.Text.Contains("D"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("e") || txtNumeroTlfFormando.Text.Contains("E"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("f") || txtNumeroTlfFormando.Text.Contains("F"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("g") || txtNumeroTlfFormando.Text.Contains("G"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("h") || txtNumeroTlfFormando.Text.Contains("H"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("i") || txtNumeroTlfFormando.Text.Contains("I"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("j") || txtNumeroTlfFormando.Text.Contains("J"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("k") || txtNumeroTlfFormando.Text.Contains("K"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("l") || txtNumeroTlfFormando.Text.Contains("L"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("m") || txtNumeroTlfFormando.Text.Contains("M"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("n") || txtNumeroTlfFormando.Text.Contains("N"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("o") || txtNumeroTlfFormando.Text.Contains("O"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("p") || txtNumeroTlfFormando.Text.Contains("P"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("q") || txtNumeroTlfFormando.Text.Contains("Q"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("r") || txtNumeroTlfFormando.Text.Contains("R"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("s") || txtNumeroTlfFormando.Text.Contains("S"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido ");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("t") || txtNumeroTlfFormando.Text.Contains("T"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("u") || txtNumeroTlfFormando.Text.Contains("U"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("v") || txtNumeroTlfFormando.Text.Contains("V"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("w") || txtNumeroTlfFormando.Text.Contains("W"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("x") || txtNumeroTlfFormando.Text.Contains("X"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("y") || txtNumeroTlfFormando.Text.Contains("Y"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+            else if (txtNumeroTlfFormando.Text.Contains("z") || txtNumeroTlfFormando.Text.Contains("Z"))
+            {
+                txtNumeroTlfFormando.Text = "";
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem.ShowDialog();
+            }
+        }
+
+        private void txt_pesquisaCursos_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbtnFiltrarCurso_nome.Checked)
+                {
+
+                    StringSQL = "select * from Cursos where curso like '%" + txt_pesquisaCursos.Text + "%' ";
+
+                    DataSet DS = new DataSet();
+                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    conexao.Open();
+                    DA.Fill(DS);
+
+                    dgvVistaCursos.DataSource = DS.Tables[0];
+                    //Loop para adicionar e editar colunas da DGV
+                    for (int i = 0; i < dgvVistaCursos.Columns.Count; i++)
+                    {
+                        dgvVistaCursos.Columns[i].Resizable = DataGridViewTriState.False;
+                        dgvVistaCursos.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        //dgvVistaCursos.Columns[i].DefaultCellStyle.BackColor = Color.Black;
+                        dgvVistaCursos.Columns[i].DataGridView.AllowUserToAddRows = false;
+                        dgvVistaCursos.Columns[i].DataGridView.AllowUserToDeleteRows = false;
+                        dgvVistaCursos.Columns[i].DataGridView.AllowUserToResizeColumns = false;
+                        dgvVistaCursos.Columns[i].DataGridView.AllowUserToResizeRows = false;
+                        dgvVistaCursos.Columns[i].DataGridView.ReadOnly = true;
+                        if (i == 0)
+                        {
+                            dgvVistaCursos.Columns[i].HeaderText = "Nº Curso";
+                        }
+                        else if (i == 1)
+                        {
+                            dgvVistaCursos.Columns[i].HeaderText = "Nome Curso";
+                        }
+                        else if (i == 2)
+                        {
+                            dgvVistaCursos.Columns[i].HeaderText = "Nº de Formandos";
+                        }
+                        else if (i == 3)
+                        {
+                            dgvVistaCursos.Columns[i].HeaderText = "Nome Formador";
+                        }
+                        else if (i == 4)
+                        {
+                            dgvVistaCursos.Columns[i].HeaderText = "Início";
+                        }
+                    }
+                }
+                else if (rbtnFiltrarCurso_formador.Checked)
+                {
+                    StringSQL = "select * from Cursos where formador like '%" + txt_pesquisaCursos.Text + "%' ";
+
+                    DataSet DS = new DataSet();
+                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    conexao.Open();
+                    DA.Fill(DS);
+
+                    dgvVistaCursos.DataSource = DS.Tables[0];
+                    //Loop para adicionar e editar colunas da DGV
+                    for (int i = 0; i < dgvVistaCursos.Columns.Count; i++)
+                    {
+                        dgvVistaCursos.Columns[i].Resizable = DataGridViewTriState.False;
+                        dgvVistaCursos.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        //dgvVistaCursos.Columns[i].DefaultCellStyle.BackColor = Color.Black;
+                        dgvVistaCursos.Columns[i].DataGridView.AllowUserToAddRows = false;
+                        dgvVistaCursos.Columns[i].DataGridView.AllowUserToDeleteRows = false;
+                        dgvVistaCursos.Columns[i].DataGridView.AllowUserToResizeColumns = false;
+                        dgvVistaCursos.Columns[i].DataGridView.AllowUserToResizeRows = false;
+                        dgvVistaCursos.Columns[i].DataGridView.ReadOnly = true;
+                        if (i == 0)
+                        {
+                            dgvVistaCursos.Columns[i].HeaderText = "Nº Curso";
+                        }
+                        else if (i == 1)
+                        {
+                            dgvVistaCursos.Columns[i].HeaderText = "Nome Curso";
+                        }
+                        else if (i == 2)
+                        {
+                            dgvVistaCursos.Columns[i].HeaderText = "Nº de Formandos";
+                        }
+                        else if (i == 3)
+                        {
+                            dgvVistaCursos.Columns[i].HeaderText = "Nome Formador";
+                        }
+                        else if (i == 4)
+                        {
+                            dgvVistaCursos.Columns[i].HeaderText = "Início";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Mensagem = new Dialogs.Mensagens(ex.Message, "Erro na pesquisa");
+                Mensagem.ShowDialog();
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private void txtPesquisaFormandos_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbtnFiltrarFormandos_numero.Checked)
+                {
+                    StringSQL = "select cod_formando, formando, curso, numero_tlf, data from Formandos where cod_formando like '%" + txtPesquisaFormandos.Text + "%' ";
+
+                    DataSet DS = new DataSet();
+                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    conexao.Open();
+                    DA.Fill(DS);
+                    dgvVistaFormandos.DataSource = DS.Tables[0];
+
+                    //Loop para adicionar e editar colunas da DGV
+                    for (int i = 0; i < dgvVistaFormandos.Columns.Count; i++)
+                    {
+                        dgvVistaFormandos.Columns[i].Resizable = DataGridViewTriState.False;
+                        dgvVistaFormandos.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        //dgvVistaFormandos.Columns[i].DefaultCellStyle.BackColor = Color.Black;
+                        dgvVistaFormandos.Columns[i].DataGridView.AllowUserToAddRows = false;
+                        dgvVistaFormandos.Columns[i].DataGridView.AllowUserToDeleteRows = false;
+                        dgvVistaFormandos.Columns[i].DataGridView.AllowUserToResizeColumns = false;
+                        dgvVistaFormandos.Columns[i].DataGridView.AllowUserToResizeRows = false;
+                        dgvVistaFormandos.Columns[i].DataGridView.ReadOnly = true;
+                        if (i == 0)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Nº Formando";
+                        }
+                        else if (i == 1)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Nome Formando";
+                        }
+                        else if (i == 2)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Curso que frequenta";
+                        }
+                        else if (i == 3)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Telefone";
+                        }
+                        else if (i == 4)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Data de Inscrição";
+                        }
+                    }
+                }
+                else if (rbtnFiltrarFormandos_nome.Checked)
+                {
+                    StringSQL = "select cod_formando, formando, curso, numero_tlf, data from Formandos where formando like '%" + txtPesquisaFormandos.Text + "%' ";
+
+                    DataSet DS = new DataSet();
+                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    conexao.Open();
+                    DA.Fill(DS);
+                    dgvVistaFormandos.DataSource = DS.Tables[0];
+
+                    //Loop para adicionar e editar colunas da DGV
+                    for (int i = 0; i < dgvVistaFormandos.Columns.Count; i++)
+                    {
+                        dgvVistaFormandos.Columns[i].Resizable = DataGridViewTriState.False;
+                        dgvVistaFormandos.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        //dgvVistaFormandos.Columns[i].DefaultCellStyle.BackColor = Color.Black;
+                        dgvVistaFormandos.Columns[i].DataGridView.AllowUserToAddRows = false;
+                        dgvVistaFormandos.Columns[i].DataGridView.AllowUserToDeleteRows = false;
+                        dgvVistaFormandos.Columns[i].DataGridView.AllowUserToResizeColumns = false;
+                        dgvVistaFormandos.Columns[i].DataGridView.AllowUserToResizeRows = false;
+                        dgvVistaFormandos.Columns[i].DataGridView.ReadOnly = true;
+                        if (i == 0)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Nº Formando";
+                        }
+                        else if (i == 1)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Nome Formando";
+                        }
+                        else if (i == 2)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Curso que frequenta";
+                        }
+                        else if (i == 3)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Telefone";
+                        }
+                        else if (i == 4)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Data de Inscrição";
+                        }
+                    }
+                }
+                else if (rbtnFiltrarFormandos_curso.Checked)
+                {
+                    StringSQL = "select cod_formando, formando, curso, numero_tlf, data from Formandos where curso like '%" + txtPesquisaFormandos.Text + "%' ";
+
+                    DataSet DS = new DataSet();
+                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    conexao.Open();
+                    DA.Fill(DS);
+                    dgvVistaFormandos.DataSource = DS.Tables[0];
+
+                    //Loop para adicionar e editar colunas da DGV
+                    for (int i = 0; i < dgvVistaFormandos.Columns.Count; i++)
+                    {
+                        dgvVistaFormandos.Columns[i].Resizable = DataGridViewTriState.False;
+                        dgvVistaFormandos.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        //dgvVistaFormandos.Columns[i].DefaultCellStyle.BackColor = Color.Black;
+                        dgvVistaFormandos.Columns[i].DataGridView.AllowUserToAddRows = false;
+                        dgvVistaFormandos.Columns[i].DataGridView.AllowUserToDeleteRows = false;
+                        dgvVistaFormandos.Columns[i].DataGridView.AllowUserToResizeColumns = false;
+                        dgvVistaFormandos.Columns[i].DataGridView.AllowUserToResizeRows = false;
+                        dgvVistaFormandos.Columns[i].DataGridView.ReadOnly = true;
+                        if (i == 0)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Nº Formando";
+                        }
+                        else if (i == 1)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Nome Formando";
+                        }
+                        else if (i == 2)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Curso que frequenta";
+                        }
+                        else if (i == 3)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Telefone";
+                        }
+                        else if (i == 4)
+                        {
+                            dgvVistaFormandos.Columns[i].HeaderText = "Data de Inscrição";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Mensagem = new Dialogs.Mensagens(ex.Message, "Erro na pesquisa");
+                Mensagem.ShowDialog();
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private void txtPesquisaFormadores_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbtnFiltraraFormador_nome.Checked)
+                {
+                    StringSQL = "select * from Formadores where formador like '%" + txtPesquisaFormadores.Text + "%'";
+
+                    DataSet DS = new DataSet();
+                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    conexao.Open();
+                    DA.Fill(DS);
+
+                    dgvVistaFormadores.DataSource = DS.Tables[0];
+                    //Loop para adicionar e editar colunas da DGV
+                    for (int i = 0; i < dgvVistaFormadores.Columns.Count; i++)
+                    {
+                        dgvVistaFormadores.Columns[i].Resizable = DataGridViewTriState.False;
+                        dgvVistaFormadores.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        //dgvVistaFormadores.Columns[i].DefaultCellStyle.BackColor = Color.Black;
+                        dgvVistaFormadores.Columns[i].DataGridView.AllowUserToAddRows = false;
+                        dgvVistaFormadores.Columns[i].DataGridView.AllowUserToDeleteRows = false;
+                        dgvVistaFormadores.Columns[i].DataGridView.AllowUserToResizeColumns = false;
+                        dgvVistaFormadores.Columns[i].DataGridView.AllowUserToResizeRows = false;
+                        dgvVistaFormadores.Columns[i].DataGridView.ReadOnly = true;
+                        if (i == 0)
+                        {
+                            dgvVistaFormadores.Columns[i].HeaderText = "Nº Formador";
+                        }
+                        else if (i == 1)
+                        {
+                            dgvVistaFormadores.Columns[i].HeaderText = "Nome Formador";
+                        }
+                        else if (i == 2)
+                        {
+                            dgvVistaFormadores.Columns[i].HeaderText = "Curso que Leciona";
+                        }
+                        else if (i == 3)
+                        {
+                            dgvVistaFormadores.Columns[i].HeaderText = "Telefone";
+                        }
+                        else if (i == 4)
+                        {
+                            dgvVistaFormadores.Columns[i].HeaderText = "Nº BI";
+                        }
+                    }
+                }
+                else if (rbtnFiltrarFormador_curso.Checked)
+                {
+                    StringSQL = "select * from Formadores where curso like '%" + txtPesquisaFormadores.Text + "%'";
+
+                    DataSet DS = new DataSet();
+                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    conexao.Open();
+                    DA.Fill(DS);
+
+                    dgvVistaFormadores.DataSource = DS.Tables[0];
+                    //Loop para adicionar e editar colunas da DGV
+                    for (int i = 0; i < dgvVistaFormadores.Columns.Count; i++)
+                    {
+                        dgvVistaFormadores.Columns[i].Resizable = DataGridViewTriState.False;
+                        dgvVistaFormadores.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        //dgvVistaFormadores.Columns[i].DefaultCellStyle.BackColor = Color.Black;
+                        dgvVistaFormadores.Columns[i].DataGridView.AllowUserToAddRows = false;
+                        dgvVistaFormadores.Columns[i].DataGridView.AllowUserToDeleteRows = false;
+                        dgvVistaFormadores.Columns[i].DataGridView.AllowUserToResizeColumns = false;
+                        dgvVistaFormadores.Columns[i].DataGridView.AllowUserToResizeRows = false;
+                        dgvVistaFormadores.Columns[i].DataGridView.ReadOnly = true;
+                        if (i == 0)
+                        {
+                            dgvVistaFormadores.Columns[i].HeaderText = "Nº Formador";
+                        }
+                        else if (i == 1)
+                        {
+                            dgvVistaFormadores.Columns[i].HeaderText = "Nome Formador";
+                        }
+                        else if (i == 2)
+                        {
+                            dgvVistaFormadores.Columns[i].HeaderText = "Curso que Leciona";
+                        }
+                        else if (i == 3)
+                        {
+                            dgvVistaFormadores.Columns[i].HeaderText = "Telefone";
+                        }
+                        else if (i == 4)
+                        {
+                            dgvVistaFormadores.Columns[i].HeaderText = "Nº BI";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Mensagem = new Dialogs.Mensagens(ex.Message, "Erro na pesquisa");
+                Mensagem.ShowDialog();
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private void txtxPesquisaMensalidade_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbtnFiltrarMensalidade_numeroFormando.Checked)
+                {
+                    StringSQL = "select formando, curso, mensalidade, mensalidadeAt from Formandos where cod_formando like '%" + txtxPesquisaMensalidade.Text + "%'";
+
+                    DataSet DS = new DataSet();
+                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    conexao.Open();
+                    DA.Fill(DS);
+
+                    dgvVistaMensalidade.DataSource = DS.Tables[0];
+                    //Loop para adicionar e editar colunas da DGV
+                    for (int i = 0; i < dgvVistaMensalidade.Columns.Count; i++)
+                    {
+                        dgvVistaMensalidade.Columns[i].Resizable = DataGridViewTriState.False;
+                        dgvVistaMensalidade.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        //dgvVistaMensalidade.Columns[i].DefaultCellStyle.BackColor = Color.Black;
+                        dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToAddRows = false;
+                        dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToDeleteRows = false;
+                        dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToResizeColumns = false;
+                        dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToResizeRows = false;
+                        dgvVistaMensalidade.Columns[i].DataGridView.ReadOnly = true;
+                        if (i == 0)
+                        {
+                            dgvVistaMensalidade.Columns[i].HeaderText = "Formando";
+                        }
+                        else if (i == 1)
+                        {
+                            dgvVistaMensalidade.Columns[i].HeaderText = "Curso";
+                        }
+                        else if (i == 2)
+                        {
+                            dgvVistaMensalidade.Columns[i].HeaderText = "Inscrito em";
+                        }
+                        else if (i == 3)
+                        {
+                            dgvVistaMensalidade.Columns[i].HeaderText = "Ultimo Mês Pago";
+                        }
+                        else if (i == 4)
+                        {
+                            dgvVistaMensalidade.Columns[i].HeaderText = "Início";
+                        }
+                    }
+                }
+                else if (rbtnFiltrarMensalidade_nomeFormando.Checked)
+                {
+                    StringSQL = "select formando, curso, mensalidade, mensalidadeAt from Formandos where formando like '%" + txtxPesquisaMensalidade.Text + "%'";
+
+                    DataSet DS = new DataSet();
+                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    conexao.Open();
+                    DA.Fill(DS);
+
+                    dgvVistaMensalidade.DataSource = DS.Tables[0];
+                    //Loop para adicionar e editar colunas da DGV
+                    for (int i = 0; i < dgvVistaMensalidade.Columns.Count; i++)
+                    {
+                        dgvVistaMensalidade.Columns[i].Resizable = DataGridViewTriState.False;
+                        dgvVistaMensalidade.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        //dgvVistaMensalidade.Columns[i].DefaultCellStyle.BackColor = Color.Black;
+                        dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToAddRows = false;
+                        dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToDeleteRows = false;
+                        dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToResizeColumns = false;
+                        dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToResizeRows = false;
+                        dgvVistaMensalidade.Columns[i].DataGridView.ReadOnly = true;
+                        if (i == 0)
+                        {
+                            dgvVistaMensalidade.Columns[i].HeaderText = "Formando";
+                        }
+                        else if (i == 1)
+                        {
+                            dgvVistaMensalidade.Columns[i].HeaderText = "Curso";
+                        }
+                        else if (i == 2)
+                        {
+                            dgvVistaMensalidade.Columns[i].HeaderText = "Inscrito em";
+                        }
+                        else if (i == 3)
+                        {
+                            dgvVistaMensalidade.Columns[i].HeaderText = "Ultimo Mês Pago";
+                        }
+                        else if (i == 4)
+                        {
+                            dgvVistaMensalidade.Columns[i].HeaderText = "Início";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Mensagem = new Dialogs.Mensagens(ex.Message, "Erro na pesquisa");
+                Mensagem.ShowDialog();
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private void btn_logout_MouseHover(object sender, EventArgs e)
+        {
+            btn_logout.Image = Properties.Resources.logout_branco;
+        }
+
+        private void btn_logout_MouseLeave(object sender, EventArgs e)
+        {
+            btn_logout.Image = Properties.Resources.logout;
+        }
+
+        private void btn_logout_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form log = new frmLogin(false);
+            log.Show();
+        }
+
+        private void CarregarDefinicoes()
+        {
+            //Carregar as definições
+            txt_precarioInscricao.Text = Properties.Precario.Default.inscricao.ToString();
+            txt_precarioCertificado.Text = Properties.Precario.Default.certificado.ToString();
+            txt_precarioCartao.Text = Properties.Precario.Default.cartao_formando.ToString();
+            txt_precarioMensalidade.Text = Properties.Precario.Default.mensalidade.ToString();
+
+            if (Properties.Config.Default.DadosGraficoEntrada == "Inscrições")
+            {
+                chkbx_DefEntrada_Inscricao.Checked = true;
+            }
+            else if (Properties.Config.Default.DadosGraficoEntrada == "Mensalidade")
+            {
+                chkbx_DefEntrada_Mensalidade.Checked = true;
+            }
+            else if (Properties.Config.Default.DadosGraficoEntrada == "Certificado")
+            {
+                chkbx_DefEntrada_Certificado.Checked = true;
+            }
+            else if (Properties.Config.Default.DadosGraficoEntrada == "Cartão de formando")
+            {
+                chkbx_DefEntrada_Cartao.Checked = true;
+            }
+
+        }
+
+        private void SetarDefinicoes()
+        {
+            if (txt_precarioCartao.Text != "" || txt_precarioCertificado.Text != "" || txt_precarioInscricao.Text != "" || txt_precarioMensalidade.Text != "")
+            {
+                Properties.Precario.Default.inscricao = int.Parse(txt_precarioInscricao.Text);
+                Properties.Precario.Default.mensalidade = int.Parse(txt_precarioMensalidade.Text);
+                Properties.Precario.Default.certificado = int.Parse(txt_precarioCertificado.Text);
+                Properties.Precario.Default.cartao_formando = int.Parse(txt_precarioCartao.Text);
+
+                Properties.Precario.Default.Save();
+                Properties.Precario.Default.Upgrade();
+
+                if (chkbx_DefEntrada_Cartao.Checked)
+                {
+                    Properties.Config.Default.DadosGraficoEntrada = "Cartão de formando";
+                }
+                else if (chkbx_DefEntrada_Certificado.Checked)
+                {
+                    Properties.Config.Default.DadosGraficoEntrada = "Certificado";
+                }
+                else if (chkbx_DefEntrada_Inscricao.Checked)
+                {
+                    Properties.Config.Default.DadosGraficoEntrada = "Inscrição";
+                }
+                else if (chkbx_DefEntrada_Mensalidade.Checked)
+                {
+                    Properties.Config.Default.DadosGraficoEntrada = "Mensalidade";
+                }
+
+                //-------------------------------------------------------------------------------------
+
+                if (chkbx_DefSaida_Combustivel.Checked)
+                {
+                    Properties.Config.Default.DadosGraficoSaida = "Combustivel";
+                }
+                else if (chkbx_DefSaida_Energia.Checked)
+                {
+                    Properties.Config.Default.DadosGraficoSaida = "Energia";
+                }
+                else if (chkbx_DefSaida_papeis.Checked)
+                {
+                    Properties.Config.Default.DadosGraficoSaida = "Papeis";
+                }
+                else if (chkbx_DefSaida_Tinteiro.Checked)
+                {
+                    Properties.Config.Default.DadosGraficoSaida = "Tinteiro";
+                }
+            }
+            else
+            {
+                Mensagem = new Dialogs.Mensagens("Os campos do preçário não podem estar vazios!", "Preencha os campos");
+
+                Mensagem.ShowDialog();
+            }
+        }
+
+
+        private void paginas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (paginas.SelectedTab == definicoes)
+            {
+                btn_guardarDefinicoes.Visible = true;
+            }
+            else
+            {
+                btn_guardarDefinicoes.Visible = false;
+            }
+        }
+
+        private void btn_guardarDefinicoes_Click(object sender, EventArgs e)
+        {
+            SetarDefinicoes();
+            Mensagem = new Dialogs.Mensagens("Definições guardadas com Sucesso.", "Definições");
+            Mensagem.ShowDialog();
         }
     }
 

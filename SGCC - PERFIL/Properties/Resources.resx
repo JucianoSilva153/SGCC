@@ -133,8 +133,8 @@
   <data name="outline_trending_up_black_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\outline_trending_up_black_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mensalidade_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mensalidade_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="apagar_branco1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apagar_branco1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="curso_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\curso_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,20 +154,23 @@
   <data name="Log_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Log_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="apagar_branco1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\apagar_branco1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Gerenciar contas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gerenciar contas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="apagar_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apagar_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="formandos_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\formandos_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Opções_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Opções_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="notificação1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notificação1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,9 +184,6 @@
   <data name="Atualizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Atualizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="notificação_branco1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\notificação_branco1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="formadores" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\formadores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,8 +196,8 @@
   <data name="curso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\curso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Gerenciar contas_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gerenciar contas_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="notificação_branco1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notificação_branco1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usuário_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuário_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,11 +205,14 @@
   <data name="Log" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Log.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="outline_autorenew_black_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\outline_autorenew_black_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="apagar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\apagar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Mensalidade_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mensalidade_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,6 +223,9 @@
   <data name="Opções" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Opções.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Gerenciar contas_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gerenciar contas_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="formadores_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\formadores_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -229,7 +235,7 @@
   <data name="Config" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Config.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Opções_branco" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Opções_branco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Config1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Config1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

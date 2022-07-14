@@ -8,5 +8,14 @@
     <Setting Name="DadosGraficoSaida" Type="System.String" Scope="User">
       <Value Profile="(Default)">Energia</Value>
     </Setting>
+    <Setting Name="FirstTime" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ConexaoPadrao" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=J-PC;Initial Catalog=BD;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="ConexaoPersonalizada" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

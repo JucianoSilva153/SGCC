@@ -1,0 +1,11 @@
+ - Como fazer pesquisa na base de dados;
+	Para se fazer um consulta, dvo usar o comando SQL - LIKE. Usado com o SELECT irá me retornar todos so registos que se parecem com o valor dentro do parametro
+	Ex.: select nome, curso from Formando where nome like @nome
+___________________________________
+ - Imprimir Relatorio com Crystal Report;
+	Baixei um video..
+___________________________________
+ - Autenticação de Dados de ususario(Sistema de Login);
+	Baixei video
+___________________________________
+- Chaves primárias não crescentes

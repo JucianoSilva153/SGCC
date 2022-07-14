@@ -1,13 +1,27 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
+using System.IO;
+
+
 
 namespace SGCC___PERFIL
 {
     public partial class frmLogin : Form
     {
-        public frmLogin()
+        SqlConnection conexao = new SqlConnection(Properties.Config.Default.ConexaoPadrao);
+        SqlCommand ComandoSQL;
+        string StringSQL;
+        SqlDataAdapter DA;
+        SqlDataReader DR;
+        string usuaro = Environment.UserName;
+
+        bool Erro;
+        Dialogs.Mensagens Mensagem = new Dialogs.Mensagens("Usuário ou Palavra-Passe incorreta!", "Erro de Credenciais");
+        public frmLogin(bool erro)
         {
-            InitializeComponent();
+                InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -17,9 +31,70 @@ namespace SGCC___PERFIL
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            Form form = new Perfil(txtNomeUsuario.Text, txtPassword.Text);
-            form.Show();
-            this.Hide();
+            //Form form = new Perfil(txtNomeUsuario.Text, txtPassword.Text);
+            //if (Erro)
+            //{
+            //    this.Hide();
+            //    form.Show();
+            //}
+            //else
+            //{
+            //    //this.Hide();
+            //}
+
+
+            try
+            {
+                StringSQL = "select usuario, senha from Conta where usuario = '" + txtNomeUsuario.Text + "' and senha = '" + txtPassword.Text + "'";
+                SqlDataAdapter DA = new SqlDataAdapter(StringSQL, conexao);
+                DataTable DT = new DataTable();
+                DA.Fill(DT);
+
+                conexao.Open();
+                if (DT.Rows.Count < 1)
+                {
+                    Mensagem = new Dialogs.Mensagens("Usuário ou Palavra-Passe Incorreta!", "Erro de Credenciais");
+                    Mensagem.ShowDialog();
+                }
+                else
+                {
+                    if (txtNomeUsuario.Text == "root")
+                    {
+                        Mensagem = new Dialogs.Mensagens("Logado como Administrador do Sistema!", "Login Efetuado");
+                        Mensagem.ShowDialog();
+
+                        this.Hide();
+                        Form main = new Perfil(txtNomeUsuario.Text);
+                        main.Show();
+                    }
+                    else
+                    {
+                        Mensagem = new Dialogs.Mensagens("Bem vindo(a) " + txtNomeUsuario.Text, "Login Efetuado");
+                        Mensagem.ShowDialog();
+
+                        this.Hide();
+                        Form main = new Perfil(txtNomeUsuario.Text);
+                        main.Show();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Mensagem = new Dialogs.Mensagens(ex.Message, "Erro de Login");
+                Mensagem.ShowDialog();
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            if (Erro)
+            {
+                Mensagem.ShowDialog();
+            }
         }
     }
 }

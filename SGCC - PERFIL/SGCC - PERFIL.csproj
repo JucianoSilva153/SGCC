@@ -86,10 +86,16 @@
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
       <HintPath>..\..\..\..\Documents\Visual Studio 2019\UI DLL\Bunifu\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2019\UI DLL\Bunifu\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Documents\Visual Studio 2019\BunifuCrack-main\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\Documents\Visual Studio 2019\UI DLL\Guna.UI.dll</HintPath>
     </Reference>
@@ -99,6 +105,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -115,6 +122,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlg_FirstTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\dlg_FirstTime.Designer.cs">
+      <DependentUpon>dlg_FirstTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\dlg_TodosRegistos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +172,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\dlg_FirstTime.resx">
+      <DependentUpon>dlg_FirstTime.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\dlg_TodosRegistos.resx">
       <DependentUpon>dlg_TodosRegistos.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +360,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Funções.txt" />
+    <None Include="Resources\Config1.png" />
+    <None Include="Resources\outline_autorenew_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -87,17 +87,8 @@ namespace SGCC___PERFIL
             this.btn_maximizar = new Guna.UI.WinForms.GunaControlBox();
             this.btn_fechar = new Guna.UI.WinForms.GunaControlBox();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTipoConta = new System.Windows.Forms.Label();
             this.lbl_nomeConta = new System.Windows.Forms.Label();
-            this.imgUsuario = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.btn_logout = new Guna.UI.WinForms.GunaButton();
-            this.btn_settings = new Guna.UI.WinForms.GunaButton();
-            this.btn_opc = new Guna.UI.WinForms.GunaButton();
-            this.btn_formadores = new Guna.UI.WinForms.GunaButton();
-            this.btn_mensalidade = new Guna.UI.WinForms.GunaButton();
-            this.btn_formandos = new Guna.UI.WinForms.GunaButton();
-            this.btn_cursos = new Guna.UI.WinForms.GunaButton();
-            this.btn_stats = new Guna.UI.WinForms.GunaButton();
             this.paginas = new Bunifu.UI.WinForms.BunifuPages();
             this.status = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -105,35 +96,28 @@ namespace SGCC___PERFIL
             this.label15 = new System.Windows.Forms.Label();
             this.dgvStatsformandos = new Guna.UI.WinForms.GunaDataGridView();
             this.label13 = new System.Windows.Forms.Label();
-            this.gunaCirclePictureBox8 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
             this.label14 = new System.Windows.Forms.Label();
             this.dgvStatsCursos = new Guna.UI.WinForms.GunaDataGridView();
             this.label12 = new System.Windows.Forms.Label();
-            this.gunaCirclePictureBox7 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.statsGrafico = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblStatsCursos = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.imgStatsCursos = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblStatsFormadores = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.imgStatsFormadores = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblStatsFormandos = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.imgStatsFormandos = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.lblStatsSaida = new System.Windows.Forms.Label();
-            this.imgStatsSaida = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblStatsEntrada = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.imgStatsEntrada = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.cursos = new System.Windows.Forms.TabPage();
             this.rbtnFiltrarCurso_formador = new Guna.UI.WinForms.GunaRadioButton();
             this.rbtnFiltrarCurso_nome = new Guna.UI.WinForms.GunaRadioButton();
@@ -152,9 +136,9 @@ namespace SGCC___PERFIL
             this.dgvVistaFormadores = new Guna.UI.WinForms.GunaDataGridView();
             this.mensalidade = new System.Windows.Forms.TabPage();
             this.dgvVistaMensalidade = new Guna.UI.WinForms.GunaDataGridView();
-            this.gunaRadioButton2 = new Guna.UI.WinForms.GunaRadioButton();
-            this.gunaRadioButton1 = new Guna.UI.WinForms.GunaRadioButton();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.rbtnFiltrarMensalidade_nomeFormando = new Guna.UI.WinForms.GunaRadioButton();
+            this.rbtnFiltrarMensalidade_numeroFormando = new Guna.UI.WinForms.GunaRadioButton();
+            this.txtxPesquisaMensalidade = new Guna.UI.WinForms.GunaTextBox();
             this.gestao_curso = new System.Windows.Forms.TabPage();
             this.gunaTextBox5 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaRadioButton3 = new Guna.UI.WinForms.GunaRadioButton();
@@ -169,10 +153,6 @@ namespace SGCC___PERFIL
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.txtNomeCurso = new Guna.UI.WinForms.GunaTextBox();
-            this.btnPesquisarCurso = new Guna.UI.WinForms.GunaButton();
-            this.btnEliminarCurso = new Guna.UI.WinForms.GunaButton();
-            this.btnEditarCurso = new Guna.UI.WinForms.GunaButton();
-            this.btnNovoCurso = new Guna.UI.WinForms.GunaButton();
             this.gestao_fomandos = new System.Windows.Forms.TabPage();
             this.txtMoradaProv = new Guna.UI.WinForms.GunaComboBox();
             this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
@@ -206,12 +186,6 @@ namespace SGCC___PERFIL
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.txtNomeFormando = new Guna.UI.WinForms.GunaTextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtCodFormando = new Guna.UI.WinForms.GunaTextBox();
-            this.btnPesquisarFormando = new Guna.UI.WinForms.GunaButton();
-            this.btnEliminarFormandos = new Guna.UI.WinForms.GunaButton();
-            this.btnEditarFormando = new Guna.UI.WinForms.GunaButton();
-            this.btnNovoFormando = new Guna.UI.WinForms.GunaButton();
             this.gestao_formadores = new System.Windows.Forms.TabPage();
             this.gunaTextBox10 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaRadioButton14 = new Guna.UI.WinForms.GunaRadioButton();
@@ -228,10 +202,6 @@ namespace SGCC___PERFIL
             this.txtNomeFormador = new Guna.UI.WinForms.GunaTextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.txtCodFormador = new Guna.UI.WinForms.GunaTextBox();
-            this.btnPesquisarFormador = new Guna.UI.WinForms.GunaButton();
-            this.btnEliminarFormador = new Guna.UI.WinForms.GunaButton();
-            this.btnEditarFormador = new Guna.UI.WinForms.GunaButton();
-            this.btnNovoFormadores = new Guna.UI.WinForms.GunaButton();
             this.gestao_mensalidade = new System.Windows.Forms.TabPage();
             this.txtMensalidadeMesPago = new Guna.UI.WinForms.GunaComboBox();
             this.gunaTextBox15 = new Guna.UI.WinForms.GunaTextBox();
@@ -242,38 +212,30 @@ namespace SGCC___PERFIL
             this.label25 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.txtMensalidadeFormando = new Guna.UI.WinForms.GunaTextBox();
-            this.btnPesquisarAlunoMensalidade = new Guna.UI.WinForms.GunaButton();
-            this.btnNovoPagamento = new Guna.UI.WinForms.GunaButton();
             this.opcoes = new System.Windows.Forms.TabPage();
             this.gunaShadowPanel11 = new Guna.UI.WinForms.GunaShadowPanel();
             this.label43 = new System.Windows.Forms.Label();
             this.VerRelatorios = new Guna.UI.WinForms.GunaButton();
-            this.gunaCirclePictureBox6 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.label44 = new System.Windows.Forms.Label();
             this.gunaShadowPanel10 = new Guna.UI.WinForms.GunaShadowPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.btnGerenUsuarios = new Guna.UI.WinForms.GunaButton();
-            this.gunaCirclePictureBox5 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.label42 = new System.Windows.Forms.Label();
             this.gunaShadowPanel9 = new Guna.UI.WinForms.GunaShadowPanel();
             this.label40 = new System.Windows.Forms.Label();
             this.btnGerenMensalidade = new Guna.UI.WinForms.GunaButton();
-            this.gunaCirclePictureBox4 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.label41 = new System.Windows.Forms.Label();
             this.gunaShadowPanel8 = new Guna.UI.WinForms.GunaShadowPanel();
             this.label38 = new System.Windows.Forms.Label();
             this.btnGerenFormadores = new Guna.UI.WinForms.GunaButton();
-            this.gunaCirclePictureBox3 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.label39 = new System.Windows.Forms.Label();
             this.gunaShadowPanel5 = new Guna.UI.WinForms.GunaShadowPanel();
             this.label10 = new System.Windows.Forms.Label();
             this.btnGerenCursos = new Guna.UI.WinForms.GunaButton();
-            this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.label37 = new System.Windows.Forms.Label();
             this.gunaShadowPanel4 = new Guna.UI.WinForms.GunaShadowPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.btnGerenFormandos = new Guna.UI.WinForms.GunaButton();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.definicoes = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -285,38 +247,23 @@ namespace SGCC___PERFIL
             this.label3 = new System.Windows.Forms.Label();
             this.gunaShadowPanel12 = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaTextBox7 = new Guna.UI.WinForms.GunaTextBox();
+            this.txt_precarioCartao = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaTextBox6 = new Guna.UI.WinForms.GunaTextBox();
+            this.txt_precarioCertificado = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
+            this.txt_precarioMensalidade = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
+            this.txt_precarioInscricao = new Guna.UI.WinForms.GunaTextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.gunaShadowPanel6 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaSwitch4 = new Guna.UI.WinForms.GunaSwitch();
-            this.label45 = new System.Windows.Forms.Label();
             this.gunaShadowPanel13 = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaGroupBox6 = new Guna.UI.WinForms.GunaGroupBox();
-            this.gunaCheckBox8 = new Guna.UI.WinForms.GunaCheckBox();
-            this.gunaCheckBox4 = new Guna.UI.WinForms.GunaCheckBox();
-            this.gunaCheckBox5 = new Guna.UI.WinForms.GunaCheckBox();
-            this.gunaCheckBox6 = new Guna.UI.WinForms.GunaCheckBox();
             this.gunaGroupBox5 = new Guna.UI.WinForms.GunaGroupBox();
-            this.gunaCheckBox7 = new Guna.UI.WinForms.GunaCheckBox();
-            this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
-            this.gunaCheckBox2 = new Guna.UI.WinForms.GunaCheckBox();
-            this.gunaCheckBox3 = new Guna.UI.WinForms.GunaCheckBox();
             this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
             this.label49 = new System.Windows.Forms.Label();
             this.relatorioEntrada = new System.Windows.Forms.TabPage();
-            this.btnRelatorioSaida = new Guna.UI.WinForms.GunaButton();
-            this.btn_verTodosRegistos_Entrada = new Guna.UI.WinForms.GunaButton();
             this.dgvRelatorioEntrada = new Guna.UI.WinForms.GunaDataGridView();
             this.label26 = new System.Windows.Forms.Label();
             this.usuarios = new System.Windows.Forms.TabPage();
-            this.btn_EliminarUsuario = new Guna.UI.WinForms.GunaButton();
             this.dgvUsuarios = new Guna.UI.WinForms.GunaDataGridView();
             this.gunaGroupBox4 = new Guna.UI.WinForms.GunaGroupBox();
             this.rbtn_secretario = new Guna.UI.WinForms.GunaRadioButton();
@@ -327,39 +274,79 @@ namespace SGCC___PERFIL
             this.label47 = new System.Windows.Forms.Label();
             this.txtPassword = new Guna.UI.WinForms.GunaTextBox();
             this.txtNomeUsuario = new Guna.UI.WinForms.GunaTextBox();
-            this.btn_addUsuario = new Guna.UI.WinForms.GunaButton();
-            this.gunaCirclePictureBox9 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.relatorioSaida = new System.Windows.Forms.TabPage();
-            this.btnVerRelatorioEntrada = new Guna.UI.WinForms.GunaButton();
-            this.btnGerarRegistos_Saida = new Guna.UI.WinForms.GunaButton();
             this.dgvRelatorioSaida = new Guna.UI.WinForms.GunaDataGridView();
             this.label48 = new System.Windows.Forms.Label();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.chkbx_DefEntrada_Mensalidade = new Guna.UI.WinForms.GunaRadioButton();
+            this.chkbx_DefEntrada_Certificado = new Guna.UI.WinForms.GunaRadioButton();
+            this.chkbx_DefEntrada_Cartao = new Guna.UI.WinForms.GunaRadioButton();
+            this.chkbx_DefEntrada_Inscricao = new Guna.UI.WinForms.GunaRadioButton();
+            this.chkbx_DefSaida_Energia = new Guna.UI.WinForms.GunaRadioButton();
+            this.chkbx_DefSaida_Combustivel = new Guna.UI.WinForms.GunaRadioButton();
+            this.chkbx_DefSaida_Tinteiro = new Guna.UI.WinForms.GunaRadioButton();
+            this.chkbx_DefSaida_papeis = new Guna.UI.WinForms.GunaRadioButton();
+            this.gunaCirclePictureBox8 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaCirclePictureBox7 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.imgStatsCursos = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.imgStatsFormadores = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.imgStatsFormandos = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.imgStatsSaida = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.imgStatsEntrada = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.btnPesquisarCurso = new Guna.UI.WinForms.GunaButton();
+            this.btnEliminarCurso = new Guna.UI.WinForms.GunaButton();
+            this.btnEditarCurso = new Guna.UI.WinForms.GunaButton();
+            this.btnNovoCurso = new Guna.UI.WinForms.GunaButton();
+            this.btnPesquisarFormando = new Guna.UI.WinForms.GunaButton();
+            this.btnEliminarFormandos = new Guna.UI.WinForms.GunaButton();
+            this.btnEditarFormando = new Guna.UI.WinForms.GunaButton();
+            this.btnNovoFormando = new Guna.UI.WinForms.GunaButton();
+            this.btnPesquisarFormador = new Guna.UI.WinForms.GunaButton();
+            this.btnEliminarFormador = new Guna.UI.WinForms.GunaButton();
+            this.btnEditarFormador = new Guna.UI.WinForms.GunaButton();
+            this.btnNovoFormadores = new Guna.UI.WinForms.GunaButton();
+            this.btnPesquisarAlunoMensalidade = new Guna.UI.WinForms.GunaButton();
+            this.btnNovoPagamento = new Guna.UI.WinForms.GunaButton();
+            this.gunaCirclePictureBox6 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaCirclePictureBox5 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaCirclePictureBox4 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaCirclePictureBox3 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.btnRelatorioSaida = new Guna.UI.WinForms.GunaButton();
+            this.btn_verTodosRegistos_Entrada = new Guna.UI.WinForms.GunaButton();
+            this.btn_EliminarUsuario = new Guna.UI.WinForms.GunaButton();
+            this.btn_addUsuario = new Guna.UI.WinForms.GunaButton();
+            this.gunaCirclePictureBox9 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.btnVerRelatorioEntrada = new Guna.UI.WinForms.GunaButton();
+            this.btnGerarRegistos_Saida = new Guna.UI.WinForms.GunaButton();
+            this.imgUsuario = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.btn_logout = new Guna.UI.WinForms.GunaButton();
+            this.btn_settings = new Guna.UI.WinForms.GunaButton();
+            this.btn_opc = new Guna.UI.WinForms.GunaButton();
+            this.btn_formadores = new Guna.UI.WinForms.GunaButton();
+            this.btn_mensalidade = new Guna.UI.WinForms.GunaButton();
+            this.btn_formandos = new Guna.UI.WinForms.GunaButton();
+            this.btn_cursos = new Guna.UI.WinForms.GunaButton();
+            this.btn_stats = new Guna.UI.WinForms.GunaButton();
+            this.btn_guardarDefinicoes = new Guna.UI.WinForms.GunaImageButton();
             this.panelTopo.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).BeginInit();
             this.paginas.SuspendLayout();
             this.status.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gunaShadowPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatsformandos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox8)).BeginInit();
             this.gunaShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatsCursos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox7)).BeginInit();
             this.gunaShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statsGrafico)).BeginInit();
             this.gunaElipsePanel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgStatsCursos)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgStatsFormadores)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgStatsFormandos)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgStatsSaida)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgStatsEntrada)).BeginInit();
             this.cursos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaCursos)).BeginInit();
             this.formandos.SuspendLayout();
@@ -381,22 +368,15 @@ namespace SGCC___PERFIL
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditMensalidade)).BeginInit();
             this.opcoes.SuspendLayout();
             this.gunaShadowPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox6)).BeginInit();
             this.gunaShadowPanel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox5)).BeginInit();
             this.gunaShadowPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).BeginInit();
             this.gunaShadowPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).BeginInit();
             this.gunaShadowPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             this.gunaShadowPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.definicoes.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.gunaShadowPanel7.SuspendLayout();
             this.gunaShadowPanel12.SuspendLayout();
-            this.gunaShadowPanel6.SuspendLayout();
             this.gunaShadowPanel13.SuspendLayout();
             this.gunaGroupBox6.SuspendLayout();
             this.gunaGroupBox5.SuspendLayout();
@@ -405,9 +385,23 @@ namespace SGCC___PERFIL
             this.usuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.gunaGroupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox9)).BeginInit();
             this.relatorioSaida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorioSaida)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgStatsCursos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgStatsFormadores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgStatsFormandos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgStatsSaida)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgStatsEntrada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTopo
@@ -416,6 +410,7 @@ namespace SGCC___PERFIL
             this.panelTopo.Controls.Add(this.button1);
             this.panelTopo.Controls.Add(this.btn_minimizar);
             this.panelTopo.Controls.Add(this.btn_maximizar);
+            this.panelTopo.Controls.Add(this.btn_guardarDefinicoes);
             this.panelTopo.Controls.Add(this.btn_fechar);
             this.panelTopo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTopo.Location = new System.Drawing.Point(0, 0);
@@ -484,7 +479,7 @@ namespace SGCC___PERFIL
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.SystemColors.Control;
-            this.panelMenu.Controls.Add(this.label1);
+            this.panelMenu.Controls.Add(this.lblTipoConta);
             this.panelMenu.Controls.Add(this.lbl_nomeConta);
             this.panelMenu.Controls.Add(this.imgUsuario);
             this.panelMenu.Controls.Add(this.btn_logout);
@@ -502,15 +497,15 @@ namespace SGCC___PERFIL
             this.panelMenu.TabIndex = 1;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
-            // label1
+            // lblTipoConta
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(86, 125);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Secretário";
+            this.lblTipoConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoConta.Location = new System.Drawing.Point(13, 125);
+            this.lblTipoConta.Name = "lblTipoConta";
+            this.lblTipoConta.Size = new System.Drawing.Size(209, 24);
+            this.lblTipoConta.TabIndex = 2;
+            this.lblTipoConta.Text = "Secretário";
+            this.lblTipoConta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_nomeConta
             // 
@@ -521,228 +516,6 @@ namespace SGCC___PERFIL
             this.lbl_nomeConta.TabIndex = 1;
             this.lbl_nomeConta.Text = "Juciano Silva";
             this.lbl_nomeConta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // imgUsuario
-            // 
-            this.imgUsuario.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.imgUsuario.Image = global::SGCC___PERFIL.Properties.Resources.usuário;
-            this.imgUsuario.Location = new System.Drawing.Point(67, 10);
-            this.imgUsuario.Name = "imgUsuario";
-            this.imgUsuario.Size = new System.Drawing.Size(94, 91);
-            this.imgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgUsuario.TabIndex = 2;
-            this.imgUsuario.TabStop = false;
-            this.imgUsuario.UseTransfarantBackground = false;
-            this.imgUsuario.Click += new System.EventHandler(this.gunaCirclePictureBox1_Click);
-            // 
-            // btn_logout
-            // 
-            this.btn_logout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_logout.AnimationHoverSpeed = 0.07F;
-            this.btn_logout.AnimationSpeed = 0.03F;
-            this.btn_logout.BackColor = System.Drawing.Color.Transparent;
-            this.btn_logout.BaseColor = System.Drawing.SystemColors.Control;
-            this.btn_logout.BorderColor = System.Drawing.Color.Black;
-            this.btn_logout.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_logout.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_logout.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.btn_logout.Image = global::SGCC___PERFIL.Properties.Resources.logout;
-            this.btn_logout.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_logout.Location = new System.Drawing.Point(10, 641);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
-            this.btn_logout.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_logout.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.btn_logout.OnHoverImage = null;
-            this.btn_logout.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_logout.Radius = 10;
-            this.btn_logout.Size = new System.Drawing.Size(212, 42);
-            this.btn_logout.TabIndex = 0;
-            this.btn_logout.Text = "Terminar Sessão";
-            // 
-            // btn_settings
-            // 
-            this.btn_settings.AnimationHoverSpeed = 0.07F;
-            this.btn_settings.AnimationSpeed = 0.03F;
-            this.btn_settings.BackColor = System.Drawing.Color.Transparent;
-            this.btn_settings.BaseColor = System.Drawing.SystemColors.Control;
-            this.btn_settings.BorderColor = System.Drawing.Color.Black;
-            this.btn_settings.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_settings.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_settings.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_settings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.btn_settings.Image = global::SGCC___PERFIL.Properties.Resources.Config;
-            this.btn_settings.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_settings.Location = new System.Drawing.Point(10, 440);
-            this.btn_settings.Name = "btn_settings";
-            this.btn_settings.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
-            this.btn_settings.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_settings.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_settings.OnHoverImage = null;
-            this.btn_settings.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_settings.Radius = 10;
-            this.btn_settings.Size = new System.Drawing.Size(212, 42);
-            this.btn_settings.TabIndex = 0;
-            this.btn_settings.Text = "Definições";
-            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
-            // 
-            // btn_opc
-            // 
-            this.btn_opc.AnimationHoverSpeed = 0.07F;
-            this.btn_opc.AnimationSpeed = 0.03F;
-            this.btn_opc.BackColor = System.Drawing.Color.Transparent;
-            this.btn_opc.BaseColor = System.Drawing.SystemColors.Control;
-            this.btn_opc.BorderColor = System.Drawing.Color.Black;
-            this.btn_opc.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_opc.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_opc.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_opc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.btn_opc.Image = global::SGCC___PERFIL.Properties.Resources.Opções;
-            this.btn_opc.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_opc.Location = new System.Drawing.Point(10, 392);
-            this.btn_opc.Name = "btn_opc";
-            this.btn_opc.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
-            this.btn_opc.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_opc.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_opc.OnHoverImage = null;
-            this.btn_opc.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_opc.Radius = 10;
-            this.btn_opc.Size = new System.Drawing.Size(212, 42);
-            this.btn_opc.TabIndex = 0;
-            this.btn_opc.Text = "Opções";
-            this.btn_opc.Click += new System.EventHandler(this.btn_opc_Click);
-            // 
-            // btn_formadores
-            // 
-            this.btn_formadores.AnimationHoverSpeed = 0.07F;
-            this.btn_formadores.AnimationSpeed = 0.03F;
-            this.btn_formadores.BackColor = System.Drawing.Color.Transparent;
-            this.btn_formadores.BaseColor = System.Drawing.SystemColors.Control;
-            this.btn_formadores.BorderColor = System.Drawing.Color.Black;
-            this.btn_formadores.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_formadores.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_formadores.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_formadores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.btn_formadores.Image = global::SGCC___PERFIL.Properties.Resources.formadores;
-            this.btn_formadores.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_formadores.Location = new System.Drawing.Point(10, 296);
-            this.btn_formadores.Name = "btn_formadores";
-            this.btn_formadores.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
-            this.btn_formadores.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_formadores.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_formadores.OnHoverImage = null;
-            this.btn_formadores.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_formadores.Radius = 10;
-            this.btn_formadores.Size = new System.Drawing.Size(212, 42);
-            this.btn_formadores.TabIndex = 0;
-            this.btn_formadores.Text = "Formadores";
-            this.btn_formadores.Click += new System.EventHandler(this.btn_formadores_Click);
-            // 
-            // btn_mensalidade
-            // 
-            this.btn_mensalidade.AnimationHoverSpeed = 0.07F;
-            this.btn_mensalidade.AnimationSpeed = 0.03F;
-            this.btn_mensalidade.BackColor = System.Drawing.Color.Transparent;
-            this.btn_mensalidade.BaseColor = System.Drawing.SystemColors.Control;
-            this.btn_mensalidade.BorderColor = System.Drawing.Color.Black;
-            this.btn_mensalidade.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_mensalidade.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_mensalidade.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_mensalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.btn_mensalidade.Image = global::SGCC___PERFIL.Properties.Resources.Mensalidade;
-            this.btn_mensalidade.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_mensalidade.Location = new System.Drawing.Point(10, 344);
-            this.btn_mensalidade.Name = "btn_mensalidade";
-            this.btn_mensalidade.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
-            this.btn_mensalidade.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_mensalidade.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_mensalidade.OnHoverImage = null;
-            this.btn_mensalidade.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_mensalidade.Radius = 10;
-            this.btn_mensalidade.Size = new System.Drawing.Size(212, 42);
-            this.btn_mensalidade.TabIndex = 0;
-            this.btn_mensalidade.Text = "Mensalidade";
-            this.btn_mensalidade.Click += new System.EventHandler(this.btn_mensalidade_Click);
-            // 
-            // btn_formandos
-            // 
-            this.btn_formandos.AnimationHoverSpeed = 0.07F;
-            this.btn_formandos.AnimationSpeed = 0.03F;
-            this.btn_formandos.BackColor = System.Drawing.Color.Transparent;
-            this.btn_formandos.BaseColor = System.Drawing.SystemColors.Control;
-            this.btn_formandos.BorderColor = System.Drawing.Color.Black;
-            this.btn_formandos.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_formandos.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_formandos.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_formandos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.btn_formandos.Image = global::SGCC___PERFIL.Properties.Resources.formandos;
-            this.btn_formandos.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_formandos.Location = new System.Drawing.Point(10, 248);
-            this.btn_formandos.Name = "btn_formandos";
-            this.btn_formandos.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
-            this.btn_formandos.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_formandos.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_formandos.OnHoverImage = null;
-            this.btn_formandos.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_formandos.Radius = 10;
-            this.btn_formandos.Size = new System.Drawing.Size(212, 42);
-            this.btn_formandos.TabIndex = 0;
-            this.btn_formandos.Text = "Formandos";
-            this.btn_formandos.Click += new System.EventHandler(this.btn_formandos_Click);
-            // 
-            // btn_cursos
-            // 
-            this.btn_cursos.AnimationHoverSpeed = 0.07F;
-            this.btn_cursos.AnimationSpeed = 0.03F;
-            this.btn_cursos.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cursos.BaseColor = System.Drawing.SystemColors.Control;
-            this.btn_cursos.BorderColor = System.Drawing.Color.Black;
-            this.btn_cursos.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_cursos.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_cursos.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_cursos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.btn_cursos.Image = global::SGCC___PERFIL.Properties.Resources.curso;
-            this.btn_cursos.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_cursos.Location = new System.Drawing.Point(10, 200);
-            this.btn_cursos.Name = "btn_cursos";
-            this.btn_cursos.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
-            this.btn_cursos.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_cursos.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_cursos.OnHoverImage = null;
-            this.btn_cursos.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_cursos.Radius = 10;
-            this.btn_cursos.Size = new System.Drawing.Size(212, 42);
-            this.btn_cursos.TabIndex = 0;
-            this.btn_cursos.Text = "Cursos";
-            this.btn_cursos.Click += new System.EventHandler(this.btn_cursos_Click);
-            // 
-            // btn_stats
-            // 
-            this.btn_stats.AnimationHoverSpeed = 0.07F;
-            this.btn_stats.AnimationSpeed = 0.03F;
-            this.btn_stats.BackColor = System.Drawing.Color.Transparent;
-            this.btn_stats.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btn_stats.BorderColor = System.Drawing.Color.Black;
-            this.btn_stats.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_stats.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_stats.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_stats.ForeColor = System.Drawing.Color.White;
-            this.btn_stats.Image = global::SGCC___PERFIL.Properties.Resources.status_branco;
-            this.btn_stats.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_stats.Location = new System.Drawing.Point(10, 152);
-            this.btn_stats.Name = "btn_stats";
-            this.btn_stats.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
-            this.btn_stats.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_stats.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_stats.OnHoverImage = null;
-            this.btn_stats.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_stats.Radius = 10;
-            this.btn_stats.Size = new System.Drawing.Size(212, 42);
-            this.btn_stats.TabIndex = 0;
-            this.btn_stats.Text = "Estatísticas";
-            this.btn_stats.Click += new System.EventHandler(this.btn_stats_Click);
             // 
             // paginas
             // 
@@ -766,10 +539,10 @@ namespace SGCC___PERFIL
             this.paginas.Location = new System.Drawing.Point(230, 35);
             this.paginas.Multiline = true;
             this.paginas.Name = "paginas";
-            this.paginas.Page = this.usuarios;
-            this.paginas.PageIndex = 12;
-            this.paginas.PageName = "usuarios";
-            this.paginas.PageTitle = "Usuarios";
+            this.paginas.Page = this.definicoes;
+            this.paginas.PageIndex = 10;
+            this.paginas.PageName = "definicoes";
+            this.paginas.PageTitle = "Definições";
             this.paginas.SelectedIndex = 0;
             this.paginas.Size = new System.Drawing.Size(1100, 695);
             this.paginas.TabIndex = 2;
@@ -790,6 +563,7 @@ namespace SGCC___PERFIL
             animation1.TransparencyCoeff = 0F;
             this.paginas.Transition = animation1;
             this.paginas.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Custom;
+            this.paginas.SelectedIndexChanged += new System.EventHandler(this.paginas_SelectedIndexChanged);
             // 
             // status
             // 
@@ -833,7 +607,7 @@ namespace SGCC___PERFIL
             this.gunaShadowPanel3.ShadowColor = System.Drawing.Color.DodgerBlue;
             this.gunaShadowPanel3.ShadowDepth = 70;
             this.gunaShadowPanel3.ShadowShift = 6;
-            this.gunaShadowPanel3.Size = new System.Drawing.Size(605, 290);
+            this.gunaShadowPanel3.Size = new System.Drawing.Size(537, 290);
             this.gunaShadowPanel3.TabIndex = 8;
             // 
             // label15
@@ -845,7 +619,7 @@ namespace SGCC___PERFIL
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.label15.Location = new System.Drawing.Point(468, 14);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(116, 35);
+            this.label15.Size = new System.Drawing.Size(48, 35);
             this.label15.TabIndex = 8;
             this.label15.Text = "Recentes";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -889,7 +663,7 @@ namespace SGCC___PERFIL
             this.dgvStatsformandos.Name = "dgvStatsformandos";
             this.dgvStatsformandos.RowHeadersVisible = false;
             this.dgvStatsformandos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStatsformandos.Size = new System.Drawing.Size(568, 217);
+            this.dgvStatsformandos.Size = new System.Drawing.Size(500, 217);
             this.dgvStatsformandos.TabIndex = 7;
             this.dgvStatsformandos.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvStatsformandos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -924,18 +698,6 @@ namespace SGCC___PERFIL
             this.label13.Text = "Formandos";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // gunaCirclePictureBox8
-            // 
-            this.gunaCirclePictureBox8.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.gunaCirclePictureBox8.Image = global::SGCC___PERFIL.Properties.Resources.formandos;
-            this.gunaCirclePictureBox8.Location = new System.Drawing.Point(9, 7);
-            this.gunaCirclePictureBox8.Name = "gunaCirclePictureBox8";
-            this.gunaCirclePictureBox8.Size = new System.Drawing.Size(35, 35);
-            this.gunaCirclePictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.gunaCirclePictureBox8.TabIndex = 5;
-            this.gunaCirclePictureBox8.TabStop = false;
-            this.gunaCirclePictureBox8.UseTransfarantBackground = false;
-            // 
             // gunaShadowPanel2
             // 
             this.gunaShadowPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -952,7 +714,7 @@ namespace SGCC___PERFIL
             this.gunaShadowPanel2.ShadowColor = System.Drawing.Color.DodgerBlue;
             this.gunaShadowPanel2.ShadowDepth = 70;
             this.gunaShadowPanel2.ShadowShift = 6;
-            this.gunaShadowPanel2.Size = new System.Drawing.Size(605, 241);
+            this.gunaShadowPanel2.Size = new System.Drawing.Size(537, 241);
             this.gunaShadowPanel2.TabIndex = 7;
             // 
             // label14
@@ -964,7 +726,7 @@ namespace SGCC___PERFIL
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.label14.Location = new System.Drawing.Point(465, 7);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 35);
+            this.label14.Size = new System.Drawing.Size(45, 35);
             this.label14.TabIndex = 6;
             this.label14.Text = "Recentes";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1008,7 +770,7 @@ namespace SGCC___PERFIL
             this.dgvStatsCursos.Name = "dgvStatsCursos";
             this.dgvStatsCursos.RowHeadersVisible = false;
             this.dgvStatsCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStatsCursos.Size = new System.Drawing.Size(556, 174);
+            this.dgvStatsCursos.Size = new System.Drawing.Size(488, 174);
             this.dgvStatsCursos.TabIndex = 5;
             this.dgvStatsCursos.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvStatsCursos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -1042,19 +804,6 @@ namespace SGCC___PERFIL
             this.label12.TabIndex = 4;
             this.label12.Text = "Cursos";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // gunaCirclePictureBox7
-            // 
-            this.gunaCirclePictureBox7.BackgroundImage = global::SGCC___PERFIL.Properties.Resources.curso;
-            this.gunaCirclePictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.gunaCirclePictureBox7.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaCirclePictureBox7.Location = new System.Drawing.Point(9, 7);
-            this.gunaCirclePictureBox7.Name = "gunaCirclePictureBox7";
-            this.gunaCirclePictureBox7.Size = new System.Drawing.Size(35, 35);
-            this.gunaCirclePictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox7.TabIndex = 3;
-            this.gunaCirclePictureBox7.TabStop = false;
-            this.gunaCirclePictureBox7.UseTransfarantBackground = false;
             // 
             // gunaShadowPanel1
             // 
@@ -1127,7 +876,7 @@ namespace SGCC___PERFIL
             this.gunaElipsePanel1.Location = new System.Drawing.Point(12, 10);
             this.gunaElipsePanel1.Name = "gunaElipsePanel1";
             this.gunaElipsePanel1.Radius = 20;
-            this.gunaElipsePanel1.Size = new System.Drawing.Size(1054, 120);
+            this.gunaElipsePanel1.Size = new System.Drawing.Size(986, 120);
             this.gunaElipsePanel1.TabIndex = 5;
             // 
             // panel5
@@ -1162,19 +911,6 @@ namespace SGCC___PERFIL
             this.label11.TabIndex = 8;
             this.label11.Text = "Cursos";
             // 
-            // imgStatsCursos
-            // 
-            this.imgStatsCursos.BackgroundImage = global::SGCC___PERFIL.Properties.Resources.curso_branco;
-            this.imgStatsCursos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgStatsCursos.BaseColor = System.Drawing.Color.Transparent;
-            this.imgStatsCursos.Location = new System.Drawing.Point(10, 17);
-            this.imgStatsCursos.Name = "imgStatsCursos";
-            this.imgStatsCursos.Size = new System.Drawing.Size(30, 30);
-            this.imgStatsCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgStatsCursos.TabIndex = 7;
-            this.imgStatsCursos.TabStop = false;
-            this.imgStatsCursos.UseTransfarantBackground = false;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.lblStatsFormadores);
@@ -1206,19 +942,6 @@ namespace SGCC___PERFIL
             this.label9.Size = new System.Drawing.Size(62, 13);
             this.label9.TabIndex = 8;
             this.label9.Text = "Formadores";
-            // 
-            // imgStatsFormadores
-            // 
-            this.imgStatsFormadores.BackgroundImage = global::SGCC___PERFIL.Properties.Resources.formadores_branco;
-            this.imgStatsFormadores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgStatsFormadores.BaseColor = System.Drawing.Color.Transparent;
-            this.imgStatsFormadores.Location = new System.Drawing.Point(9, 17);
-            this.imgStatsFormadores.Name = "imgStatsFormadores";
-            this.imgStatsFormadores.Size = new System.Drawing.Size(30, 30);
-            this.imgStatsFormadores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgStatsFormadores.TabIndex = 7;
-            this.imgStatsFormadores.TabStop = false;
-            this.imgStatsFormadores.UseTransfarantBackground = false;
             // 
             // panel3
             // 
@@ -1252,19 +975,6 @@ namespace SGCC___PERFIL
             this.label7.TabIndex = 8;
             this.label7.Text = "Formandos";
             // 
-            // imgStatsFormandos
-            // 
-            this.imgStatsFormandos.BackgroundImage = global::SGCC___PERFIL.Properties.Resources.formandos_branco;
-            this.imgStatsFormandos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgStatsFormandos.BaseColor = System.Drawing.Color.Transparent;
-            this.imgStatsFormandos.Location = new System.Drawing.Point(9, 17);
-            this.imgStatsFormandos.Name = "imgStatsFormandos";
-            this.imgStatsFormandos.Size = new System.Drawing.Size(30, 30);
-            this.imgStatsFormandos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgStatsFormandos.TabIndex = 7;
-            this.imgStatsFormandos.TabStop = false;
-            this.imgStatsFormandos.UseTransfarantBackground = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label8);
@@ -1296,18 +1006,6 @@ namespace SGCC___PERFIL
             this.lblStatsSaida.TabIndex = 9;
             this.lblStatsSaida.Text = "5.000KZ";
             this.lblStatsSaida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // imgStatsSaida
-            // 
-            this.imgStatsSaida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgStatsSaida.BaseColor = System.Drawing.Color.Transparent;
-            this.imgStatsSaida.Location = new System.Drawing.Point(9, 17);
-            this.imgStatsSaida.Name = "imgStatsSaida";
-            this.imgStatsSaida.Size = new System.Drawing.Size(30, 30);
-            this.imgStatsSaida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgStatsSaida.TabIndex = 8;
-            this.imgStatsSaida.TabStop = false;
-            this.imgStatsSaida.UseTransfarantBackground = false;
             // 
             // panel6
             // 
@@ -1341,18 +1039,6 @@ namespace SGCC___PERFIL
             this.label2.TabIndex = 7;
             this.label2.Text = "Entrada";
             // 
-            // imgStatsEntrada
-            // 
-            this.imgStatsEntrada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgStatsEntrada.BaseColor = System.Drawing.Color.Transparent;
-            this.imgStatsEntrada.Location = new System.Drawing.Point(9, 17);
-            this.imgStatsEntrada.Name = "imgStatsEntrada";
-            this.imgStatsEntrada.Size = new System.Drawing.Size(30, 30);
-            this.imgStatsEntrada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgStatsEntrada.TabIndex = 6;
-            this.imgStatsEntrada.TabStop = false;
-            this.imgStatsEntrada.UseTransfarantBackground = false;
-            // 
             // cursos
             // 
             this.cursos.BackColor = System.Drawing.SystemColors.Control;
@@ -1371,9 +1057,9 @@ namespace SGCC___PERFIL
             // 
             this.rbtnFiltrarCurso_formador.BaseColor = System.Drawing.SystemColors.Control;
             this.rbtnFiltrarCurso_formador.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rbtnFiltrarCurso_formador.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rbtnFiltrarCurso_formador.CheckedOnColor = System.Drawing.Color.DodgerBlue;
             this.rbtnFiltrarCurso_formador.FillColor = System.Drawing.Color.White;
-            this.rbtnFiltrarCurso_formador.Location = new System.Drawing.Point(137, 60);
+            this.rbtnFiltrarCurso_formador.Location = new System.Drawing.Point(73, 60);
             this.rbtnFiltrarCurso_formador.Name = "rbtnFiltrarCurso_formador";
             this.rbtnFiltrarCurso_formador.Size = new System.Drawing.Size(79, 20);
             this.rbtnFiltrarCurso_formador.TabIndex = 4;
@@ -1382,8 +1068,9 @@ namespace SGCC___PERFIL
             // rbtnFiltrarCurso_nome
             // 
             this.rbtnFiltrarCurso_nome.BaseColor = System.Drawing.SystemColors.Control;
+            this.rbtnFiltrarCurso_nome.Checked = true;
             this.rbtnFiltrarCurso_nome.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rbtnFiltrarCurso_nome.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rbtnFiltrarCurso_nome.CheckedOnColor = System.Drawing.Color.DodgerBlue;
             this.rbtnFiltrarCurso_nome.FillColor = System.Drawing.Color.White;
             this.rbtnFiltrarCurso_nome.Location = new System.Drawing.Point(7, 60);
             this.rbtnFiltrarCurso_nome.Name = "rbtnFiltrarCurso_nome";
@@ -1408,11 +1095,15 @@ namespace SGCC___PERFIL
             this.txt_pesquisaCursos.SelectedText = "";
             this.txt_pesquisaCursos.Size = new System.Drawing.Size(491, 42);
             this.txt_pesquisaCursos.TabIndex = 2;
+            this.txt_pesquisaCursos.TextChanged += new System.EventHandler(this.txt_pesquisaCursos_TextChanged);
             // 
             // dgvVistaCursos
             // 
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             this.dgvVistaCursos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvVistaCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVistaCursos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVistaCursos.BackgroundColor = System.Drawing.Color.White;
             this.dgvVistaCursos.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1485,7 +1176,7 @@ namespace SGCC___PERFIL
             // 
             this.rbtnFiltrarFormandos_curso.BaseColor = System.Drawing.SystemColors.Control;
             this.rbtnFiltrarFormandos_curso.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rbtnFiltrarFormandos_curso.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rbtnFiltrarFormandos_curso.CheckedOnColor = System.Drawing.Color.DodgerBlue;
             this.rbtnFiltrarFormandos_curso.FillColor = System.Drawing.Color.White;
             this.rbtnFiltrarFormandos_curso.Location = new System.Drawing.Point(247, 54);
             this.rbtnFiltrarFormandos_curso.Name = "rbtnFiltrarFormandos_curso";
@@ -1497,7 +1188,7 @@ namespace SGCC___PERFIL
             // 
             this.rbtnFiltrarFormandos_nome.BaseColor = System.Drawing.SystemColors.Control;
             this.rbtnFiltrarFormandos_nome.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rbtnFiltrarFormandos_nome.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rbtnFiltrarFormandos_nome.CheckedOnColor = System.Drawing.Color.DodgerBlue;
             this.rbtnFiltrarFormandos_nome.FillColor = System.Drawing.Color.White;
             this.rbtnFiltrarFormandos_nome.Location = new System.Drawing.Point(111, 54);
             this.rbtnFiltrarFormandos_nome.Name = "rbtnFiltrarFormandos_nome";
@@ -1508,8 +1199,9 @@ namespace SGCC___PERFIL
             // rbtnFiltrarFormandos_numero
             // 
             this.rbtnFiltrarFormandos_numero.BaseColor = System.Drawing.SystemColors.Control;
+            this.rbtnFiltrarFormandos_numero.Checked = true;
             this.rbtnFiltrarFormandos_numero.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rbtnFiltrarFormandos_numero.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rbtnFiltrarFormandos_numero.CheckedOnColor = System.Drawing.Color.DodgerBlue;
             this.rbtnFiltrarFormandos_numero.FillColor = System.Drawing.Color.White;
             this.rbtnFiltrarFormandos_numero.Location = new System.Drawing.Point(8, 54);
             this.rbtnFiltrarFormandos_numero.Name = "rbtnFiltrarFormandos_numero";
@@ -1534,11 +1226,15 @@ namespace SGCC___PERFIL
             this.txtPesquisaFormandos.SelectedText = "";
             this.txtPesquisaFormandos.Size = new System.Drawing.Size(491, 42);
             this.txtPesquisaFormandos.TabIndex = 7;
+            this.txtPesquisaFormandos.TextChanged += new System.EventHandler(this.txtPesquisaFormandos_TextChanged);
             // 
             // dgvVistaFormandos
             // 
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
             this.dgvVistaFormandos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvVistaFormandos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVistaFormandos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVistaFormandos.BackgroundColor = System.Drawing.Color.White;
             this.dgvVistaFormandos.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1564,7 +1260,7 @@ namespace SGCC___PERFIL
             this.dgvVistaFormandos.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvVistaFormandos.EnableHeadersVisualStyles = false;
             this.dgvVistaFormandos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvVistaFormandos.Location = new System.Drawing.Point(8, 76);
+            this.dgvVistaFormandos.Location = new System.Drawing.Point(8, 83);
             this.dgvVistaFormandos.Name = "dgvVistaFormandos";
             this.dgvVistaFormandos.RowHeadersVisible = false;
             this.dgvVistaFormandos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1611,7 +1307,7 @@ namespace SGCC___PERFIL
             // 
             this.rbtnFiltrarFormador_curso.BaseColor = System.Drawing.SystemColors.Control;
             this.rbtnFiltrarFormador_curso.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rbtnFiltrarFormador_curso.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rbtnFiltrarFormador_curso.CheckedOnColor = System.Drawing.Color.DodgerBlue;
             this.rbtnFiltrarFormador_curso.FillColor = System.Drawing.Color.White;
             this.rbtnFiltrarFormador_curso.Location = new System.Drawing.Point(142, 54);
             this.rbtnFiltrarFormador_curso.Name = "rbtnFiltrarFormador_curso";
@@ -1622,8 +1318,9 @@ namespace SGCC___PERFIL
             // rbtnFiltraraFormador_nome
             // 
             this.rbtnFiltraraFormador_nome.BaseColor = System.Drawing.SystemColors.Control;
+            this.rbtnFiltraraFormador_nome.Checked = true;
             this.rbtnFiltraraFormador_nome.CheckedOffColor = System.Drawing.Color.Gray;
-            this.rbtnFiltraraFormador_nome.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.rbtnFiltraraFormador_nome.CheckedOnColor = System.Drawing.Color.DodgerBlue;
             this.rbtnFiltraraFormador_nome.FillColor = System.Drawing.Color.White;
             this.rbtnFiltraraFormador_nome.Location = new System.Drawing.Point(8, 54);
             this.rbtnFiltraraFormador_nome.Name = "rbtnFiltraraFormador_nome";
@@ -1648,11 +1345,15 @@ namespace SGCC___PERFIL
             this.txtPesquisaFormadores.SelectedText = "";
             this.txtPesquisaFormadores.Size = new System.Drawing.Size(491, 42);
             this.txtPesquisaFormadores.TabIndex = 13;
+            this.txtPesquisaFormadores.TextChanged += new System.EventHandler(this.txtPesquisaFormadores_TextChanged);
             // 
             // dgvVistaFormadores
             // 
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
             this.dgvVistaFormadores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgvVistaFormadores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVistaFormadores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVistaFormadores.BackgroundColor = System.Drawing.Color.White;
             this.dgvVistaFormadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1711,9 +1412,9 @@ namespace SGCC___PERFIL
             // 
             this.mensalidade.BackColor = System.Drawing.SystemColors.Control;
             this.mensalidade.Controls.Add(this.dgvVistaMensalidade);
-            this.mensalidade.Controls.Add(this.gunaRadioButton2);
-            this.mensalidade.Controls.Add(this.gunaRadioButton1);
-            this.mensalidade.Controls.Add(this.gunaTextBox1);
+            this.mensalidade.Controls.Add(this.rbtnFiltrarMensalidade_nomeFormando);
+            this.mensalidade.Controls.Add(this.rbtnFiltrarMensalidade_numeroFormando);
+            this.mensalidade.Controls.Add(this.txtxPesquisaMensalidade);
             this.mensalidade.Location = new System.Drawing.Point(4, 4);
             this.mensalidade.Name = "mensalidade";
             this.mensalidade.Size = new System.Drawing.Size(1092, 669);
@@ -1724,6 +1425,9 @@ namespace SGCC___PERFIL
             // 
             dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
             this.dgvVistaMensalidade.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.dgvVistaMensalidade.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVistaMensalidade.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVistaMensalidade.BackgroundColor = System.Drawing.Color.White;
             this.dgvVistaMensalidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1778,47 +1482,49 @@ namespace SGCC___PERFIL
             this.dgvVistaMensalidade.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvVistaMensalidade.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // gunaRadioButton2
+            // rbtnFiltrarMensalidade_nomeFormando
             // 
-            this.gunaRadioButton2.BaseColor = System.Drawing.SystemColors.Control;
-            this.gunaRadioButton2.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaRadioButton2.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaRadioButton2.FillColor = System.Drawing.Color.White;
-            this.gunaRadioButton2.Location = new System.Drawing.Point(147, 67);
-            this.gunaRadioButton2.Name = "gunaRadioButton2";
-            this.gunaRadioButton2.Size = new System.Drawing.Size(108, 20);
-            this.gunaRadioButton2.TabIndex = 1;
-            this.gunaRadioButton2.Text = "Nome do Aluno";
+            this.rbtnFiltrarMensalidade_nomeFormando.BaseColor = System.Drawing.SystemColors.Control;
+            this.rbtnFiltrarMensalidade_nomeFormando.CheckedOffColor = System.Drawing.Color.Gray;
+            this.rbtnFiltrarMensalidade_nomeFormando.CheckedOnColor = System.Drawing.Color.DodgerBlue;
+            this.rbtnFiltrarMensalidade_nomeFormando.FillColor = System.Drawing.Color.White;
+            this.rbtnFiltrarMensalidade_nomeFormando.Location = new System.Drawing.Point(147, 67);
+            this.rbtnFiltrarMensalidade_nomeFormando.Name = "rbtnFiltrarMensalidade_nomeFormando";
+            this.rbtnFiltrarMensalidade_nomeFormando.Size = new System.Drawing.Size(130, 20);
+            this.rbtnFiltrarMensalidade_nomeFormando.TabIndex = 1;
+            this.rbtnFiltrarMensalidade_nomeFormando.Text = "Nome do Formando";
             // 
-            // gunaRadioButton1
+            // rbtnFiltrarMensalidade_numeroFormando
             // 
-            this.gunaRadioButton1.BaseColor = System.Drawing.SystemColors.Control;
-            this.gunaRadioButton1.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaRadioButton1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaRadioButton1.FillColor = System.Drawing.Color.White;
-            this.gunaRadioButton1.Location = new System.Drawing.Point(17, 67);
-            this.gunaRadioButton1.Name = "gunaRadioButton1";
-            this.gunaRadioButton1.Size = new System.Drawing.Size(90, 20);
-            this.gunaRadioButton1.TabIndex = 1;
-            this.gunaRadioButton1.Text = "Nº do Aluno";
+            this.rbtnFiltrarMensalidade_numeroFormando.BaseColor = System.Drawing.SystemColors.Control;
+            this.rbtnFiltrarMensalidade_numeroFormando.Checked = true;
+            this.rbtnFiltrarMensalidade_numeroFormando.CheckedOffColor = System.Drawing.Color.Gray;
+            this.rbtnFiltrarMensalidade_numeroFormando.CheckedOnColor = System.Drawing.Color.DodgerBlue;
+            this.rbtnFiltrarMensalidade_numeroFormando.FillColor = System.Drawing.Color.White;
+            this.rbtnFiltrarMensalidade_numeroFormando.Location = new System.Drawing.Point(17, 67);
+            this.rbtnFiltrarMensalidade_numeroFormando.Name = "rbtnFiltrarMensalidade_numeroFormando";
+            this.rbtnFiltrarMensalidade_numeroFormando.Size = new System.Drawing.Size(112, 20);
+            this.rbtnFiltrarMensalidade_numeroFormando.TabIndex = 1;
+            this.rbtnFiltrarMensalidade_numeroFormando.Text = "Nº do Formando";
             // 
-            // gunaTextBox1
+            // txtxPesquisaMensalidade
             // 
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(17, 19);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 10;
-            this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(491, 42);
-            this.gunaTextBox1.TabIndex = 0;
+            this.txtxPesquisaMensalidade.BackColor = System.Drawing.Color.Transparent;
+            this.txtxPesquisaMensalidade.BaseColor = System.Drawing.Color.White;
+            this.txtxPesquisaMensalidade.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txtxPesquisaMensalidade.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtxPesquisaMensalidade.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtxPesquisaMensalidade.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtxPesquisaMensalidade.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtxPesquisaMensalidade.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtxPesquisaMensalidade.Location = new System.Drawing.Point(17, 19);
+            this.txtxPesquisaMensalidade.Name = "txtxPesquisaMensalidade";
+            this.txtxPesquisaMensalidade.PasswordChar = '\0';
+            this.txtxPesquisaMensalidade.Radius = 10;
+            this.txtxPesquisaMensalidade.SelectedText = "";
+            this.txtxPesquisaMensalidade.Size = new System.Drawing.Size(491, 42);
+            this.txtxPesquisaMensalidade.TabIndex = 0;
+            this.txtxPesquisaMensalidade.TextChanged += new System.EventHandler(this.txtxPesquisaMensalidade_TextChanged);
             // 
             // gestao_curso
             // 
@@ -2084,109 +1790,6 @@ namespace SGCC___PERFIL
             this.txtNomeCurso.Size = new System.Drawing.Size(1047, 42);
             this.txtNomeCurso.TabIndex = 4;
             // 
-            // btnPesquisarCurso
-            // 
-            this.btnPesquisarCurso.AnimationHoverSpeed = 0.07F;
-            this.btnPesquisarCurso.AnimationSpeed = 0.03F;
-            this.btnPesquisarCurso.BackColor = System.Drawing.Color.Transparent;
-            this.btnPesquisarCurso.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnPesquisarCurso.BorderColor = System.Drawing.Color.Black;
-            this.btnPesquisarCurso.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnPesquisarCurso.FocusedColor = System.Drawing.Color.Empty;
-            this.btnPesquisarCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPesquisarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisarCurso.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
-            this.btnPesquisarCurso.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnPesquisarCurso.Location = new System.Drawing.Point(530, 201);
-            this.btnPesquisarCurso.Name = "btnPesquisarCurso";
-            this.btnPesquisarCurso.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btnPesquisarCurso.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnPesquisarCurso.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnPesquisarCurso.OnHoverImage = null;
-            this.btnPesquisarCurso.OnPressedColor = System.Drawing.Color.Black;
-            this.btnPesquisarCurso.Radius = 10;
-            this.btnPesquisarCurso.Size = new System.Drawing.Size(212, 42);
-            this.btnPesquisarCurso.TabIndex = 18;
-            this.btnPesquisarCurso.Text = "Pesquisar Curso";
-            // 
-            // btnEliminarCurso
-            // 
-            this.btnEliminarCurso.AnimationHoverSpeed = 0.07F;
-            this.btnEliminarCurso.AnimationSpeed = 0.03F;
-            this.btnEliminarCurso.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminarCurso.BaseColor = System.Drawing.Color.DarkRed;
-            this.btnEliminarCurso.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminarCurso.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnEliminarCurso.FocusedColor = System.Drawing.Color.Empty;
-            this.btnEliminarCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEliminarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarCurso.Image = global::SGCC___PERFIL.Properties.Resources.apagar_branco1;
-            this.btnEliminarCurso.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminarCurso.Location = new System.Drawing.Point(748, 201);
-            this.btnEliminarCurso.Name = "btnEliminarCurso";
-            this.btnEliminarCurso.OnHoverBaseColor = System.Drawing.Color.Brown;
-            this.btnEliminarCurso.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnEliminarCurso.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnEliminarCurso.OnHoverImage = null;
-            this.btnEliminarCurso.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEliminarCurso.Radius = 10;
-            this.btnEliminarCurso.Size = new System.Drawing.Size(212, 42);
-            this.btnEliminarCurso.TabIndex = 12;
-            this.btnEliminarCurso.Text = "Eliminar Curso";
-            this.btnEliminarCurso.Click += new System.EventHandler(this.btnEliminarCurso_Click);
-            // 
-            // btnEditarCurso
-            // 
-            this.btnEditarCurso.AnimationHoverSpeed = 0.07F;
-            this.btnEditarCurso.AnimationSpeed = 0.03F;
-            this.btnEditarCurso.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditarCurso.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnEditarCurso.BorderColor = System.Drawing.Color.Black;
-            this.btnEditarCurso.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnEditarCurso.FocusedColor = System.Drawing.Color.Empty;
-            this.btnEditarCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEditarCurso.ForeColor = System.Drawing.Color.White;
-            this.btnEditarCurso.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
-            this.btnEditarCurso.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEditarCurso.Location = new System.Drawing.Point(312, 201);
-            this.btnEditarCurso.Name = "btnEditarCurso";
-            this.btnEditarCurso.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btnEditarCurso.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnEditarCurso.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnEditarCurso.OnHoverImage = null;
-            this.btnEditarCurso.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEditarCurso.Radius = 10;
-            this.btnEditarCurso.Size = new System.Drawing.Size(212, 42);
-            this.btnEditarCurso.TabIndex = 14;
-            this.btnEditarCurso.Text = "Editar Curso";
-            this.btnEditarCurso.Click += new System.EventHandler(this.btnEditarCurso_Click);
-            // 
-            // btnNovoCurso
-            // 
-            this.btnNovoCurso.AnimationHoverSpeed = 0.07F;
-            this.btnNovoCurso.AnimationSpeed = 0.03F;
-            this.btnNovoCurso.BackColor = System.Drawing.Color.Transparent;
-            this.btnNovoCurso.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnNovoCurso.BorderColor = System.Drawing.Color.Black;
-            this.btnNovoCurso.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnNovoCurso.FocusedColor = System.Drawing.Color.Empty;
-            this.btnNovoCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNovoCurso.ForeColor = System.Drawing.Color.White;
-            this.btnNovoCurso.Image = global::SGCC___PERFIL.Properties.Resources.add_branco;
-            this.btnNovoCurso.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnNovoCurso.Location = new System.Drawing.Point(94, 201);
-            this.btnNovoCurso.Name = "btnNovoCurso";
-            this.btnNovoCurso.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btnNovoCurso.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnNovoCurso.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnNovoCurso.OnHoverImage = null;
-            this.btnNovoCurso.OnPressedColor = System.Drawing.Color.Black;
-            this.btnNovoCurso.Radius = 10;
-            this.btnNovoCurso.Size = new System.Drawing.Size(212, 42);
-            this.btnNovoCurso.TabIndex = 0;
-            this.btnNovoCurso.Text = "Novo Curso";
-            this.btnNovoCurso.Click += new System.EventHandler(this.btnNovoCurso_Click);
-            // 
             // gestao_fomandos
             // 
             this.gestao_fomandos.AutoScroll = true;
@@ -2213,8 +1816,6 @@ namespace SGCC___PERFIL
             this.gestao_fomandos.Controls.Add(this.label23);
             this.gestao_fomandos.Controls.Add(this.label22);
             this.gestao_fomandos.Controls.Add(this.txtNomeFormando);
-            this.gestao_fomandos.Controls.Add(this.label21);
-            this.gestao_fomandos.Controls.Add(this.txtCodFormando);
             this.gestao_fomandos.Controls.Add(this.btnPesquisarFormando);
             this.gestao_fomandos.Controls.Add(this.btnEliminarFormandos);
             this.gestao_fomandos.Controls.Add(this.btnEditarFormando);
@@ -2634,6 +2235,7 @@ namespace SGCC___PERFIL
             this.txtIDBI.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtIDBI.ForeColor = System.Drawing.Color.DodgerBlue;
             this.txtIDBI.Location = new System.Drawing.Point(18, 64);
+            this.txtIDBI.MaxLength = 14;
             this.txtIDBI.Name = "txtIDBI";
             this.txtIDBI.PasswordChar = '\0';
             this.txtIDBI.Radius = 10;
@@ -2707,12 +2309,14 @@ namespace SGCC___PERFIL
             this.txtNumeroTlfFormando.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtNumeroTlfFormando.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNumeroTlfFormando.Location = new System.Drawing.Point(508, 91);
+            this.txtNumeroTlfFormando.MaxLength = 9;
             this.txtNumeroTlfFormando.Name = "txtNumeroTlfFormando";
             this.txtNumeroTlfFormando.PasswordChar = '\0';
             this.txtNumeroTlfFormando.Radius = 10;
             this.txtNumeroTlfFormando.SelectedText = "";
             this.txtNumeroTlfFormando.Size = new System.Drawing.Size(199, 48);
             this.txtNumeroTlfFormando.TabIndex = 11;
+            this.txtNumeroTlfFormando.TextChanged += new System.EventHandler(this.txtNumeroTlfFormando_TextChanged);
             // 
             // cbxCursoFormando
             // 
@@ -2748,7 +2352,7 @@ namespace SGCC___PERFIL
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(181, 5);
+            this.label22.Location = new System.Drawing.Point(7, 6);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(100, 13);
             this.label22.TabIndex = 7;
@@ -2764,144 +2368,13 @@ namespace SGCC___PERFIL
             this.txtNomeFormando.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtNomeFormando.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtNomeFormando.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNomeFormando.Location = new System.Drawing.Point(177, 21);
+            this.txtNomeFormando.Location = new System.Drawing.Point(3, 21);
             this.txtNomeFormando.Name = "txtNomeFormando";
             this.txtNomeFormando.PasswordChar = '\0';
             this.txtNomeFormando.Radius = 10;
             this.txtNomeFormando.SelectedText = "";
-            this.txtNomeFormando.Size = new System.Drawing.Size(891, 42);
+            this.txtNomeFormando.Size = new System.Drawing.Size(1065, 42);
             this.txtNomeFormando.TabIndex = 6;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(7, 5);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(69, 13);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "Nº Formando";
-            // 
-            // txtCodFormando
-            // 
-            this.txtCodFormando.BackColor = System.Drawing.Color.Transparent;
-            this.txtCodFormando.BaseColor = System.Drawing.Color.White;
-            this.txtCodFormando.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.txtCodFormando.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCodFormando.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtCodFormando.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtCodFormando.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCodFormando.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCodFormando.Location = new System.Drawing.Point(3, 21);
-            this.txtCodFormando.Name = "txtCodFormando";
-            this.txtCodFormando.PasswordChar = '\0';
-            this.txtCodFormando.Radius = 10;
-            this.txtCodFormando.SelectedText = "";
-            this.txtCodFormando.Size = new System.Drawing.Size(144, 42);
-            this.txtCodFormando.TabIndex = 4;
-            // 
-            // btnPesquisarFormando
-            // 
-            this.btnPesquisarFormando.AnimationHoverSpeed = 0.07F;
-            this.btnPesquisarFormando.AnimationSpeed = 0.03F;
-            this.btnPesquisarFormando.BackColor = System.Drawing.Color.Transparent;
-            this.btnPesquisarFormando.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnPesquisarFormando.BorderColor = System.Drawing.Color.Black;
-            this.btnPesquisarFormando.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnPesquisarFormando.FocusedColor = System.Drawing.Color.Empty;
-            this.btnPesquisarFormando.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPesquisarFormando.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisarFormando.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
-            this.btnPesquisarFormando.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnPesquisarFormando.Location = new System.Drawing.Point(535, 525);
-            this.btnPesquisarFormando.Name = "btnPesquisarFormando";
-            this.btnPesquisarFormando.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btnPesquisarFormando.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnPesquisarFormando.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnPesquisarFormando.OnHoverImage = null;
-            this.btnPesquisarFormando.OnPressedColor = System.Drawing.Color.Black;
-            this.btnPesquisarFormando.Radius = 10;
-            this.btnPesquisarFormando.Size = new System.Drawing.Size(212, 42);
-            this.btnPesquisarFormando.TabIndex = 34;
-            this.btnPesquisarFormando.Text = "Pesquisar Formando";
-            // 
-            // btnEliminarFormandos
-            // 
-            this.btnEliminarFormandos.AnimationHoverSpeed = 0.07F;
-            this.btnEliminarFormandos.AnimationSpeed = 0.03F;
-            this.btnEliminarFormandos.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminarFormandos.BaseColor = System.Drawing.Color.DarkRed;
-            this.btnEliminarFormandos.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminarFormandos.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnEliminarFormandos.FocusedColor = System.Drawing.Color.Empty;
-            this.btnEliminarFormandos.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEliminarFormandos.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarFormandos.Image = global::SGCC___PERFIL.Properties.Resources.apagar_branco;
-            this.btnEliminarFormandos.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminarFormandos.Location = new System.Drawing.Point(753, 525);
-            this.btnEliminarFormandos.Name = "btnEliminarFormandos";
-            this.btnEliminarFormandos.OnHoverBaseColor = System.Drawing.Color.Brown;
-            this.btnEliminarFormandos.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnEliminarFormandos.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnEliminarFormandos.OnHoverImage = null;
-            this.btnEliminarFormandos.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEliminarFormandos.Radius = 10;
-            this.btnEliminarFormandos.Size = new System.Drawing.Size(212, 42);
-            this.btnEliminarFormandos.TabIndex = 30;
-            this.btnEliminarFormandos.Text = "Eliminar Formando";
-            this.btnEliminarFormandos.Click += new System.EventHandler(this.btnEliminarFormandos_Click);
-            // 
-            // btnEditarFormando
-            // 
-            this.btnEditarFormando.AnimationHoverSpeed = 0.07F;
-            this.btnEditarFormando.AnimationSpeed = 0.03F;
-            this.btnEditarFormando.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditarFormando.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnEditarFormando.BorderColor = System.Drawing.Color.Black;
-            this.btnEditarFormando.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnEditarFormando.FocusedColor = System.Drawing.Color.Empty;
-            this.btnEditarFormando.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEditarFormando.ForeColor = System.Drawing.Color.White;
-            this.btnEditarFormando.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
-            this.btnEditarFormando.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEditarFormando.Location = new System.Drawing.Point(317, 525);
-            this.btnEditarFormando.Name = "btnEditarFormando";
-            this.btnEditarFormando.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btnEditarFormando.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnEditarFormando.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnEditarFormando.OnHoverImage = null;
-            this.btnEditarFormando.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEditarFormando.Radius = 10;
-            this.btnEditarFormando.Size = new System.Drawing.Size(212, 42);
-            this.btnEditarFormando.TabIndex = 31;
-            this.btnEditarFormando.Text = "Editar Formando";
-            this.btnEditarFormando.Click += new System.EventHandler(this.btnEditarFormando_Click);
-            // 
-            // btnNovoFormando
-            // 
-            this.btnNovoFormando.AnimationHoverSpeed = 0.07F;
-            this.btnNovoFormando.AnimationSpeed = 0.03F;
-            this.btnNovoFormando.BackColor = System.Drawing.Color.Transparent;
-            this.btnNovoFormando.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnNovoFormando.BorderColor = System.Drawing.Color.Black;
-            this.btnNovoFormando.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnNovoFormando.FocusedColor = System.Drawing.Color.Empty;
-            this.btnNovoFormando.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNovoFormando.ForeColor = System.Drawing.Color.White;
-            this.btnNovoFormando.Image = global::SGCC___PERFIL.Properties.Resources.add_branco;
-            this.btnNovoFormando.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnNovoFormando.Location = new System.Drawing.Point(99, 525);
-            this.btnNovoFormando.Name = "btnNovoFormando";
-            this.btnNovoFormando.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btnNovoFormando.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnNovoFormando.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnNovoFormando.OnHoverImage = null;
-            this.btnNovoFormando.OnPressedColor = System.Drawing.Color.Black;
-            this.btnNovoFormando.Radius = 10;
-            this.btnNovoFormando.Size = new System.Drawing.Size(212, 42);
-            this.btnNovoFormando.TabIndex = 29;
-            this.btnNovoFormando.Text = "Novo Formando";
-            this.btnNovoFormando.Click += new System.EventHandler(this.btnNovoFormando_Click);
             // 
             // gestao_formadores
             // 
@@ -3181,109 +2654,6 @@ namespace SGCC___PERFIL
             this.txtCodFormador.Size = new System.Drawing.Size(144, 42);
             this.txtCodFormador.TabIndex = 17;
             // 
-            // btnPesquisarFormador
-            // 
-            this.btnPesquisarFormador.AnimationHoverSpeed = 0.07F;
-            this.btnPesquisarFormador.AnimationSpeed = 0.03F;
-            this.btnPesquisarFormador.BackColor = System.Drawing.Color.Transparent;
-            this.btnPesquisarFormador.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnPesquisarFormador.BorderColor = System.Drawing.Color.Black;
-            this.btnPesquisarFormador.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnPesquisarFormador.FocusedColor = System.Drawing.Color.Empty;
-            this.btnPesquisarFormador.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPesquisarFormador.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisarFormador.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
-            this.btnPesquisarFormador.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnPesquisarFormador.Location = new System.Drawing.Point(529, 197);
-            this.btnPesquisarFormador.Name = "btnPesquisarFormador";
-            this.btnPesquisarFormador.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btnPesquisarFormador.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnPesquisarFormador.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnPesquisarFormador.OnHoverImage = null;
-            this.btnPesquisarFormador.OnPressedColor = System.Drawing.Color.Black;
-            this.btnPesquisarFormador.Radius = 10;
-            this.btnPesquisarFormador.Size = new System.Drawing.Size(212, 42);
-            this.btnPesquisarFormador.TabIndex = 35;
-            this.btnPesquisarFormador.Text = "Pesquisar Formador";
-            // 
-            // btnEliminarFormador
-            // 
-            this.btnEliminarFormador.AnimationHoverSpeed = 0.07F;
-            this.btnEliminarFormador.AnimationSpeed = 0.03F;
-            this.btnEliminarFormador.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminarFormador.BaseColor = System.Drawing.Color.DarkRed;
-            this.btnEliminarFormador.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminarFormador.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnEliminarFormador.FocusedColor = System.Drawing.Color.Empty;
-            this.btnEliminarFormador.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEliminarFormador.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarFormador.Image = global::SGCC___PERFIL.Properties.Resources.apagar_branco;
-            this.btnEliminarFormador.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEliminarFormador.Location = new System.Drawing.Point(747, 197);
-            this.btnEliminarFormador.Name = "btnEliminarFormador";
-            this.btnEliminarFormador.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btnEliminarFormador.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnEliminarFormador.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.btnEliminarFormador.OnHoverImage = null;
-            this.btnEliminarFormador.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEliminarFormador.Radius = 10;
-            this.btnEliminarFormador.Size = new System.Drawing.Size(212, 42);
-            this.btnEliminarFormador.TabIndex = 28;
-            this.btnEliminarFormador.Text = "Eliminar Formador";
-            this.btnEliminarFormador.Click += new System.EventHandler(this.btnEliminarFormador_Click);
-            // 
-            // btnEditarFormador
-            // 
-            this.btnEditarFormador.AnimationHoverSpeed = 0.07F;
-            this.btnEditarFormador.AnimationSpeed = 0.03F;
-            this.btnEditarFormador.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditarFormador.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnEditarFormador.BorderColor = System.Drawing.Color.Black;
-            this.btnEditarFormador.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnEditarFormador.FocusedColor = System.Drawing.Color.Empty;
-            this.btnEditarFormador.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEditarFormador.ForeColor = System.Drawing.Color.White;
-            this.btnEditarFormador.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
-            this.btnEditarFormador.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEditarFormador.Location = new System.Drawing.Point(311, 197);
-            this.btnEditarFormador.Name = "btnEditarFormador";
-            this.btnEditarFormador.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btnEditarFormador.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnEditarFormador.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnEditarFormador.OnHoverImage = null;
-            this.btnEditarFormador.OnPressedColor = System.Drawing.Color.Black;
-            this.btnEditarFormador.Radius = 10;
-            this.btnEditarFormador.Size = new System.Drawing.Size(212, 42);
-            this.btnEditarFormador.TabIndex = 29;
-            this.btnEditarFormador.Text = "Editar Formador";
-            this.btnEditarFormador.Click += new System.EventHandler(this.btnEditarFormador_Click);
-            // 
-            // btnNovoFormadores
-            // 
-            this.btnNovoFormadores.AnimationHoverSpeed = 0.07F;
-            this.btnNovoFormadores.AnimationSpeed = 0.03F;
-            this.btnNovoFormadores.BackColor = System.Drawing.Color.Transparent;
-            this.btnNovoFormadores.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnNovoFormadores.BorderColor = System.Drawing.Color.Black;
-            this.btnNovoFormadores.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnNovoFormadores.FocusedColor = System.Drawing.Color.Empty;
-            this.btnNovoFormadores.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNovoFormadores.ForeColor = System.Drawing.Color.White;
-            this.btnNovoFormadores.Image = global::SGCC___PERFIL.Properties.Resources.add_branco;
-            this.btnNovoFormadores.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnNovoFormadores.Location = new System.Drawing.Point(93, 197);
-            this.btnNovoFormadores.Name = "btnNovoFormadores";
-            this.btnNovoFormadores.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btnNovoFormadores.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnNovoFormadores.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnNovoFormadores.OnHoverImage = null;
-            this.btnNovoFormadores.OnPressedColor = System.Drawing.Color.Black;
-            this.btnNovoFormadores.Radius = 10;
-            this.btnNovoFormadores.Size = new System.Drawing.Size(212, 42);
-            this.btnNovoFormadores.TabIndex = 16;
-            this.btnNovoFormadores.Text = "Novo Formador";
-            this.btnNovoFormadores.Click += new System.EventHandler(this.btnNovoFormadores_Click);
-            // 
             // gestao_mensalidade
             // 
             this.gestao_mensalidade.AutoScroll = true;
@@ -3486,57 +2856,6 @@ namespace SGCC___PERFIL
             this.txtMensalidadeFormando.Size = new System.Drawing.Size(566, 48);
             this.txtMensalidadeFormando.TabIndex = 38;
             // 
-            // btnPesquisarAlunoMensalidade
-            // 
-            this.btnPesquisarAlunoMensalidade.AnimationHoverSpeed = 0.07F;
-            this.btnPesquisarAlunoMensalidade.AnimationSpeed = 0.03F;
-            this.btnPesquisarAlunoMensalidade.BackColor = System.Drawing.Color.Transparent;
-            this.btnPesquisarAlunoMensalidade.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnPesquisarAlunoMensalidade.BorderColor = System.Drawing.Color.Black;
-            this.btnPesquisarAlunoMensalidade.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnPesquisarAlunoMensalidade.FocusedColor = System.Drawing.Color.Empty;
-            this.btnPesquisarAlunoMensalidade.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPesquisarAlunoMensalidade.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisarAlunoMensalidade.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
-            this.btnPesquisarAlunoMensalidade.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnPesquisarAlunoMensalidade.Location = new System.Drawing.Point(541, 117);
-            this.btnPesquisarAlunoMensalidade.Name = "btnPesquisarAlunoMensalidade";
-            this.btnPesquisarAlunoMensalidade.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btnPesquisarAlunoMensalidade.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnPesquisarAlunoMensalidade.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnPesquisarAlunoMensalidade.OnHoverImage = null;
-            this.btnPesquisarAlunoMensalidade.OnPressedColor = System.Drawing.Color.Black;
-            this.btnPesquisarAlunoMensalidade.Radius = 10;
-            this.btnPesquisarAlunoMensalidade.Size = new System.Drawing.Size(212, 42);
-            this.btnPesquisarAlunoMensalidade.TabIndex = 46;
-            this.btnPesquisarAlunoMensalidade.Text = "Pesquisar Aluno";
-            // 
-            // btnNovoPagamento
-            // 
-            this.btnNovoPagamento.AnimationHoverSpeed = 0.07F;
-            this.btnNovoPagamento.AnimationSpeed = 0.03F;
-            this.btnNovoPagamento.BackColor = System.Drawing.Color.Transparent;
-            this.btnNovoPagamento.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnNovoPagamento.BorderColor = System.Drawing.Color.Black;
-            this.btnNovoPagamento.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnNovoPagamento.FocusedColor = System.Drawing.Color.Empty;
-            this.btnNovoPagamento.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNovoPagamento.ForeColor = System.Drawing.Color.White;
-            this.btnNovoPagamento.Image = global::SGCC___PERFIL.Properties.Resources.add_branco;
-            this.btnNovoPagamento.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnNovoPagamento.Location = new System.Drawing.Point(323, 117);
-            this.btnNovoPagamento.Name = "btnNovoPagamento";
-            this.btnNovoPagamento.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btnNovoPagamento.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnNovoPagamento.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnNovoPagamento.OnHoverImage = null;
-            this.btnNovoPagamento.OnPressedColor = System.Drawing.Color.Black;
-            this.btnNovoPagamento.Radius = 10;
-            this.btnNovoPagamento.Size = new System.Drawing.Size(212, 42);
-            this.btnNovoPagamento.TabIndex = 35;
-            this.btnNovoPagamento.Text = "Novo Pagamento";
-            this.btnNovoPagamento.Click += new System.EventHandler(this.btnNovoPagamento_Click);
-            // 
             // opcoes
             // 
             this.opcoes.BackColor = System.Drawing.SystemColors.Control;
@@ -3605,17 +2924,6 @@ namespace SGCC___PERFIL
             this.VerRelatorios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.VerRelatorios.Click += new System.EventHandler(this.VerRelatorios_Click);
             // 
-            // gunaCirclePictureBox6
-            // 
-            this.gunaCirclePictureBox6.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.gunaCirclePictureBox6.Location = new System.Drawing.Point(307, 21);
-            this.gunaCirclePictureBox6.Name = "gunaCirclePictureBox6";
-            this.gunaCirclePictureBox6.Size = new System.Drawing.Size(158, 158);
-            this.gunaCirclePictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox6.TabIndex = 10;
-            this.gunaCirclePictureBox6.TabStop = false;
-            this.gunaCirclePictureBox6.UseTransfarantBackground = false;
-            // 
             // label44
             // 
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3680,17 +2988,6 @@ namespace SGCC___PERFIL
             this.btnGerenUsuarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnGerenUsuarios.Click += new System.EventHandler(this.btnGerenUsuarios_Click);
             // 
-            // gunaCirclePictureBox5
-            // 
-            this.gunaCirclePictureBox5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.gunaCirclePictureBox5.Location = new System.Drawing.Point(307, 21);
-            this.gunaCirclePictureBox5.Name = "gunaCirclePictureBox5";
-            this.gunaCirclePictureBox5.Size = new System.Drawing.Size(158, 158);
-            this.gunaCirclePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox5.TabIndex = 10;
-            this.gunaCirclePictureBox5.TabStop = false;
-            this.gunaCirclePictureBox5.UseTransfarantBackground = false;
-            // 
             // label42
             // 
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3753,17 +3050,6 @@ namespace SGCC___PERFIL
             this.btnGerenMensalidade.Text = "Gerenciar Mensalidade";
             this.btnGerenMensalidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnGerenMensalidade.Click += new System.EventHandler(this.btnGerenMensalidade_Click);
-            // 
-            // gunaCirclePictureBox4
-            // 
-            this.gunaCirclePictureBox4.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.gunaCirclePictureBox4.Location = new System.Drawing.Point(307, 21);
-            this.gunaCirclePictureBox4.Name = "gunaCirclePictureBox4";
-            this.gunaCirclePictureBox4.Size = new System.Drawing.Size(158, 158);
-            this.gunaCirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox4.TabIndex = 10;
-            this.gunaCirclePictureBox4.TabStop = false;
-            this.gunaCirclePictureBox4.UseTransfarantBackground = false;
             // 
             // label41
             // 
@@ -3829,17 +3115,6 @@ namespace SGCC___PERFIL
             this.btnGerenFormadores.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnGerenFormadores.Click += new System.EventHandler(this.btnGerenFormadores_Click);
             // 
-            // gunaCirclePictureBox3
-            // 
-            this.gunaCirclePictureBox3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.gunaCirclePictureBox3.Location = new System.Drawing.Point(307, 21);
-            this.gunaCirclePictureBox3.Name = "gunaCirclePictureBox3";
-            this.gunaCirclePictureBox3.Size = new System.Drawing.Size(158, 158);
-            this.gunaCirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox3.TabIndex = 10;
-            this.gunaCirclePictureBox3.TabStop = false;
-            this.gunaCirclePictureBox3.UseTransfarantBackground = false;
-            // 
             // label39
             // 
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3903,17 +3178,6 @@ namespace SGCC___PERFIL
             this.btnGerenCursos.Text = "Gerenciar Cursos";
             this.btnGerenCursos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnGerenCursos.Click += new System.EventHandler(this.btnGerenCursos_Click);
-            // 
-            // gunaCirclePictureBox2
-            // 
-            this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(307, 21);
-            this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
-            this.gunaCirclePictureBox2.Size = new System.Drawing.Size(158, 158);
-            this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox2.TabIndex = 10;
-            this.gunaCirclePictureBox2.TabStop = false;
-            this.gunaCirclePictureBox2.UseTransfarantBackground = false;
             // 
             // label37
             // 
@@ -3979,17 +3243,6 @@ namespace SGCC___PERFIL
             this.btnGerenFormandos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnGerenFormandos.Click += new System.EventHandler(this.btnGerenFormandos_Click);
             // 
-            // gunaCirclePictureBox1
-            // 
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(307, 21);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(158, 158);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.gunaCirclePictureBox1.TabIndex = 10;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
-            // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4014,7 +3267,6 @@ namespace SGCC___PERFIL
             // 
             this.flowLayoutPanel1.Controls.Add(this.gunaShadowPanel7);
             this.flowLayoutPanel1.Controls.Add(this.gunaShadowPanel12);
-            this.flowLayoutPanel1.Controls.Add(this.gunaShadowPanel6);
             this.flowLayoutPanel1.Controls.Add(this.gunaShadowPanel13);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -4100,13 +3352,13 @@ namespace SGCC___PERFIL
             this.gunaShadowPanel12.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel12.BaseColor = System.Drawing.Color.White;
             this.gunaShadowPanel12.Controls.Add(this.gunaLabel7);
-            this.gunaShadowPanel12.Controls.Add(this.gunaTextBox7);
+            this.gunaShadowPanel12.Controls.Add(this.txt_precarioCartao);
             this.gunaShadowPanel12.Controls.Add(this.gunaLabel6);
-            this.gunaShadowPanel12.Controls.Add(this.gunaTextBox6);
+            this.gunaShadowPanel12.Controls.Add(this.txt_precarioCertificado);
             this.gunaShadowPanel12.Controls.Add(this.gunaLabel5);
-            this.gunaShadowPanel12.Controls.Add(this.gunaTextBox3);
+            this.gunaShadowPanel12.Controls.Add(this.txt_precarioMensalidade);
             this.gunaShadowPanel12.Controls.Add(this.gunaLabel3);
-            this.gunaShadowPanel12.Controls.Add(this.gunaTextBox2);
+            this.gunaShadowPanel12.Controls.Add(this.txt_precarioInscricao);
             this.gunaShadowPanel12.Controls.Add(this.label16);
             this.gunaShadowPanel12.Location = new System.Drawing.Point(189, 3);
             this.gunaShadowPanel12.Name = "gunaShadowPanel12";
@@ -4128,23 +3380,23 @@ namespace SGCC___PERFIL
             this.gunaLabel7.TabIndex = 48;
             this.gunaLabel7.Text = "Cartão de Formando";
             // 
-            // gunaTextBox7
+            // txt_precarioCartao
             // 
-            this.gunaTextBox7.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox7.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox7.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.gunaTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox7.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox7.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox7.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox7.Location = new System.Drawing.Point(186, 145);
-            this.gunaTextBox7.Name = "gunaTextBox7";
-            this.gunaTextBox7.PasswordChar = '\0';
-            this.gunaTextBox7.Radius = 10;
-            this.gunaTextBox7.SelectedText = "";
-            this.gunaTextBox7.Size = new System.Drawing.Size(142, 34);
-            this.gunaTextBox7.TabIndex = 47;
+            this.txt_precarioCartao.BackColor = System.Drawing.Color.Transparent;
+            this.txt_precarioCartao.BaseColor = System.Drawing.Color.White;
+            this.txt_precarioCartao.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txt_precarioCartao.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_precarioCartao.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_precarioCartao.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_precarioCartao.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_precarioCartao.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_precarioCartao.Location = new System.Drawing.Point(186, 145);
+            this.txt_precarioCartao.Name = "txt_precarioCartao";
+            this.txt_precarioCartao.PasswordChar = '\0';
+            this.txt_precarioCartao.Radius = 10;
+            this.txt_precarioCartao.SelectedText = "";
+            this.txt_precarioCartao.Size = new System.Drawing.Size(142, 34);
+            this.txt_precarioCartao.TabIndex = 47;
             // 
             // gunaLabel6
             // 
@@ -4153,27 +3405,27 @@ namespace SGCC___PERFIL
             this.gunaLabel6.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel6.Location = new System.Drawing.Point(26, 127);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(62, 15);
+            this.gunaLabel6.Size = new System.Drawing.Size(65, 15);
             this.gunaLabel6.TabIndex = 46;
-            this.gunaLabel6.Text = "Certficado";
+            this.gunaLabel6.Text = "Certificado";
             // 
-            // gunaTextBox6
+            // txt_precarioCertificado
             // 
-            this.gunaTextBox6.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox6.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox6.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.gunaTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox6.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox6.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox6.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox6.Location = new System.Drawing.Point(18, 145);
-            this.gunaTextBox6.Name = "gunaTextBox6";
-            this.gunaTextBox6.PasswordChar = '\0';
-            this.gunaTextBox6.Radius = 10;
-            this.gunaTextBox6.SelectedText = "";
-            this.gunaTextBox6.Size = new System.Drawing.Size(142, 34);
-            this.gunaTextBox6.TabIndex = 45;
+            this.txt_precarioCertificado.BackColor = System.Drawing.Color.Transparent;
+            this.txt_precarioCertificado.BaseColor = System.Drawing.Color.White;
+            this.txt_precarioCertificado.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txt_precarioCertificado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_precarioCertificado.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_precarioCertificado.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_precarioCertificado.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_precarioCertificado.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_precarioCertificado.Location = new System.Drawing.Point(18, 145);
+            this.txt_precarioCertificado.Name = "txt_precarioCertificado";
+            this.txt_precarioCertificado.PasswordChar = '\0';
+            this.txt_precarioCertificado.Radius = 10;
+            this.txt_precarioCertificado.SelectedText = "";
+            this.txt_precarioCertificado.Size = new System.Drawing.Size(142, 34);
+            this.txt_precarioCertificado.TabIndex = 45;
             // 
             // gunaLabel5
             // 
@@ -4186,23 +3438,23 @@ namespace SGCC___PERFIL
             this.gunaLabel5.TabIndex = 44;
             this.gunaLabel5.Text = "Mensalidade";
             // 
-            // gunaTextBox3
+            // txt_precarioMensalidade
             // 
-            this.gunaTextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox3.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox3.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.gunaTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox3.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox3.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox3.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox3.Location = new System.Drawing.Point(186, 76);
-            this.gunaTextBox3.Name = "gunaTextBox3";
-            this.gunaTextBox3.PasswordChar = '\0';
-            this.gunaTextBox3.Radius = 10;
-            this.gunaTextBox3.SelectedText = "";
-            this.gunaTextBox3.Size = new System.Drawing.Size(142, 34);
-            this.gunaTextBox3.TabIndex = 43;
+            this.txt_precarioMensalidade.BackColor = System.Drawing.Color.Transparent;
+            this.txt_precarioMensalidade.BaseColor = System.Drawing.Color.White;
+            this.txt_precarioMensalidade.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txt_precarioMensalidade.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_precarioMensalidade.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_precarioMensalidade.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_precarioMensalidade.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_precarioMensalidade.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_precarioMensalidade.Location = new System.Drawing.Point(186, 76);
+            this.txt_precarioMensalidade.Name = "txt_precarioMensalidade";
+            this.txt_precarioMensalidade.PasswordChar = '\0';
+            this.txt_precarioMensalidade.Radius = 10;
+            this.txt_precarioMensalidade.SelectedText = "";
+            this.txt_precarioMensalidade.Size = new System.Drawing.Size(142, 34);
+            this.txt_precarioMensalidade.TabIndex = 43;
             // 
             // gunaLabel3
             // 
@@ -4215,23 +3467,23 @@ namespace SGCC___PERFIL
             this.gunaLabel3.TabIndex = 42;
             this.gunaLabel3.Text = "Inscrição";
             // 
-            // gunaTextBox2
+            // txt_precarioInscricao
             // 
-            this.gunaTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox2.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.gunaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox2.Location = new System.Drawing.Point(18, 76);
-            this.gunaTextBox2.Name = "gunaTextBox2";
-            this.gunaTextBox2.PasswordChar = '\0';
-            this.gunaTextBox2.Radius = 10;
-            this.gunaTextBox2.SelectedText = "";
-            this.gunaTextBox2.Size = new System.Drawing.Size(142, 34);
-            this.gunaTextBox2.TabIndex = 41;
+            this.txt_precarioInscricao.BackColor = System.Drawing.Color.Transparent;
+            this.txt_precarioInscricao.BaseColor = System.Drawing.Color.White;
+            this.txt_precarioInscricao.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.txt_precarioInscricao.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_precarioInscricao.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_precarioInscricao.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_precarioInscricao.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_precarioInscricao.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_precarioInscricao.Location = new System.Drawing.Point(18, 76);
+            this.txt_precarioInscricao.Name = "txt_precarioInscricao";
+            this.txt_precarioInscricao.PasswordChar = '\0';
+            this.txt_precarioInscricao.Radius = 10;
+            this.txt_precarioInscricao.SelectedText = "";
+            this.txt_precarioInscricao.Size = new System.Drawing.Size(142, 34);
+            this.txt_precarioInscricao.TabIndex = 41;
             // 
             // label16
             // 
@@ -4244,55 +3496,6 @@ namespace SGCC___PERFIL
             this.label16.Text = "Preçário";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // gunaShadowPanel6
-            // 
-            this.gunaShadowPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.gunaShadowPanel6.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel6.Controls.Add(this.gunaLabel4);
-            this.gunaShadowPanel6.Controls.Add(this.gunaSwitch4);
-            this.gunaShadowPanel6.Controls.Add(this.label45);
-            this.gunaShadowPanel6.Location = new System.Drawing.Point(537, 3);
-            this.gunaShadowPanel6.Name = "gunaShadowPanel6";
-            this.gunaShadowPanel6.Radius = 10;
-            this.gunaShadowPanel6.ShadowColor = System.Drawing.Color.DodgerBlue;
-            this.gunaShadowPanel6.ShadowDepth = 70;
-            this.gunaShadowPanel6.ShadowShift = 6;
-            this.gunaShadowPanel6.Size = new System.Drawing.Size(342, 115);
-            this.gunaShadowPanel6.TabIndex = 12;
-            // 
-            // gunaLabel4
-            // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaLabel4.Location = new System.Drawing.Point(53, 57);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(137, 15);
-            this.gunaLabel4.TabIndex = 14;
-            this.gunaLabel4.Text = "Reportagem Automática";
-            // 
-            // gunaSwitch4
-            // 
-            this.gunaSwitch4.BaseColor = System.Drawing.SystemColors.Control;
-            this.gunaSwitch4.CheckedOffColor = System.Drawing.Color.DarkGray;
-            this.gunaSwitch4.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaSwitch4.FillColor = System.Drawing.Color.White;
-            this.gunaSwitch4.Location = new System.Drawing.Point(19, 54);
-            this.gunaSwitch4.Name = "gunaSwitch4";
-            this.gunaSwitch4.Size = new System.Drawing.Size(28, 20);
-            this.gunaSwitch4.TabIndex = 13;
-            // 
-            // label45
-            // 
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label45.Location = new System.Drawing.Point(14, 20);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(264, 21);
-            this.label45.TabIndex = 9;
-            this.label45.Text = "Reportar Relatório Diário";
-            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // gunaShadowPanel13
             // 
             this.gunaShadowPanel13.BackColor = System.Drawing.Color.Transparent;
@@ -4301,7 +3504,7 @@ namespace SGCC___PERFIL
             this.gunaShadowPanel13.Controls.Add(this.gunaGroupBox5);
             this.gunaShadowPanel13.Controls.Add(this.gunaLabel12);
             this.gunaShadowPanel13.Controls.Add(this.label49);
-            this.gunaShadowPanel13.Location = new System.Drawing.Point(3, 208);
+            this.gunaShadowPanel13.Location = new System.Drawing.Point(537, 3);
             this.gunaShadowPanel13.Name = "gunaShadowPanel13";
             this.gunaShadowPanel13.Radius = 10;
             this.gunaShadowPanel13.ShadowColor = System.Drawing.Color.DodgerBlue;
@@ -4316,10 +3519,10 @@ namespace SGCC___PERFIL
             this.gunaGroupBox6.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox6.BorderColor = System.Drawing.Color.Orange;
             this.gunaGroupBox6.BorderSize = 2;
-            this.gunaGroupBox6.Controls.Add(this.gunaCheckBox8);
-            this.gunaGroupBox6.Controls.Add(this.gunaCheckBox4);
-            this.gunaGroupBox6.Controls.Add(this.gunaCheckBox5);
-            this.gunaGroupBox6.Controls.Add(this.gunaCheckBox6);
+            this.gunaGroupBox6.Controls.Add(this.chkbx_DefSaida_papeis);
+            this.gunaGroupBox6.Controls.Add(this.chkbx_DefSaida_Tinteiro);
+            this.gunaGroupBox6.Controls.Add(this.chkbx_DefSaida_Combustivel);
+            this.gunaGroupBox6.Controls.Add(this.chkbx_DefSaida_Energia);
             this.gunaGroupBox6.ForeColor = System.Drawing.Color.White;
             this.gunaGroupBox6.LineColor = System.Drawing.Color.Orange;
             this.gunaGroupBox6.Location = new System.Drawing.Point(258, 66);
@@ -4330,69 +3533,16 @@ namespace SGCC___PERFIL
             this.gunaGroupBox6.Text = "Saídas";
             this.gunaGroupBox6.TextLocation = new System.Drawing.Point(10, 8);
             // 
-            // gunaCheckBox8
-            // 
-            this.gunaCheckBox8.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox8.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox8.CheckedOnColor = System.Drawing.Color.Orange;
-            this.gunaCheckBox8.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox8.ForeColor = System.Drawing.Color.Orange;
-            this.gunaCheckBox8.Location = new System.Drawing.Point(21, 121);
-            this.gunaCheckBox8.Name = "gunaCheckBox8";
-            this.gunaCheckBox8.Size = new System.Drawing.Size(64, 20);
-            this.gunaCheckBox8.TabIndex = 15;
-            this.gunaCheckBox8.Text = "Papeis";
-            // 
-            // gunaCheckBox4
-            // 
-            this.gunaCheckBox4.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox4.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox4.CheckedOnColor = System.Drawing.Color.Orange;
-            this.gunaCheckBox4.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox4.ForeColor = System.Drawing.Color.Orange;
-            this.gunaCheckBox4.Location = new System.Drawing.Point(21, 95);
-            this.gunaCheckBox4.Name = "gunaCheckBox4";
-            this.gunaCheckBox4.Size = new System.Drawing.Size(68, 20);
-            this.gunaCheckBox4.TabIndex = 14;
-            this.gunaCheckBox4.Text = "Tinteiro";
-            // 
-            // gunaCheckBox5
-            // 
-            this.gunaCheckBox5.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox5.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox5.CheckedOnColor = System.Drawing.Color.Orange;
-            this.gunaCheckBox5.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox5.ForeColor = System.Drawing.Color.Orange;
-            this.gunaCheckBox5.Location = new System.Drawing.Point(21, 69);
-            this.gunaCheckBox5.Name = "gunaCheckBox5";
-            this.gunaCheckBox5.Size = new System.Drawing.Size(92, 20);
-            this.gunaCheckBox5.TabIndex = 13;
-            this.gunaCheckBox5.Text = "Combustivel";
-            // 
-            // gunaCheckBox6
-            // 
-            this.gunaCheckBox6.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox6.Checked = true;
-            this.gunaCheckBox6.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox6.CheckedOnColor = System.Drawing.Color.Orange;
-            this.gunaCheckBox6.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox6.ForeColor = System.Drawing.Color.Orange;
-            this.gunaCheckBox6.Location = new System.Drawing.Point(21, 43);
-            this.gunaCheckBox6.Name = "gunaCheckBox6";
-            this.gunaCheckBox6.Size = new System.Drawing.Size(69, 20);
-            this.gunaCheckBox6.TabIndex = 12;
-            this.gunaCheckBox6.Text = "Energia";
-            // 
             // gunaGroupBox5
             // 
             this.gunaGroupBox5.BackColor = System.Drawing.Color.Transparent;
             this.gunaGroupBox5.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox5.BorderColor = System.Drawing.Color.DodgerBlue;
             this.gunaGroupBox5.BorderSize = 2;
-            this.gunaGroupBox5.Controls.Add(this.gunaCheckBox7);
-            this.gunaGroupBox5.Controls.Add(this.gunaCheckBox1);
-            this.gunaGroupBox5.Controls.Add(this.gunaCheckBox2);
-            this.gunaGroupBox5.Controls.Add(this.gunaCheckBox3);
+            this.gunaGroupBox5.Controls.Add(this.chkbx_DefEntrada_Inscricao);
+            this.gunaGroupBox5.Controls.Add(this.chkbx_DefEntrada_Cartao);
+            this.gunaGroupBox5.Controls.Add(this.chkbx_DefEntrada_Certificado);
+            this.gunaGroupBox5.Controls.Add(this.chkbx_DefEntrada_Mensalidade);
             this.gunaGroupBox5.ForeColor = System.Drawing.Color.White;
             this.gunaGroupBox5.LineColor = System.Drawing.Color.DodgerBlue;
             this.gunaGroupBox5.Location = new System.Drawing.Point(25, 66);
@@ -4402,59 +3552,6 @@ namespace SGCC___PERFIL
             this.gunaGroupBox5.TabIndex = 50;
             this.gunaGroupBox5.Text = "Entradas";
             this.gunaGroupBox5.TextLocation = new System.Drawing.Point(10, 8);
-            // 
-            // gunaCheckBox7
-            // 
-            this.gunaCheckBox7.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox7.Checked = true;
-            this.gunaCheckBox7.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox7.CheckedOnColor = System.Drawing.Color.DodgerBlue;
-            this.gunaCheckBox7.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.gunaCheckBox7.Location = new System.Drawing.Point(21, 121);
-            this.gunaCheckBox7.Name = "gunaCheckBox7";
-            this.gunaCheckBox7.Size = new System.Drawing.Size(81, 20);
-            this.gunaCheckBox7.TabIndex = 15;
-            this.gunaCheckBox7.Text = "Inscrições";
-            // 
-            // gunaCheckBox1
-            // 
-            this.gunaCheckBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox1.CheckedOnColor = System.Drawing.Color.DodgerBlue;
-            this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.gunaCheckBox1.Location = new System.Drawing.Point(21, 95);
-            this.gunaCheckBox1.Name = "gunaCheckBox1";
-            this.gunaCheckBox1.Size = new System.Drawing.Size(126, 20);
-            this.gunaCheckBox1.TabIndex = 14;
-            this.gunaCheckBox1.Text = "Cartão de fomando";
-            // 
-            // gunaCheckBox2
-            // 
-            this.gunaCheckBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox2.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox2.CheckedOnColor = System.Drawing.Color.DodgerBlue;
-            this.gunaCheckBox2.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.gunaCheckBox2.Location = new System.Drawing.Point(21, 69);
-            this.gunaCheckBox2.Name = "gunaCheckBox2";
-            this.gunaCheckBox2.Size = new System.Drawing.Size(84, 20);
-            this.gunaCheckBox2.TabIndex = 13;
-            this.gunaCheckBox2.Text = "Certificado";
-            // 
-            // gunaCheckBox3
-            // 
-            this.gunaCheckBox3.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox3.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox3.CheckedOnColor = System.Drawing.Color.DodgerBlue;
-            this.gunaCheckBox3.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.gunaCheckBox3.Location = new System.Drawing.Point(21, 43);
-            this.gunaCheckBox3.Name = "gunaCheckBox3";
-            this.gunaCheckBox3.Size = new System.Drawing.Size(94, 20);
-            this.gunaCheckBox3.TabIndex = 12;
-            this.gunaCheckBox3.Text = "Mensalidade";
             // 
             // gunaLabel12
             // 
@@ -4490,57 +3587,6 @@ namespace SGCC___PERFIL
             this.relatorioEntrada.Size = new System.Drawing.Size(1092, 669);
             this.relatorioEntrada.TabIndex = 11;
             this.relatorioEntrada.Text = "Relatorio Entrada";
-            // 
-            // btnRelatorioSaida
-            // 
-            this.btnRelatorioSaida.AnimationHoverSpeed = 0.07F;
-            this.btnRelatorioSaida.AnimationSpeed = 0.03F;
-            this.btnRelatorioSaida.BackColor = System.Drawing.Color.Transparent;
-            this.btnRelatorioSaida.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnRelatorioSaida.BorderColor = System.Drawing.Color.Black;
-            this.btnRelatorioSaida.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnRelatorioSaida.FocusedColor = System.Drawing.Color.Empty;
-            this.btnRelatorioSaida.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRelatorioSaida.ForeColor = System.Drawing.Color.White;
-            this.btnRelatorioSaida.Image = global::SGCC___PERFIL.Properties.Resources.status_branco;
-            this.btnRelatorioSaida.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRelatorioSaida.Location = new System.Drawing.Point(253, 55);
-            this.btnRelatorioSaida.Name = "btnRelatorioSaida";
-            this.btnRelatorioSaida.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnRelatorioSaida.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnRelatorioSaida.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnRelatorioSaida.OnHoverImage = null;
-            this.btnRelatorioSaida.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRelatorioSaida.Radius = 10;
-            this.btnRelatorioSaida.Size = new System.Drawing.Size(212, 42);
-            this.btnRelatorioSaida.TabIndex = 3;
-            this.btnRelatorioSaida.Text = "Ver Relatório de Saida";
-            this.btnRelatorioSaida.Click += new System.EventHandler(this.btn_verRegistos_Click);
-            // 
-            // btn_verTodosRegistos_Entrada
-            // 
-            this.btn_verTodosRegistos_Entrada.AnimationHoverSpeed = 0.07F;
-            this.btn_verTodosRegistos_Entrada.AnimationSpeed = 0.03F;
-            this.btn_verTodosRegistos_Entrada.BackColor = System.Drawing.Color.Transparent;
-            this.btn_verTodosRegistos_Entrada.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btn_verTodosRegistos_Entrada.BorderColor = System.Drawing.Color.Black;
-            this.btn_verTodosRegistos_Entrada.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_verTodosRegistos_Entrada.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_verTodosRegistos_Entrada.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_verTodosRegistos_Entrada.ForeColor = System.Drawing.Color.White;
-            this.btn_verTodosRegistos_Entrada.Image = global::SGCC___PERFIL.Properties.Resources.status_branco;
-            this.btn_verTodosRegistos_Entrada.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_verTodosRegistos_Entrada.Location = new System.Drawing.Point(19, 55);
-            this.btn_verTodosRegistos_Entrada.Name = "btn_verTodosRegistos_Entrada";
-            this.btn_verTodosRegistos_Entrada.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
-            this.btn_verTodosRegistos_Entrada.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_verTodosRegistos_Entrada.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_verTodosRegistos_Entrada.OnHoverImage = null;
-            this.btn_verTodosRegistos_Entrada.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_verTodosRegistos_Entrada.Radius = 10;
-            this.btn_verTodosRegistos_Entrada.Size = new System.Drawing.Size(212, 42);
-            this.btn_verTodosRegistos_Entrada.TabIndex = 3;
-            this.btn_verTodosRegistos_Entrada.Text = "Todos Registos";
             // 
             // dgvRelatorioEntrada
             // 
@@ -4627,31 +3673,6 @@ namespace SGCC___PERFIL
             this.usuarios.Size = new System.Drawing.Size(1092, 669);
             this.usuarios.TabIndex = 12;
             this.usuarios.Text = "Usuarios";
-            // 
-            // btn_EliminarUsuario
-            // 
-            this.btn_EliminarUsuario.AnimationHoverSpeed = 0.07F;
-            this.btn_EliminarUsuario.AnimationSpeed = 0.03F;
-            this.btn_EliminarUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.btn_EliminarUsuario.BaseColor = System.Drawing.Color.DarkRed;
-            this.btn_EliminarUsuario.BorderColor = System.Drawing.Color.Black;
-            this.btn_EliminarUsuario.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_EliminarUsuario.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_EliminarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_EliminarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btn_EliminarUsuario.Image = global::SGCC___PERFIL.Properties.Resources.apagar_branco;
-            this.btn_EliminarUsuario.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_EliminarUsuario.Location = new System.Drawing.Point(267, 595);
-            this.btn_EliminarUsuario.Name = "btn_EliminarUsuario";
-            this.btn_EliminarUsuario.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btn_EliminarUsuario.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_EliminarUsuario.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.btn_EliminarUsuario.OnHoverImage = null;
-            this.btn_EliminarUsuario.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_EliminarUsuario.Radius = 10;
-            this.btn_EliminarUsuario.Size = new System.Drawing.Size(212, 42);
-            this.btn_EliminarUsuario.TabIndex = 50;
-            this.btn_EliminarUsuario.Text = "Eliminar usuário";
             // 
             // dgvUsuarios
             // 
@@ -4836,44 +3857,6 @@ namespace SGCC___PERFIL
             this.txtNomeUsuario.Size = new System.Drawing.Size(396, 48);
             this.txtNomeUsuario.TabIndex = 42;
             // 
-            // btn_addUsuario
-            // 
-            this.btn_addUsuario.AnimationHoverSpeed = 0.07F;
-            this.btn_addUsuario.AnimationSpeed = 0.03F;
-            this.btn_addUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.btn_addUsuario.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btn_addUsuario.BorderColor = System.Drawing.Color.Black;
-            this.btn_addUsuario.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_addUsuario.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_addUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_addUsuario.ForeColor = System.Drawing.Color.White;
-            this.btn_addUsuario.Image = global::SGCC___PERFIL.Properties.Resources.add_branco;
-            this.btn_addUsuario.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_addUsuario.Location = new System.Drawing.Point(49, 595);
-            this.btn_addUsuario.Name = "btn_addUsuario";
-            this.btn_addUsuario.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
-            this.btn_addUsuario.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_addUsuario.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_addUsuario.OnHoverImage = null;
-            this.btn_addUsuario.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_addUsuario.Radius = 10;
-            this.btn_addUsuario.Size = new System.Drawing.Size(212, 42);
-            this.btn_addUsuario.TabIndex = 47;
-            this.btn_addUsuario.Text = "Novo Usuário";
-            this.btn_addUsuario.Click += new System.EventHandler(this.btn_addUsuario_Click);
-            // 
-            // gunaCirclePictureBox9
-            // 
-            this.gunaCirclePictureBox9.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.gunaCirclePictureBox9.Image = global::SGCC___PERFIL.Properties.Resources.usuário;
-            this.gunaCirclePictureBox9.Location = new System.Drawing.Point(158, 33);
-            this.gunaCirclePictureBox9.Name = "gunaCirclePictureBox9";
-            this.gunaCirclePictureBox9.Size = new System.Drawing.Size(203, 188);
-            this.gunaCirclePictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox9.TabIndex = 3;
-            this.gunaCirclePictureBox9.TabStop = false;
-            this.gunaCirclePictureBox9.UseTransfarantBackground = false;
-            // 
             // relatorioSaida
             // 
             this.relatorioSaida.Controls.Add(this.btnVerRelatorioEntrada);
@@ -4886,58 +3869,6 @@ namespace SGCC___PERFIL
             this.relatorioSaida.TabIndex = 13;
             this.relatorioSaida.Text = "RelatorioSaida";
             this.relatorioSaida.UseVisualStyleBackColor = true;
-            // 
-            // btnVerRelatorioEntrada
-            // 
-            this.btnVerRelatorioEntrada.AnimationHoverSpeed = 0.07F;
-            this.btnVerRelatorioEntrada.AnimationSpeed = 0.03F;
-            this.btnVerRelatorioEntrada.BackColor = System.Drawing.Color.Transparent;
-            this.btnVerRelatorioEntrada.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnVerRelatorioEntrada.BorderColor = System.Drawing.Color.Black;
-            this.btnVerRelatorioEntrada.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnVerRelatorioEntrada.FocusedColor = System.Drawing.Color.Empty;
-            this.btnVerRelatorioEntrada.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnVerRelatorioEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnVerRelatorioEntrada.Image = global::SGCC___PERFIL.Properties.Resources.status_branco;
-            this.btnVerRelatorioEntrada.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnVerRelatorioEntrada.Location = new System.Drawing.Point(252, 56);
-            this.btnVerRelatorioEntrada.Name = "btnVerRelatorioEntrada";
-            this.btnVerRelatorioEntrada.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnVerRelatorioEntrada.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnVerRelatorioEntrada.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnVerRelatorioEntrada.OnHoverImage = null;
-            this.btnVerRelatorioEntrada.OnPressedColor = System.Drawing.Color.Black;
-            this.btnVerRelatorioEntrada.Radius = 10;
-            this.btnVerRelatorioEntrada.Size = new System.Drawing.Size(212, 42);
-            this.btnVerRelatorioEntrada.TabIndex = 48;
-            this.btnVerRelatorioEntrada.Text = "Ver Relatório de Entrada";
-            this.btnVerRelatorioEntrada.Click += new System.EventHandler(this.btnVerRelatorioEntrada_Click);
-            // 
-            // btnGerarRegistos_Saida
-            // 
-            this.btnGerarRegistos_Saida.AnimationHoverSpeed = 0.07F;
-            this.btnGerarRegistos_Saida.AnimationSpeed = 0.03F;
-            this.btnGerarRegistos_Saida.BackColor = System.Drawing.Color.Transparent;
-            this.btnGerarRegistos_Saida.BaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnGerarRegistos_Saida.BorderColor = System.Drawing.Color.Black;
-            this.btnGerarRegistos_Saida.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnGerarRegistos_Saida.FocusedColor = System.Drawing.Color.Empty;
-            this.btnGerarRegistos_Saida.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnGerarRegistos_Saida.ForeColor = System.Drawing.Color.White;
-            this.btnGerarRegistos_Saida.Image = global::SGCC___PERFIL.Properties.Resources.status_branco;
-            this.btnGerarRegistos_Saida.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnGerarRegistos_Saida.Location = new System.Drawing.Point(19, 56);
-            this.btnGerarRegistos_Saida.Name = "btnGerarRegistos_Saida";
-            this.btnGerarRegistos_Saida.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
-            this.btnGerarRegistos_Saida.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnGerarRegistos_Saida.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnGerarRegistos_Saida.OnHoverImage = null;
-            this.btnGerarRegistos_Saida.OnPressedColor = System.Drawing.Color.Black;
-            this.btnGerarRegistos_Saida.Radius = 10;
-            this.btnGerarRegistos_Saida.Size = new System.Drawing.Size(212, 42);
-            this.btnGerarRegistos_Saida.TabIndex = 49;
-            this.btnGerarRegistos_Saida.Text = "Gerar relatório de saída";
-            this.btnGerarRegistos_Saida.Click += new System.EventHandler(this.btnGerarRegistos_Saida_Click);
             // 
             // dgvRelatorioSaida
             // 
@@ -5010,6 +3941,1032 @@ namespace SGCC___PERFIL
             // 
             this.gunaDragControl1.TargetControl = this.panelTopo;
             // 
+            // chkbx_DefEntrada_Mensalidade
+            // 
+            this.chkbx_DefEntrada_Mensalidade.BaseColor = System.Drawing.Color.White;
+            this.chkbx_DefEntrada_Mensalidade.CheckedOffColor = System.Drawing.Color.Gray;
+            this.chkbx_DefEntrada_Mensalidade.CheckedOnColor = System.Drawing.Color.DodgerBlue;
+            this.chkbx_DefEntrada_Mensalidade.FillColor = System.Drawing.Color.White;
+            this.chkbx_DefEntrada_Mensalidade.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.chkbx_DefEntrada_Mensalidade.Location = new System.Drawing.Point(23, 43);
+            this.chkbx_DefEntrada_Mensalidade.Name = "chkbx_DefEntrada_Mensalidade";
+            this.chkbx_DefEntrada_Mensalidade.Size = new System.Drawing.Size(94, 20);
+            this.chkbx_DefEntrada_Mensalidade.TabIndex = 50;
+            this.chkbx_DefEntrada_Mensalidade.Text = "Mensalidade";
+            // 
+            // chkbx_DefEntrada_Certificado
+            // 
+            this.chkbx_DefEntrada_Certificado.BaseColor = System.Drawing.Color.White;
+            this.chkbx_DefEntrada_Certificado.CheckedOffColor = System.Drawing.Color.Gray;
+            this.chkbx_DefEntrada_Certificado.CheckedOnColor = System.Drawing.Color.DodgerBlue;
+            this.chkbx_DefEntrada_Certificado.FillColor = System.Drawing.Color.White;
+            this.chkbx_DefEntrada_Certificado.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.chkbx_DefEntrada_Certificado.Location = new System.Drawing.Point(23, 69);
+            this.chkbx_DefEntrada_Certificado.Name = "chkbx_DefEntrada_Certificado";
+            this.chkbx_DefEntrada_Certificado.Size = new System.Drawing.Size(84, 20);
+            this.chkbx_DefEntrada_Certificado.TabIndex = 50;
+            this.chkbx_DefEntrada_Certificado.Text = "Certificado";
+            // 
+            // chkbx_DefEntrada_Cartao
+            // 
+            this.chkbx_DefEntrada_Cartao.BaseColor = System.Drawing.Color.White;
+            this.chkbx_DefEntrada_Cartao.CheckedOffColor = System.Drawing.Color.Gray;
+            this.chkbx_DefEntrada_Cartao.CheckedOnColor = System.Drawing.Color.DodgerBlue;
+            this.chkbx_DefEntrada_Cartao.FillColor = System.Drawing.Color.White;
+            this.chkbx_DefEntrada_Cartao.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.chkbx_DefEntrada_Cartao.Location = new System.Drawing.Point(23, 95);
+            this.chkbx_DefEntrada_Cartao.Name = "chkbx_DefEntrada_Cartao";
+            this.chkbx_DefEntrada_Cartao.Size = new System.Drawing.Size(130, 20);
+            this.chkbx_DefEntrada_Cartao.TabIndex = 50;
+            this.chkbx_DefEntrada_Cartao.Text = "Cartão de formando";
+            // 
+            // chkbx_DefEntrada_Inscricao
+            // 
+            this.chkbx_DefEntrada_Inscricao.BaseColor = System.Drawing.Color.White;
+            this.chkbx_DefEntrada_Inscricao.Checked = true;
+            this.chkbx_DefEntrada_Inscricao.CheckedOffColor = System.Drawing.Color.Gray;
+            this.chkbx_DefEntrada_Inscricao.CheckedOnColor = System.Drawing.Color.DodgerBlue;
+            this.chkbx_DefEntrada_Inscricao.FillColor = System.Drawing.Color.White;
+            this.chkbx_DefEntrada_Inscricao.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.chkbx_DefEntrada_Inscricao.Location = new System.Drawing.Point(23, 121);
+            this.chkbx_DefEntrada_Inscricao.Name = "chkbx_DefEntrada_Inscricao";
+            this.chkbx_DefEntrada_Inscricao.Size = new System.Drawing.Size(75, 20);
+            this.chkbx_DefEntrada_Inscricao.TabIndex = 50;
+            this.chkbx_DefEntrada_Inscricao.Text = "Inscrição";
+            // 
+            // chkbx_DefSaida_Energia
+            // 
+            this.chkbx_DefSaida_Energia.BaseColor = System.Drawing.Color.White;
+            this.chkbx_DefSaida_Energia.CheckedOffColor = System.Drawing.Color.Gray;
+            this.chkbx_DefSaida_Energia.CheckedOnColor = System.Drawing.Color.Orange;
+            this.chkbx_DefSaida_Energia.FillColor = System.Drawing.Color.White;
+            this.chkbx_DefSaida_Energia.ForeColor = System.Drawing.Color.Orange;
+            this.chkbx_DefSaida_Energia.Location = new System.Drawing.Point(21, 43);
+            this.chkbx_DefSaida_Energia.Name = "chkbx_DefSaida_Energia";
+            this.chkbx_DefSaida_Energia.Size = new System.Drawing.Size(69, 20);
+            this.chkbx_DefSaida_Energia.TabIndex = 16;
+            this.chkbx_DefSaida_Energia.Text = "Energia";
+            // 
+            // chkbx_DefSaida_Combustivel
+            // 
+            this.chkbx_DefSaida_Combustivel.BaseColor = System.Drawing.Color.White;
+            this.chkbx_DefSaida_Combustivel.CheckedOffColor = System.Drawing.Color.Gray;
+            this.chkbx_DefSaida_Combustivel.CheckedOnColor = System.Drawing.Color.Orange;
+            this.chkbx_DefSaida_Combustivel.FillColor = System.Drawing.Color.White;
+            this.chkbx_DefSaida_Combustivel.ForeColor = System.Drawing.Color.Orange;
+            this.chkbx_DefSaida_Combustivel.Location = new System.Drawing.Point(21, 69);
+            this.chkbx_DefSaida_Combustivel.Name = "chkbx_DefSaida_Combustivel";
+            this.chkbx_DefSaida_Combustivel.Size = new System.Drawing.Size(92, 20);
+            this.chkbx_DefSaida_Combustivel.TabIndex = 16;
+            this.chkbx_DefSaida_Combustivel.Text = "Combustivel";
+            // 
+            // chkbx_DefSaida_Tinteiro
+            // 
+            this.chkbx_DefSaida_Tinteiro.BaseColor = System.Drawing.Color.White;
+            this.chkbx_DefSaida_Tinteiro.Checked = true;
+            this.chkbx_DefSaida_Tinteiro.CheckedOffColor = System.Drawing.Color.Gray;
+            this.chkbx_DefSaida_Tinteiro.CheckedOnColor = System.Drawing.Color.Orange;
+            this.chkbx_DefSaida_Tinteiro.FillColor = System.Drawing.Color.White;
+            this.chkbx_DefSaida_Tinteiro.ForeColor = System.Drawing.Color.Orange;
+            this.chkbx_DefSaida_Tinteiro.Location = new System.Drawing.Point(21, 95);
+            this.chkbx_DefSaida_Tinteiro.Name = "chkbx_DefSaida_Tinteiro";
+            this.chkbx_DefSaida_Tinteiro.Size = new System.Drawing.Size(68, 20);
+            this.chkbx_DefSaida_Tinteiro.TabIndex = 16;
+            this.chkbx_DefSaida_Tinteiro.Text = "Tinteiro";
+            // 
+            // chkbx_DefSaida_papeis
+            // 
+            this.chkbx_DefSaida_papeis.BaseColor = System.Drawing.Color.White;
+            this.chkbx_DefSaida_papeis.CheckedOffColor = System.Drawing.Color.Gray;
+            this.chkbx_DefSaida_papeis.CheckedOnColor = System.Drawing.Color.Orange;
+            this.chkbx_DefSaida_papeis.FillColor = System.Drawing.Color.White;
+            this.chkbx_DefSaida_papeis.ForeColor = System.Drawing.Color.Orange;
+            this.chkbx_DefSaida_papeis.Location = new System.Drawing.Point(21, 121);
+            this.chkbx_DefSaida_papeis.Name = "chkbx_DefSaida_papeis";
+            this.chkbx_DefSaida_papeis.Size = new System.Drawing.Size(64, 20);
+            this.chkbx_DefSaida_papeis.TabIndex = 16;
+            this.chkbx_DefSaida_papeis.Text = "Papeis";
+            // 
+            // gunaCirclePictureBox8
+            // 
+            this.gunaCirclePictureBox8.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.gunaCirclePictureBox8.Image = global::SGCC___PERFIL.Properties.Resources.formandos;
+            this.gunaCirclePictureBox8.Location = new System.Drawing.Point(9, 7);
+            this.gunaCirclePictureBox8.Name = "gunaCirclePictureBox8";
+            this.gunaCirclePictureBox8.Size = new System.Drawing.Size(35, 35);
+            this.gunaCirclePictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaCirclePictureBox8.TabIndex = 5;
+            this.gunaCirclePictureBox8.TabStop = false;
+            this.gunaCirclePictureBox8.UseTransfarantBackground = false;
+            // 
+            // gunaCirclePictureBox7
+            // 
+            this.gunaCirclePictureBox7.BackgroundImage = global::SGCC___PERFIL.Properties.Resources.curso;
+            this.gunaCirclePictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gunaCirclePictureBox7.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaCirclePictureBox7.Location = new System.Drawing.Point(9, 7);
+            this.gunaCirclePictureBox7.Name = "gunaCirclePictureBox7";
+            this.gunaCirclePictureBox7.Size = new System.Drawing.Size(35, 35);
+            this.gunaCirclePictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox7.TabIndex = 3;
+            this.gunaCirclePictureBox7.TabStop = false;
+            this.gunaCirclePictureBox7.UseTransfarantBackground = false;
+            // 
+            // imgStatsCursos
+            // 
+            this.imgStatsCursos.BackgroundImage = global::SGCC___PERFIL.Properties.Resources.curso_branco;
+            this.imgStatsCursos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgStatsCursos.BaseColor = System.Drawing.Color.Transparent;
+            this.imgStatsCursos.Location = new System.Drawing.Point(10, 17);
+            this.imgStatsCursos.Name = "imgStatsCursos";
+            this.imgStatsCursos.Size = new System.Drawing.Size(30, 30);
+            this.imgStatsCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgStatsCursos.TabIndex = 7;
+            this.imgStatsCursos.TabStop = false;
+            this.imgStatsCursos.UseTransfarantBackground = false;
+            // 
+            // imgStatsFormadores
+            // 
+            this.imgStatsFormadores.BackgroundImage = global::SGCC___PERFIL.Properties.Resources.formadores_branco;
+            this.imgStatsFormadores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgStatsFormadores.BaseColor = System.Drawing.Color.Transparent;
+            this.imgStatsFormadores.Location = new System.Drawing.Point(9, 17);
+            this.imgStatsFormadores.Name = "imgStatsFormadores";
+            this.imgStatsFormadores.Size = new System.Drawing.Size(30, 30);
+            this.imgStatsFormadores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgStatsFormadores.TabIndex = 7;
+            this.imgStatsFormadores.TabStop = false;
+            this.imgStatsFormadores.UseTransfarantBackground = false;
+            // 
+            // imgStatsFormandos
+            // 
+            this.imgStatsFormandos.BackgroundImage = global::SGCC___PERFIL.Properties.Resources.formandos_branco;
+            this.imgStatsFormandos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgStatsFormandos.BaseColor = System.Drawing.Color.Transparent;
+            this.imgStatsFormandos.Location = new System.Drawing.Point(9, 17);
+            this.imgStatsFormandos.Name = "imgStatsFormandos";
+            this.imgStatsFormandos.Size = new System.Drawing.Size(30, 30);
+            this.imgStatsFormandos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgStatsFormandos.TabIndex = 7;
+            this.imgStatsFormandos.TabStop = false;
+            this.imgStatsFormandos.UseTransfarantBackground = false;
+            // 
+            // imgStatsSaida
+            // 
+            this.imgStatsSaida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgStatsSaida.BaseColor = System.Drawing.Color.Transparent;
+            this.imgStatsSaida.Location = new System.Drawing.Point(9, 17);
+            this.imgStatsSaida.Name = "imgStatsSaida";
+            this.imgStatsSaida.Size = new System.Drawing.Size(30, 30);
+            this.imgStatsSaida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgStatsSaida.TabIndex = 8;
+            this.imgStatsSaida.TabStop = false;
+            this.imgStatsSaida.UseTransfarantBackground = false;
+            // 
+            // imgStatsEntrada
+            // 
+            this.imgStatsEntrada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgStatsEntrada.BaseColor = System.Drawing.Color.Transparent;
+            this.imgStatsEntrada.Location = new System.Drawing.Point(9, 17);
+            this.imgStatsEntrada.Name = "imgStatsEntrada";
+            this.imgStatsEntrada.Size = new System.Drawing.Size(30, 30);
+            this.imgStatsEntrada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgStatsEntrada.TabIndex = 6;
+            this.imgStatsEntrada.TabStop = false;
+            this.imgStatsEntrada.UseTransfarantBackground = false;
+            // 
+            // btnPesquisarCurso
+            // 
+            this.btnPesquisarCurso.AnimationHoverSpeed = 0.07F;
+            this.btnPesquisarCurso.AnimationSpeed = 0.03F;
+            this.btnPesquisarCurso.BackColor = System.Drawing.Color.Transparent;
+            this.btnPesquisarCurso.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnPesquisarCurso.BorderColor = System.Drawing.Color.Black;
+            this.btnPesquisarCurso.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPesquisarCurso.FocusedColor = System.Drawing.Color.Empty;
+            this.btnPesquisarCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPesquisarCurso.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisarCurso.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
+            this.btnPesquisarCurso.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnPesquisarCurso.Location = new System.Drawing.Point(530, 201);
+            this.btnPesquisarCurso.Name = "btnPesquisarCurso";
+            this.btnPesquisarCurso.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btnPesquisarCurso.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnPesquisarCurso.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnPesquisarCurso.OnHoverImage = null;
+            this.btnPesquisarCurso.OnPressedColor = System.Drawing.Color.Black;
+            this.btnPesquisarCurso.Radius = 10;
+            this.btnPesquisarCurso.Size = new System.Drawing.Size(212, 42);
+            this.btnPesquisarCurso.TabIndex = 18;
+            this.btnPesquisarCurso.Text = "Pesquisar Curso";
+            // 
+            // btnEliminarCurso
+            // 
+            this.btnEliminarCurso.AnimationHoverSpeed = 0.07F;
+            this.btnEliminarCurso.AnimationSpeed = 0.03F;
+            this.btnEliminarCurso.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminarCurso.BaseColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarCurso.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminarCurso.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEliminarCurso.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEliminarCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEliminarCurso.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarCurso.Image = global::SGCC___PERFIL.Properties.Resources.apagar_branco1;
+            this.btnEliminarCurso.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEliminarCurso.Location = new System.Drawing.Point(748, 201);
+            this.btnEliminarCurso.Name = "btnEliminarCurso";
+            this.btnEliminarCurso.OnHoverBaseColor = System.Drawing.Color.Brown;
+            this.btnEliminarCurso.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEliminarCurso.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEliminarCurso.OnHoverImage = null;
+            this.btnEliminarCurso.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEliminarCurso.Radius = 10;
+            this.btnEliminarCurso.Size = new System.Drawing.Size(212, 42);
+            this.btnEliminarCurso.TabIndex = 12;
+            this.btnEliminarCurso.Text = "Eliminar Curso";
+            this.btnEliminarCurso.Click += new System.EventHandler(this.btnEliminarCurso_Click);
+            // 
+            // btnEditarCurso
+            // 
+            this.btnEditarCurso.AnimationHoverSpeed = 0.07F;
+            this.btnEditarCurso.AnimationSpeed = 0.03F;
+            this.btnEditarCurso.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditarCurso.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditarCurso.BorderColor = System.Drawing.Color.Black;
+            this.btnEditarCurso.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEditarCurso.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEditarCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEditarCurso.ForeColor = System.Drawing.Color.White;
+            this.btnEditarCurso.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
+            this.btnEditarCurso.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEditarCurso.Location = new System.Drawing.Point(312, 201);
+            this.btnEditarCurso.Name = "btnEditarCurso";
+            this.btnEditarCurso.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btnEditarCurso.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEditarCurso.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEditarCurso.OnHoverImage = null;
+            this.btnEditarCurso.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEditarCurso.Radius = 10;
+            this.btnEditarCurso.Size = new System.Drawing.Size(212, 42);
+            this.btnEditarCurso.TabIndex = 14;
+            this.btnEditarCurso.Text = "Editar Curso";
+            this.btnEditarCurso.Click += new System.EventHandler(this.btnEditarCurso_Click);
+            // 
+            // btnNovoCurso
+            // 
+            this.btnNovoCurso.AnimationHoverSpeed = 0.07F;
+            this.btnNovoCurso.AnimationSpeed = 0.03F;
+            this.btnNovoCurso.BackColor = System.Drawing.Color.Transparent;
+            this.btnNovoCurso.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnNovoCurso.BorderColor = System.Drawing.Color.Black;
+            this.btnNovoCurso.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnNovoCurso.FocusedColor = System.Drawing.Color.Empty;
+            this.btnNovoCurso.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNovoCurso.ForeColor = System.Drawing.Color.White;
+            this.btnNovoCurso.Image = global::SGCC___PERFIL.Properties.Resources.add_branco;
+            this.btnNovoCurso.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnNovoCurso.Location = new System.Drawing.Point(94, 201);
+            this.btnNovoCurso.Name = "btnNovoCurso";
+            this.btnNovoCurso.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btnNovoCurso.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnNovoCurso.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnNovoCurso.OnHoverImage = null;
+            this.btnNovoCurso.OnPressedColor = System.Drawing.Color.Black;
+            this.btnNovoCurso.Radius = 10;
+            this.btnNovoCurso.Size = new System.Drawing.Size(212, 42);
+            this.btnNovoCurso.TabIndex = 0;
+            this.btnNovoCurso.Text = "Novo Curso";
+            this.btnNovoCurso.Click += new System.EventHandler(this.btnNovoCurso_Click);
+            // 
+            // btnPesquisarFormando
+            // 
+            this.btnPesquisarFormando.AnimationHoverSpeed = 0.07F;
+            this.btnPesquisarFormando.AnimationSpeed = 0.03F;
+            this.btnPesquisarFormando.BackColor = System.Drawing.Color.Transparent;
+            this.btnPesquisarFormando.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnPesquisarFormando.BorderColor = System.Drawing.Color.Black;
+            this.btnPesquisarFormando.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPesquisarFormando.FocusedColor = System.Drawing.Color.Empty;
+            this.btnPesquisarFormando.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPesquisarFormando.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisarFormando.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
+            this.btnPesquisarFormando.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnPesquisarFormando.Location = new System.Drawing.Point(535, 525);
+            this.btnPesquisarFormando.Name = "btnPesquisarFormando";
+            this.btnPesquisarFormando.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btnPesquisarFormando.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnPesquisarFormando.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnPesquisarFormando.OnHoverImage = null;
+            this.btnPesquisarFormando.OnPressedColor = System.Drawing.Color.Black;
+            this.btnPesquisarFormando.Radius = 10;
+            this.btnPesquisarFormando.Size = new System.Drawing.Size(212, 42);
+            this.btnPesquisarFormando.TabIndex = 34;
+            this.btnPesquisarFormando.Text = "Pesquisar Formando";
+            // 
+            // btnEliminarFormandos
+            // 
+            this.btnEliminarFormandos.AnimationHoverSpeed = 0.07F;
+            this.btnEliminarFormandos.AnimationSpeed = 0.03F;
+            this.btnEliminarFormandos.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminarFormandos.BaseColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarFormandos.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminarFormandos.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEliminarFormandos.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEliminarFormandos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEliminarFormandos.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarFormandos.Image = global::SGCC___PERFIL.Properties.Resources.apagar_branco;
+            this.btnEliminarFormandos.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEliminarFormandos.Location = new System.Drawing.Point(753, 525);
+            this.btnEliminarFormandos.Name = "btnEliminarFormandos";
+            this.btnEliminarFormandos.OnHoverBaseColor = System.Drawing.Color.Brown;
+            this.btnEliminarFormandos.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEliminarFormandos.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEliminarFormandos.OnHoverImage = null;
+            this.btnEliminarFormandos.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEliminarFormandos.Radius = 10;
+            this.btnEliminarFormandos.Size = new System.Drawing.Size(212, 42);
+            this.btnEliminarFormandos.TabIndex = 30;
+            this.btnEliminarFormandos.Text = "Eliminar Formando";
+            this.btnEliminarFormandos.Click += new System.EventHandler(this.btnEliminarFormandos_Click);
+            // 
+            // btnEditarFormando
+            // 
+            this.btnEditarFormando.AnimationHoverSpeed = 0.07F;
+            this.btnEditarFormando.AnimationSpeed = 0.03F;
+            this.btnEditarFormando.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditarFormando.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditarFormando.BorderColor = System.Drawing.Color.Black;
+            this.btnEditarFormando.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEditarFormando.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEditarFormando.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEditarFormando.ForeColor = System.Drawing.Color.White;
+            this.btnEditarFormando.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
+            this.btnEditarFormando.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEditarFormando.Location = new System.Drawing.Point(317, 525);
+            this.btnEditarFormando.Name = "btnEditarFormando";
+            this.btnEditarFormando.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btnEditarFormando.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEditarFormando.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEditarFormando.OnHoverImage = null;
+            this.btnEditarFormando.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEditarFormando.Radius = 10;
+            this.btnEditarFormando.Size = new System.Drawing.Size(212, 42);
+            this.btnEditarFormando.TabIndex = 31;
+            this.btnEditarFormando.Text = "Editar Formando";
+            this.btnEditarFormando.Click += new System.EventHandler(this.btnEditarFormando_Click);
+            // 
+            // btnNovoFormando
+            // 
+            this.btnNovoFormando.AnimationHoverSpeed = 0.07F;
+            this.btnNovoFormando.AnimationSpeed = 0.03F;
+            this.btnNovoFormando.BackColor = System.Drawing.Color.Transparent;
+            this.btnNovoFormando.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnNovoFormando.BorderColor = System.Drawing.Color.Black;
+            this.btnNovoFormando.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnNovoFormando.FocusedColor = System.Drawing.Color.Empty;
+            this.btnNovoFormando.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNovoFormando.ForeColor = System.Drawing.Color.White;
+            this.btnNovoFormando.Image = global::SGCC___PERFIL.Properties.Resources.add_branco;
+            this.btnNovoFormando.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnNovoFormando.Location = new System.Drawing.Point(99, 525);
+            this.btnNovoFormando.Name = "btnNovoFormando";
+            this.btnNovoFormando.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btnNovoFormando.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnNovoFormando.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnNovoFormando.OnHoverImage = null;
+            this.btnNovoFormando.OnPressedColor = System.Drawing.Color.Black;
+            this.btnNovoFormando.Radius = 10;
+            this.btnNovoFormando.Size = new System.Drawing.Size(212, 42);
+            this.btnNovoFormando.TabIndex = 29;
+            this.btnNovoFormando.Text = "Novo Formando";
+            this.btnNovoFormando.Click += new System.EventHandler(this.btnNovoFormando_Click);
+            // 
+            // btnPesquisarFormador
+            // 
+            this.btnPesquisarFormador.AnimationHoverSpeed = 0.07F;
+            this.btnPesquisarFormador.AnimationSpeed = 0.03F;
+            this.btnPesquisarFormador.BackColor = System.Drawing.Color.Transparent;
+            this.btnPesquisarFormador.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnPesquisarFormador.BorderColor = System.Drawing.Color.Black;
+            this.btnPesquisarFormador.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPesquisarFormador.FocusedColor = System.Drawing.Color.Empty;
+            this.btnPesquisarFormador.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPesquisarFormador.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisarFormador.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
+            this.btnPesquisarFormador.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnPesquisarFormador.Location = new System.Drawing.Point(529, 197);
+            this.btnPesquisarFormador.Name = "btnPesquisarFormador";
+            this.btnPesquisarFormador.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btnPesquisarFormador.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnPesquisarFormador.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnPesquisarFormador.OnHoverImage = null;
+            this.btnPesquisarFormador.OnPressedColor = System.Drawing.Color.Black;
+            this.btnPesquisarFormador.Radius = 10;
+            this.btnPesquisarFormador.Size = new System.Drawing.Size(212, 42);
+            this.btnPesquisarFormador.TabIndex = 35;
+            this.btnPesquisarFormador.Text = "Pesquisar Formador";
+            // 
+            // btnEliminarFormador
+            // 
+            this.btnEliminarFormador.AnimationHoverSpeed = 0.07F;
+            this.btnEliminarFormador.AnimationSpeed = 0.03F;
+            this.btnEliminarFormador.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminarFormador.BaseColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarFormador.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminarFormador.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEliminarFormador.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEliminarFormador.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEliminarFormador.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarFormador.Image = global::SGCC___PERFIL.Properties.Resources.apagar_branco;
+            this.btnEliminarFormador.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEliminarFormador.Location = new System.Drawing.Point(747, 197);
+            this.btnEliminarFormador.Name = "btnEliminarFormador";
+            this.btnEliminarFormador.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btnEliminarFormador.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEliminarFormador.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.btnEliminarFormador.OnHoverImage = null;
+            this.btnEliminarFormador.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEliminarFormador.Radius = 10;
+            this.btnEliminarFormador.Size = new System.Drawing.Size(212, 42);
+            this.btnEliminarFormador.TabIndex = 28;
+            this.btnEliminarFormador.Text = "Eliminar Formador";
+            this.btnEliminarFormador.Click += new System.EventHandler(this.btnEliminarFormador_Click);
+            // 
+            // btnEditarFormador
+            // 
+            this.btnEditarFormador.AnimationHoverSpeed = 0.07F;
+            this.btnEditarFormador.AnimationSpeed = 0.03F;
+            this.btnEditarFormador.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditarFormador.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditarFormador.BorderColor = System.Drawing.Color.Black;
+            this.btnEditarFormador.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEditarFormador.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEditarFormador.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEditarFormador.ForeColor = System.Drawing.Color.White;
+            this.btnEditarFormador.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
+            this.btnEditarFormador.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEditarFormador.Location = new System.Drawing.Point(311, 197);
+            this.btnEditarFormador.Name = "btnEditarFormador";
+            this.btnEditarFormador.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btnEditarFormador.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEditarFormador.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEditarFormador.OnHoverImage = null;
+            this.btnEditarFormador.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEditarFormador.Radius = 10;
+            this.btnEditarFormador.Size = new System.Drawing.Size(212, 42);
+            this.btnEditarFormador.TabIndex = 29;
+            this.btnEditarFormador.Text = "Editar Formador";
+            this.btnEditarFormador.Click += new System.EventHandler(this.btnEditarFormador_Click);
+            // 
+            // btnNovoFormadores
+            // 
+            this.btnNovoFormadores.AnimationHoverSpeed = 0.07F;
+            this.btnNovoFormadores.AnimationSpeed = 0.03F;
+            this.btnNovoFormadores.BackColor = System.Drawing.Color.Transparent;
+            this.btnNovoFormadores.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnNovoFormadores.BorderColor = System.Drawing.Color.Black;
+            this.btnNovoFormadores.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnNovoFormadores.FocusedColor = System.Drawing.Color.Empty;
+            this.btnNovoFormadores.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNovoFormadores.ForeColor = System.Drawing.Color.White;
+            this.btnNovoFormadores.Image = global::SGCC___PERFIL.Properties.Resources.add_branco;
+            this.btnNovoFormadores.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnNovoFormadores.Location = new System.Drawing.Point(93, 197);
+            this.btnNovoFormadores.Name = "btnNovoFormadores";
+            this.btnNovoFormadores.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btnNovoFormadores.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnNovoFormadores.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnNovoFormadores.OnHoverImage = null;
+            this.btnNovoFormadores.OnPressedColor = System.Drawing.Color.Black;
+            this.btnNovoFormadores.Radius = 10;
+            this.btnNovoFormadores.Size = new System.Drawing.Size(212, 42);
+            this.btnNovoFormadores.TabIndex = 16;
+            this.btnNovoFormadores.Text = "Novo Formador";
+            this.btnNovoFormadores.Click += new System.EventHandler(this.btnNovoFormadores_Click);
+            // 
+            // btnPesquisarAlunoMensalidade
+            // 
+            this.btnPesquisarAlunoMensalidade.AnimationHoverSpeed = 0.07F;
+            this.btnPesquisarAlunoMensalidade.AnimationSpeed = 0.03F;
+            this.btnPesquisarAlunoMensalidade.BackColor = System.Drawing.Color.Transparent;
+            this.btnPesquisarAlunoMensalidade.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnPesquisarAlunoMensalidade.BorderColor = System.Drawing.Color.Black;
+            this.btnPesquisarAlunoMensalidade.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPesquisarAlunoMensalidade.FocusedColor = System.Drawing.Color.Empty;
+            this.btnPesquisarAlunoMensalidade.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPesquisarAlunoMensalidade.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisarAlunoMensalidade.Image = global::SGCC___PERFIL.Properties.Resources.Editar_branco;
+            this.btnPesquisarAlunoMensalidade.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnPesquisarAlunoMensalidade.Location = new System.Drawing.Point(541, 117);
+            this.btnPesquisarAlunoMensalidade.Name = "btnPesquisarAlunoMensalidade";
+            this.btnPesquisarAlunoMensalidade.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btnPesquisarAlunoMensalidade.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnPesquisarAlunoMensalidade.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnPesquisarAlunoMensalidade.OnHoverImage = null;
+            this.btnPesquisarAlunoMensalidade.OnPressedColor = System.Drawing.Color.Black;
+            this.btnPesquisarAlunoMensalidade.Radius = 10;
+            this.btnPesquisarAlunoMensalidade.Size = new System.Drawing.Size(212, 42);
+            this.btnPesquisarAlunoMensalidade.TabIndex = 46;
+            this.btnPesquisarAlunoMensalidade.Text = "Pesquisar Aluno";
+            // 
+            // btnNovoPagamento
+            // 
+            this.btnNovoPagamento.AnimationHoverSpeed = 0.07F;
+            this.btnNovoPagamento.AnimationSpeed = 0.03F;
+            this.btnNovoPagamento.BackColor = System.Drawing.Color.Transparent;
+            this.btnNovoPagamento.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnNovoPagamento.BorderColor = System.Drawing.Color.Black;
+            this.btnNovoPagamento.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnNovoPagamento.FocusedColor = System.Drawing.Color.Empty;
+            this.btnNovoPagamento.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNovoPagamento.ForeColor = System.Drawing.Color.White;
+            this.btnNovoPagamento.Image = global::SGCC___PERFIL.Properties.Resources.add_branco;
+            this.btnNovoPagamento.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnNovoPagamento.Location = new System.Drawing.Point(323, 117);
+            this.btnNovoPagamento.Name = "btnNovoPagamento";
+            this.btnNovoPagamento.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btnNovoPagamento.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnNovoPagamento.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnNovoPagamento.OnHoverImage = null;
+            this.btnNovoPagamento.OnPressedColor = System.Drawing.Color.Black;
+            this.btnNovoPagamento.Radius = 10;
+            this.btnNovoPagamento.Size = new System.Drawing.Size(212, 42);
+            this.btnNovoPagamento.TabIndex = 35;
+            this.btnNovoPagamento.Text = "Novo Pagamento";
+            this.btnNovoPagamento.Click += new System.EventHandler(this.btnNovoPagamento_Click);
+            // 
+            // gunaCirclePictureBox6
+            // 
+            this.gunaCirclePictureBox6.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.gunaCirclePictureBox6.Location = new System.Drawing.Point(307, 21);
+            this.gunaCirclePictureBox6.Name = "gunaCirclePictureBox6";
+            this.gunaCirclePictureBox6.Size = new System.Drawing.Size(158, 158);
+            this.gunaCirclePictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox6.TabIndex = 10;
+            this.gunaCirclePictureBox6.TabStop = false;
+            this.gunaCirclePictureBox6.UseTransfarantBackground = false;
+            // 
+            // gunaCirclePictureBox5
+            // 
+            this.gunaCirclePictureBox5.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.gunaCirclePictureBox5.Location = new System.Drawing.Point(307, 21);
+            this.gunaCirclePictureBox5.Name = "gunaCirclePictureBox5";
+            this.gunaCirclePictureBox5.Size = new System.Drawing.Size(158, 158);
+            this.gunaCirclePictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox5.TabIndex = 10;
+            this.gunaCirclePictureBox5.TabStop = false;
+            this.gunaCirclePictureBox5.UseTransfarantBackground = false;
+            // 
+            // gunaCirclePictureBox4
+            // 
+            this.gunaCirclePictureBox4.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.gunaCirclePictureBox4.Location = new System.Drawing.Point(307, 21);
+            this.gunaCirclePictureBox4.Name = "gunaCirclePictureBox4";
+            this.gunaCirclePictureBox4.Size = new System.Drawing.Size(158, 158);
+            this.gunaCirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox4.TabIndex = 10;
+            this.gunaCirclePictureBox4.TabStop = false;
+            this.gunaCirclePictureBox4.UseTransfarantBackground = false;
+            // 
+            // gunaCirclePictureBox3
+            // 
+            this.gunaCirclePictureBox3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.gunaCirclePictureBox3.Location = new System.Drawing.Point(307, 21);
+            this.gunaCirclePictureBox3.Name = "gunaCirclePictureBox3";
+            this.gunaCirclePictureBox3.Size = new System.Drawing.Size(158, 158);
+            this.gunaCirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox3.TabIndex = 10;
+            this.gunaCirclePictureBox3.TabStop = false;
+            this.gunaCirclePictureBox3.UseTransfarantBackground = false;
+            // 
+            // gunaCirclePictureBox2
+            // 
+            this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(307, 21);
+            this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
+            this.gunaCirclePictureBox2.Size = new System.Drawing.Size(158, 158);
+            this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox2.TabIndex = 10;
+            this.gunaCirclePictureBox2.TabStop = false;
+            this.gunaCirclePictureBox2.UseTransfarantBackground = false;
+            // 
+            // gunaCirclePictureBox1
+            // 
+            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(307, 21);
+            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(158, 158);
+            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.gunaCirclePictureBox1.TabIndex = 10;
+            this.gunaCirclePictureBox1.TabStop = false;
+            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
+            // 
+            // btnRelatorioSaida
+            // 
+            this.btnRelatorioSaida.AnimationHoverSpeed = 0.07F;
+            this.btnRelatorioSaida.AnimationSpeed = 0.03F;
+            this.btnRelatorioSaida.BackColor = System.Drawing.Color.Transparent;
+            this.btnRelatorioSaida.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnRelatorioSaida.BorderColor = System.Drawing.Color.Black;
+            this.btnRelatorioSaida.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRelatorioSaida.FocusedColor = System.Drawing.Color.Empty;
+            this.btnRelatorioSaida.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRelatorioSaida.ForeColor = System.Drawing.Color.White;
+            this.btnRelatorioSaida.Image = global::SGCC___PERFIL.Properties.Resources.status_branco;
+            this.btnRelatorioSaida.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnRelatorioSaida.Location = new System.Drawing.Point(253, 55);
+            this.btnRelatorioSaida.Name = "btnRelatorioSaida";
+            this.btnRelatorioSaida.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnRelatorioSaida.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnRelatorioSaida.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnRelatorioSaida.OnHoverImage = null;
+            this.btnRelatorioSaida.OnPressedColor = System.Drawing.Color.Black;
+            this.btnRelatorioSaida.Radius = 10;
+            this.btnRelatorioSaida.Size = new System.Drawing.Size(212, 42);
+            this.btnRelatorioSaida.TabIndex = 3;
+            this.btnRelatorioSaida.Text = "Ver Relatório de Saida";
+            this.btnRelatorioSaida.Click += new System.EventHandler(this.btn_verRegistos_Click);
+            // 
+            // btn_verTodosRegistos_Entrada
+            // 
+            this.btn_verTodosRegistos_Entrada.AnimationHoverSpeed = 0.07F;
+            this.btn_verTodosRegistos_Entrada.AnimationSpeed = 0.03F;
+            this.btn_verTodosRegistos_Entrada.BackColor = System.Drawing.Color.Transparent;
+            this.btn_verTodosRegistos_Entrada.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btn_verTodosRegistos_Entrada.BorderColor = System.Drawing.Color.Black;
+            this.btn_verTodosRegistos_Entrada.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_verTodosRegistos_Entrada.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_verTodosRegistos_Entrada.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_verTodosRegistos_Entrada.ForeColor = System.Drawing.Color.White;
+            this.btn_verTodosRegistos_Entrada.Image = global::SGCC___PERFIL.Properties.Resources.status_branco;
+            this.btn_verTodosRegistos_Entrada.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_verTodosRegistos_Entrada.Location = new System.Drawing.Point(19, 55);
+            this.btn_verTodosRegistos_Entrada.Name = "btn_verTodosRegistos_Entrada";
+            this.btn_verTodosRegistos_Entrada.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btn_verTodosRegistos_Entrada.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_verTodosRegistos_Entrada.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_verTodosRegistos_Entrada.OnHoverImage = null;
+            this.btn_verTodosRegistos_Entrada.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_verTodosRegistos_Entrada.Radius = 10;
+            this.btn_verTodosRegistos_Entrada.Size = new System.Drawing.Size(212, 42);
+            this.btn_verTodosRegistos_Entrada.TabIndex = 3;
+            this.btn_verTodosRegistos_Entrada.Text = "Todos Registos";
+            // 
+            // btn_EliminarUsuario
+            // 
+            this.btn_EliminarUsuario.AnimationHoverSpeed = 0.07F;
+            this.btn_EliminarUsuario.AnimationSpeed = 0.03F;
+            this.btn_EliminarUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_EliminarUsuario.BaseColor = System.Drawing.Color.DarkRed;
+            this.btn_EliminarUsuario.BorderColor = System.Drawing.Color.Black;
+            this.btn_EliminarUsuario.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_EliminarUsuario.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_EliminarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_EliminarUsuario.ForeColor = System.Drawing.Color.White;
+            this.btn_EliminarUsuario.Image = global::SGCC___PERFIL.Properties.Resources.apagar_branco;
+            this.btn_EliminarUsuario.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_EliminarUsuario.Location = new System.Drawing.Point(267, 595);
+            this.btn_EliminarUsuario.Name = "btn_EliminarUsuario";
+            this.btn_EliminarUsuario.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btn_EliminarUsuario.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_EliminarUsuario.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.btn_EliminarUsuario.OnHoverImage = null;
+            this.btn_EliminarUsuario.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_EliminarUsuario.Radius = 10;
+            this.btn_EliminarUsuario.Size = new System.Drawing.Size(212, 42);
+            this.btn_EliminarUsuario.TabIndex = 50;
+            this.btn_EliminarUsuario.Text = "Eliminar usuário";
+            // 
+            // btn_addUsuario
+            // 
+            this.btn_addUsuario.AnimationHoverSpeed = 0.07F;
+            this.btn_addUsuario.AnimationSpeed = 0.03F;
+            this.btn_addUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addUsuario.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btn_addUsuario.BorderColor = System.Drawing.Color.Black;
+            this.btn_addUsuario.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_addUsuario.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_addUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_addUsuario.ForeColor = System.Drawing.Color.White;
+            this.btn_addUsuario.Image = global::SGCC___PERFIL.Properties.Resources.add_branco;
+            this.btn_addUsuario.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_addUsuario.Location = new System.Drawing.Point(49, 595);
+            this.btn_addUsuario.Name = "btn_addUsuario";
+            this.btn_addUsuario.OnHoverBaseColor = System.Drawing.Color.LightSteelBlue;
+            this.btn_addUsuario.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_addUsuario.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_addUsuario.OnHoverImage = null;
+            this.btn_addUsuario.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_addUsuario.Radius = 10;
+            this.btn_addUsuario.Size = new System.Drawing.Size(212, 42);
+            this.btn_addUsuario.TabIndex = 47;
+            this.btn_addUsuario.Text = "Novo Usuário";
+            this.btn_addUsuario.Click += new System.EventHandler(this.btn_addUsuario_Click);
+            // 
+            // gunaCirclePictureBox9
+            // 
+            this.gunaCirclePictureBox9.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.gunaCirclePictureBox9.Image = global::SGCC___PERFIL.Properties.Resources.usuário;
+            this.gunaCirclePictureBox9.Location = new System.Drawing.Point(158, 33);
+            this.gunaCirclePictureBox9.Name = "gunaCirclePictureBox9";
+            this.gunaCirclePictureBox9.Size = new System.Drawing.Size(203, 188);
+            this.gunaCirclePictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox9.TabIndex = 3;
+            this.gunaCirclePictureBox9.TabStop = false;
+            this.gunaCirclePictureBox9.UseTransfarantBackground = false;
+            // 
+            // btnVerRelatorioEntrada
+            // 
+            this.btnVerRelatorioEntrada.AnimationHoverSpeed = 0.07F;
+            this.btnVerRelatorioEntrada.AnimationSpeed = 0.03F;
+            this.btnVerRelatorioEntrada.BackColor = System.Drawing.Color.Transparent;
+            this.btnVerRelatorioEntrada.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnVerRelatorioEntrada.BorderColor = System.Drawing.Color.Black;
+            this.btnVerRelatorioEntrada.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnVerRelatorioEntrada.FocusedColor = System.Drawing.Color.Empty;
+            this.btnVerRelatorioEntrada.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnVerRelatorioEntrada.ForeColor = System.Drawing.Color.White;
+            this.btnVerRelatorioEntrada.Image = global::SGCC___PERFIL.Properties.Resources.status_branco;
+            this.btnVerRelatorioEntrada.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnVerRelatorioEntrada.Location = new System.Drawing.Point(252, 56);
+            this.btnVerRelatorioEntrada.Name = "btnVerRelatorioEntrada";
+            this.btnVerRelatorioEntrada.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnVerRelatorioEntrada.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnVerRelatorioEntrada.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnVerRelatorioEntrada.OnHoverImage = null;
+            this.btnVerRelatorioEntrada.OnPressedColor = System.Drawing.Color.Black;
+            this.btnVerRelatorioEntrada.Radius = 10;
+            this.btnVerRelatorioEntrada.Size = new System.Drawing.Size(212, 42);
+            this.btnVerRelatorioEntrada.TabIndex = 48;
+            this.btnVerRelatorioEntrada.Text = "Ver Relatório de Entrada";
+            this.btnVerRelatorioEntrada.Click += new System.EventHandler(this.btnVerRelatorioEntrada_Click);
+            // 
+            // btnGerarRegistos_Saida
+            // 
+            this.btnGerarRegistos_Saida.AnimationHoverSpeed = 0.07F;
+            this.btnGerarRegistos_Saida.AnimationSpeed = 0.03F;
+            this.btnGerarRegistos_Saida.BackColor = System.Drawing.Color.Transparent;
+            this.btnGerarRegistos_Saida.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnGerarRegistos_Saida.BorderColor = System.Drawing.Color.Black;
+            this.btnGerarRegistos_Saida.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnGerarRegistos_Saida.FocusedColor = System.Drawing.Color.Empty;
+            this.btnGerarRegistos_Saida.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGerarRegistos_Saida.ForeColor = System.Drawing.Color.White;
+            this.btnGerarRegistos_Saida.Image = global::SGCC___PERFIL.Properties.Resources.status_branco;
+            this.btnGerarRegistos_Saida.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnGerarRegistos_Saida.Location = new System.Drawing.Point(19, 56);
+            this.btnGerarRegistos_Saida.Name = "btnGerarRegistos_Saida";
+            this.btnGerarRegistos_Saida.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btnGerarRegistos_Saida.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnGerarRegistos_Saida.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnGerarRegistos_Saida.OnHoverImage = null;
+            this.btnGerarRegistos_Saida.OnPressedColor = System.Drawing.Color.Black;
+            this.btnGerarRegistos_Saida.Radius = 10;
+            this.btnGerarRegistos_Saida.Size = new System.Drawing.Size(212, 42);
+            this.btnGerarRegistos_Saida.TabIndex = 49;
+            this.btnGerarRegistos_Saida.Text = "Gerar relatório de saída";
+            this.btnGerarRegistos_Saida.Click += new System.EventHandler(this.btnGerarRegistos_Saida_Click);
+            // 
+            // imgUsuario
+            // 
+            this.imgUsuario.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.imgUsuario.Image = global::SGCC___PERFIL.Properties.Resources.usuário;
+            this.imgUsuario.Location = new System.Drawing.Point(67, 10);
+            this.imgUsuario.Name = "imgUsuario";
+            this.imgUsuario.Size = new System.Drawing.Size(94, 91);
+            this.imgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgUsuario.TabIndex = 2;
+            this.imgUsuario.TabStop = false;
+            this.imgUsuario.UseTransfarantBackground = false;
+            this.imgUsuario.Click += new System.EventHandler(this.gunaCirclePictureBox1_Click);
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_logout.AnimationHoverSpeed = 0.07F;
+            this.btn_logout.AnimationSpeed = 0.03F;
+            this.btn_logout.BackColor = System.Drawing.Color.Transparent;
+            this.btn_logout.BaseColor = System.Drawing.SystemColors.Control;
+            this.btn_logout.BorderColor = System.Drawing.Color.Black;
+            this.btn_logout.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_logout.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_logout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.btn_logout.Image = global::SGCC___PERFIL.Properties.Resources.logout;
+            this.btn_logout.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_logout.Location = new System.Drawing.Point(10, 641);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btn_logout.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_logout.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_logout.OnHoverImage = null;
+            this.btn_logout.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_logout.Radius = 10;
+            this.btn_logout.Size = new System.Drawing.Size(212, 42);
+            this.btn_logout.TabIndex = 0;
+            this.btn_logout.Text = "Terminar Sessão";
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click_1);
+            this.btn_logout.MouseLeave += new System.EventHandler(this.btn_logout_MouseLeave);
+            this.btn_logout.MouseHover += new System.EventHandler(this.btn_logout_MouseHover);
+            // 
+            // btn_settings
+            // 
+            this.btn_settings.AnimationHoverSpeed = 0.07F;
+            this.btn_settings.AnimationSpeed = 0.03F;
+            this.btn_settings.BackColor = System.Drawing.Color.Transparent;
+            this.btn_settings.BaseColor = System.Drawing.SystemColors.Control;
+            this.btn_settings.BorderColor = System.Drawing.Color.Black;
+            this.btn_settings.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_settings.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_settings.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_settings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.btn_settings.Image = global::SGCC___PERFIL.Properties.Resources.Config;
+            this.btn_settings.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_settings.Location = new System.Drawing.Point(10, 440);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btn_settings.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_settings.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_settings.OnHoverImage = null;
+            this.btn_settings.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_settings.Radius = 10;
+            this.btn_settings.Size = new System.Drawing.Size(212, 42);
+            this.btn_settings.TabIndex = 0;
+            this.btn_settings.Text = "Definições";
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
+            // 
+            // btn_opc
+            // 
+            this.btn_opc.AnimationHoverSpeed = 0.07F;
+            this.btn_opc.AnimationSpeed = 0.03F;
+            this.btn_opc.BackColor = System.Drawing.Color.Transparent;
+            this.btn_opc.BaseColor = System.Drawing.SystemColors.Control;
+            this.btn_opc.BorderColor = System.Drawing.Color.Black;
+            this.btn_opc.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_opc.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_opc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_opc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.btn_opc.Image = global::SGCC___PERFIL.Properties.Resources.Opções;
+            this.btn_opc.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_opc.Location = new System.Drawing.Point(10, 392);
+            this.btn_opc.Name = "btn_opc";
+            this.btn_opc.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btn_opc.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_opc.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_opc.OnHoverImage = null;
+            this.btn_opc.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_opc.Radius = 10;
+            this.btn_opc.Size = new System.Drawing.Size(212, 42);
+            this.btn_opc.TabIndex = 0;
+            this.btn_opc.Text = "Opções";
+            this.btn_opc.Click += new System.EventHandler(this.btn_opc_Click);
+            // 
+            // btn_formadores
+            // 
+            this.btn_formadores.AnimationHoverSpeed = 0.07F;
+            this.btn_formadores.AnimationSpeed = 0.03F;
+            this.btn_formadores.BackColor = System.Drawing.Color.Transparent;
+            this.btn_formadores.BaseColor = System.Drawing.SystemColors.Control;
+            this.btn_formadores.BorderColor = System.Drawing.Color.Black;
+            this.btn_formadores.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_formadores.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_formadores.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_formadores.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.btn_formadores.Image = global::SGCC___PERFIL.Properties.Resources.formadores;
+            this.btn_formadores.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_formadores.Location = new System.Drawing.Point(10, 296);
+            this.btn_formadores.Name = "btn_formadores";
+            this.btn_formadores.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btn_formadores.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_formadores.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_formadores.OnHoverImage = null;
+            this.btn_formadores.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_formadores.Radius = 10;
+            this.btn_formadores.Size = new System.Drawing.Size(212, 42);
+            this.btn_formadores.TabIndex = 0;
+            this.btn_formadores.Text = "Formadores";
+            this.btn_formadores.Click += new System.EventHandler(this.btn_formadores_Click);
+            // 
+            // btn_mensalidade
+            // 
+            this.btn_mensalidade.AnimationHoverSpeed = 0.07F;
+            this.btn_mensalidade.AnimationSpeed = 0.03F;
+            this.btn_mensalidade.BackColor = System.Drawing.Color.Transparent;
+            this.btn_mensalidade.BaseColor = System.Drawing.SystemColors.Control;
+            this.btn_mensalidade.BorderColor = System.Drawing.Color.Black;
+            this.btn_mensalidade.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_mensalidade.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_mensalidade.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_mensalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.btn_mensalidade.Image = global::SGCC___PERFIL.Properties.Resources.Mensalidade;
+            this.btn_mensalidade.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_mensalidade.Location = new System.Drawing.Point(10, 344);
+            this.btn_mensalidade.Name = "btn_mensalidade";
+            this.btn_mensalidade.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btn_mensalidade.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_mensalidade.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_mensalidade.OnHoverImage = null;
+            this.btn_mensalidade.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_mensalidade.Radius = 10;
+            this.btn_mensalidade.Size = new System.Drawing.Size(212, 42);
+            this.btn_mensalidade.TabIndex = 0;
+            this.btn_mensalidade.Text = "Mensalidade";
+            this.btn_mensalidade.Click += new System.EventHandler(this.btn_mensalidade_Click);
+            // 
+            // btn_formandos
+            // 
+            this.btn_formandos.AnimationHoverSpeed = 0.07F;
+            this.btn_formandos.AnimationSpeed = 0.03F;
+            this.btn_formandos.BackColor = System.Drawing.Color.Transparent;
+            this.btn_formandos.BaseColor = System.Drawing.SystemColors.Control;
+            this.btn_formandos.BorderColor = System.Drawing.Color.Black;
+            this.btn_formandos.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_formandos.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_formandos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_formandos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.btn_formandos.Image = global::SGCC___PERFIL.Properties.Resources.formandos;
+            this.btn_formandos.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_formandos.Location = new System.Drawing.Point(10, 248);
+            this.btn_formandos.Name = "btn_formandos";
+            this.btn_formandos.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btn_formandos.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_formandos.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_formandos.OnHoverImage = null;
+            this.btn_formandos.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_formandos.Radius = 10;
+            this.btn_formandos.Size = new System.Drawing.Size(212, 42);
+            this.btn_formandos.TabIndex = 0;
+            this.btn_formandos.Text = "Formandos";
+            this.btn_formandos.Click += new System.EventHandler(this.btn_formandos_Click);
+            // 
+            // btn_cursos
+            // 
+            this.btn_cursos.AnimationHoverSpeed = 0.07F;
+            this.btn_cursos.AnimationSpeed = 0.03F;
+            this.btn_cursos.BackColor = System.Drawing.Color.Transparent;
+            this.btn_cursos.BaseColor = System.Drawing.SystemColors.Control;
+            this.btn_cursos.BorderColor = System.Drawing.Color.Black;
+            this.btn_cursos.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_cursos.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_cursos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_cursos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.btn_cursos.Image = global::SGCC___PERFIL.Properties.Resources.curso;
+            this.btn_cursos.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_cursos.Location = new System.Drawing.Point(10, 200);
+            this.btn_cursos.Name = "btn_cursos";
+            this.btn_cursos.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btn_cursos.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_cursos.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_cursos.OnHoverImage = null;
+            this.btn_cursos.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_cursos.Radius = 10;
+            this.btn_cursos.Size = new System.Drawing.Size(212, 42);
+            this.btn_cursos.TabIndex = 0;
+            this.btn_cursos.Text = "Cursos";
+            this.btn_cursos.Click += new System.EventHandler(this.btn_cursos_Click);
+            // 
+            // btn_stats
+            // 
+            this.btn_stats.AnimationHoverSpeed = 0.07F;
+            this.btn_stats.AnimationSpeed = 0.03F;
+            this.btn_stats.BackColor = System.Drawing.Color.Transparent;
+            this.btn_stats.BaseColor = System.Drawing.Color.DodgerBlue;
+            this.btn_stats.BorderColor = System.Drawing.Color.Black;
+            this.btn_stats.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_stats.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_stats.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_stats.ForeColor = System.Drawing.Color.White;
+            this.btn_stats.Image = global::SGCC___PERFIL.Properties.Resources.status_branco;
+            this.btn_stats.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_stats.Location = new System.Drawing.Point(10, 152);
+            this.btn_stats.Name = "btn_stats";
+            this.btn_stats.OnHoverBaseColor = System.Drawing.Color.DodgerBlue;
+            this.btn_stats.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_stats.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_stats.OnHoverImage = null;
+            this.btn_stats.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_stats.Radius = 10;
+            this.btn_stats.Size = new System.Drawing.Size(212, 42);
+            this.btn_stats.TabIndex = 0;
+            this.btn_stats.Text = "Estatísticas";
+            this.btn_stats.Click += new System.EventHandler(this.btn_stats_Click);
+            // 
+            // btn_guardarDefinicoes
+            // 
+            this.btn_guardarDefinicoes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_guardarDefinicoes.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_guardarDefinicoes.Image = global::SGCC___PERFIL.Properties.Resources.Atualizar;
+            this.btn_guardarDefinicoes.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_guardarDefinicoes.Location = new System.Drawing.Point(1190, 2);
+            this.btn_guardarDefinicoes.Name = "btn_guardarDefinicoes";
+            this.btn_guardarDefinicoes.OnHoverImage = null;
+            this.btn_guardarDefinicoes.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_guardarDefinicoes.Size = new System.Drawing.Size(30, 30);
+            this.btn_guardarDefinicoes.TabIndex = 50;
+            this.btn_guardarDefinicoes.Visible = false;
+            this.btn_guardarDefinicoes.Click += new System.EventHandler(this.btn_guardarDefinicoes_Click);
+            // 
             // Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5025,35 +4982,26 @@ namespace SGCC___PERFIL
             this.Load += new System.EventHandler(this.Perfil_Load);
             this.panelTopo.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
-            this.panelMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).EndInit();
             this.paginas.ResumeLayout(false);
             this.status.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.gunaShadowPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatsformandos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox8)).EndInit();
             this.gunaShadowPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatsCursos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox7)).EndInit();
             this.gunaShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.statsGrafico)).EndInit();
             this.gunaElipsePanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgStatsCursos)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgStatsFormadores)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgStatsFormandos)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgStatsSaida)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgStatsEntrada)).EndInit();
             this.cursos.ResumeLayout(false);
             this.cursos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVistaCursos)).EndInit();
@@ -5086,25 +5034,17 @@ namespace SGCC___PERFIL
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditMensalidade)).EndInit();
             this.opcoes.ResumeLayout(false);
             this.gunaShadowPanel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox6)).EndInit();
             this.gunaShadowPanel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox5)).EndInit();
             this.gunaShadowPanel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).EndInit();
             this.gunaShadowPanel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).EndInit();
             this.gunaShadowPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             this.gunaShadowPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.definicoes.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.gunaShadowPanel7.ResumeLayout(false);
             this.gunaShadowPanel7.PerformLayout();
             this.gunaShadowPanel12.ResumeLayout(false);
             this.gunaShadowPanel12.PerformLayout();
-            this.gunaShadowPanel6.ResumeLayout(false);
-            this.gunaShadowPanel6.PerformLayout();
             this.gunaShadowPanel13.ResumeLayout(false);
             this.gunaShadowPanel13.PerformLayout();
             this.gunaGroupBox6.ResumeLayout(false);
@@ -5119,10 +5059,24 @@ namespace SGCC___PERFIL
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.gunaGroupBox4.ResumeLayout(false);
             this.gunaGroupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox9)).EndInit();
             this.relatorioSaida.ResumeLayout(false);
             this.relatorioSaida.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorioSaida)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgStatsCursos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgStatsFormadores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgStatsFormandos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgStatsSaida)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgStatsEntrada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5146,16 +5100,16 @@ namespace SGCC___PERFIL
         private Guna.UI.WinForms.GunaButton btn_formandos;
         private Guna.UI.WinForms.GunaButton btn_cursos;
         private Guna.UI.WinForms.GunaCirclePictureBox imgUsuario;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTipoConta;
         private System.Windows.Forms.Label lbl_nomeConta;
         private Guna.UI.WinForms.GunaDataGridView dgvVistaCursos;
         private System.Windows.Forms.TabPage formandos;
         private Guna.UI.WinForms.GunaDataGridView dgvVistaFormandos;
         private System.Windows.Forms.TabPage mensalidade;
         private Guna.UI.WinForms.GunaDataGridView dgvVistaMensalidade;
-        private Guna.UI.WinForms.GunaRadioButton gunaRadioButton2;
-        private Guna.UI.WinForms.GunaRadioButton gunaRadioButton1;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        private Guna.UI.WinForms.GunaRadioButton rbtnFiltrarMensalidade_nomeFormando;
+        private Guna.UI.WinForms.GunaRadioButton rbtnFiltrarMensalidade_numeroFormando;
+        private Guna.UI.WinForms.GunaTextBox txtxPesquisaMensalidade;
         private System.Windows.Forms.TabPage gestao_curso;
         private System.Windows.Forms.Label label17;
         private Guna.UI.WinForms.GunaTextBox txtNomeCurso;
@@ -5178,8 +5132,6 @@ namespace SGCC___PERFIL
         private Guna.UI.WinForms.GunaRadioButton rbtnFiltrarFormandos_numero;
         private Guna.UI.WinForms.GunaTextBox txtPesquisaFormandos;
         private System.Windows.Forms.TabPage gestao_fomandos;
-        private System.Windows.Forms.Label label21;
-        private Guna.UI.WinForms.GunaTextBox txtCodFormando;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox2;
         private Guna.UI.WinForms.GunaRadioButton rbtnIDPassaporte;
         private Guna.UI.WinForms.GunaRadioButton rbtnIDBI;
@@ -5315,18 +5267,14 @@ namespace SGCC___PERFIL
         private System.Windows.Forms.Label label3;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel12;
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox7;
+        private Guna.UI.WinForms.GunaTextBox txt_precarioCartao;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox6;
+        private Guna.UI.WinForms.GunaTextBox txt_precarioCertificado;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox3;
+        private Guna.UI.WinForms.GunaTextBox txt_precarioMensalidade;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
+        private Guna.UI.WinForms.GunaTextBox txt_precarioInscricao;
         private System.Windows.Forms.Label label16;
-        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel6;
-        private Guna.UI.WinForms.GunaLabel gunaLabel4;
-        private Guna.UI.WinForms.GunaSwitch gunaSwitch4;
-        private System.Windows.Forms.Label label45;
         private Guna.UI.WinForms.GunaButton btn_verTodosRegistos_Entrada;
         private Guna.UI.WinForms.GunaButton btnRelatorioSaida;
         private System.Windows.Forms.TabPage relatorioSaida;
@@ -5374,14 +5322,15 @@ namespace SGCC___PERFIL
         private Guna.UI.WinForms.GunaLabel gunaLabel12;
         private System.Windows.Forms.Label label49;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox6;
-        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox8;
-        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox4;
-        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox5;
-        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox6;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox5;
-        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox7;
-        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox1;
-        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox2;
-        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox3;
+        private Guna.UI.WinForms.GunaRadioButton chkbx_DefSaida_Energia;
+        private Guna.UI.WinForms.GunaRadioButton chkbx_DefEntrada_Inscricao;
+        private Guna.UI.WinForms.GunaRadioButton chkbx_DefEntrada_Cartao;
+        private Guna.UI.WinForms.GunaRadioButton chkbx_DefEntrada_Certificado;
+        private Guna.UI.WinForms.GunaRadioButton chkbx_DefEntrada_Mensalidade;
+        private Guna.UI.WinForms.GunaRadioButton chkbx_DefSaida_papeis;
+        private Guna.UI.WinForms.GunaRadioButton chkbx_DefSaida_Tinteiro;
+        private Guna.UI.WinForms.GunaRadioButton chkbx_DefSaida_Combustivel;
+        private Guna.UI.WinForms.GunaImageButton btn_guardarDefinicoes;
     }
 }

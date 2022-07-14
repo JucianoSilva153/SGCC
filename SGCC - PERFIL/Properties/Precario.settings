@@ -11,7 +11,7 @@
     <Setting Name="cartao_formando" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">500</Value>
     </Setting>
-    <Setting Name="certificado" Type="System.String" Scope="User">
+    <Setting Name="certificado" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">3000</Value>
     </Setting>
   </Settings>

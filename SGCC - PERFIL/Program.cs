@@ -13,7 +13,7 @@ namespace SGCC___PERFIL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmLogin(false));
         }
     }
 }

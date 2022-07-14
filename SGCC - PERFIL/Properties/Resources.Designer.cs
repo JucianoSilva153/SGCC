@@ -143,6 +143,16 @@ namespace SGCC___PERFIL.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Config1 {
+            get {
+                object obj = ResourceManager.GetObject("Config1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap curso {
             get {
                 object obj = ResourceManager.GetObject("curso", resourceCulture);
@@ -386,6 +396,16 @@ namespace SGCC___PERFIL.Properties {
         internal static System.Drawing.Bitmap Opções_branco {
             get {
                 object obj = ResourceManager.GetObject("Opções_branco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outline_autorenew_black_24dp {
+            get {
+                object obj = ResourceManager.GetObject("outline_autorenew_black_24dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -207,6 +207,7 @@ namespace SGCC___PERFIL
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Centro Perfil - Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctbx_LogoUser)).EndInit();
             this.ResumeLayout(false);
