@@ -868,7 +868,9 @@ namespace SGCC___PERFIL
         {
             try
             {
-                StringSQL = "select cod, usuario, tipo from Conta";
+
+                StringSQL = "select cod, usuario, senha, tipo from Conta";
+                
 
                 DataSet DS = new DataSet();
                 DA = new SqlDataAdapter(StringSQL, conexao);
@@ -896,6 +898,10 @@ namespace SGCC___PERFIL
                         dgvUsuarios.Columns[i].HeaderText = "Usuário";
                     }
                     else if (i == 2)
+                    {
+                        dgvUsuarios.Columns[i].HeaderText = "Senha".Trim();
+                    }
+                    else if (i == 3)
                     {
                         dgvUsuarios.Columns[i].HeaderText = "Tipo de Conta";
                     }
@@ -1465,6 +1471,7 @@ namespace SGCC___PERFIL
                         SetarDadosGerais();
                         Modo = "";
                         btnNovoCurso.Text = "Novo Curso";
+                        btnEliminarCurso.Text = "Eliminar Curso";
                         Campos("curso", "desativar");
                     }
                 }
@@ -1477,6 +1484,7 @@ namespace SGCC___PERFIL
             {
                 Modo = "Adição";
                 btnNovoCurso.Text = "Adicionar Curso";
+                btnEliminarCurso.Text = "Cancelar";
                 Campos("curso", "ativar");
             }
         }
@@ -1652,27 +1660,37 @@ namespace SGCC___PERFIL
 
         private void btnEliminarCurso_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja Eliminar Este Curso?", "Eliminar Cursos", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+           if(Modo != "Adição")
             {
-                try
+                if (MessageBox.Show("Deseja Eliminar Este Curso?", "Eliminar Cursos", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    StringSQL = "delete from Cursos where cod=@cod";
-                    ComandoSQL = new SqlCommand(StringSQL, conexao);
+                    try
+                    {
+                        StringSQL = "delete from Cursos where cod=@cod";
+                        ComandoSQL = new SqlCommand(StringSQL, conexao);
 
-                    ComandoSQL.Parameters.AddWithValue("@cod", dgvEditCurso.SelectedCells[0].Value);
-                    conexao.Open();
-                    ComandoSQL.ExecuteNonQuery();
+                        ComandoSQL.Parameters.AddWithValue("@cod", dgvEditCurso.SelectedCells[0].Value);
+                        conexao.Open();
+                        ComandoSQL.ExecuteNonQuery();
+                    }
+                    catch (Exception E)
+                    {
+                        MessageBox.Show(E.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        conexao.Close();
+                        MessageBox.Show("Curso Eliminado com Sucesso!", "Eliminar curso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SetarDadosDGVEdit_Cursos();
+                    }
                 }
-                catch (Exception E)
-                {
-                    MessageBox.Show(E.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    conexao.Close();
-                    MessageBox.Show("Curso Eliminado com Sucesso!", "Eliminar curso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    SetarDadosDGVEdit_Cursos();
-                }
+            }
+            else
+            {
+                Modo = "";
+                btnNovoCurso.Text = "Novo Curso";
+                btnEliminarCurso.Text = "Eliminar";
+                Campos("curso", "desativar");
             }
         }
 
@@ -1712,6 +1730,27 @@ namespace SGCC___PERFIL
 
 
             return erro;
+        }
+
+        private void Add_nFormando()
+        {
+            try
+            {
+                StringSQL = "update Cursos set n_formandos += 1 where curso = " + cbxCursoFormando.Text;
+                ComandoSQL = new SqlCommand(StringSQL, conexao);
+
+                conexao.Open();
+                ComandoSQL.ExecuteNonQuery();
+            }
+            catch (Exception er)
+            {
+                Mensagem = new Dialogs.Mensagens(er.Message, "Erro na Base de Dados");
+                Mensagem.ShowDialog();
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
 
         private void btnNovoFormando_Click(object sender, EventArgs e)
@@ -1806,6 +1845,7 @@ namespace SGCC___PERFIL
                         btnNovoFormando.Text = "Novo Formando";
                         Modo = "";
                         Campos("formando", "desativar");
+                        Add_nFormando();
                     }
                 }
                 else
@@ -2680,7 +2720,7 @@ namespace SGCC___PERFIL
 
             if (campos == "curso")
             {
-                if (txtNomeCurso.Text == "" || cbxFormador.Text == "")
+                if (txtNomeCurso.Text == "")
                 {
                     erro = true;
                 }
@@ -2694,7 +2734,7 @@ namespace SGCC___PERFIL
             }
             else if (campos == "formadores")
             {
-                if (txtNomeFormador.Text == "" || cbxCursoFormador.Text == "" || txtNumeroTlfFormador.Text == "" || txtNumeroBIFormador.Text == "")
+                if (txtNomeFormador.Text == "" || txtNumeroTlfFormador.Text == "" || txtNumeroBIFormador.Text == "")
                 {
                     erro = true;
                 }
@@ -3548,6 +3588,12 @@ namespace SGCC___PERFIL
             SetarDefinicoes();
             Mensagem = new Dialogs.Mensagens("Definições guardadas com Sucesso.", "Definições");
             Mensagem.ShowDialog();
+        }
+
+        private void dgvUsuarios_Click(object sender, EventArgs e)
+        {
+            txtNomeUsuario.Text = dgvUsuarios.SelectedRows[0].Cells[1].Value.ToString();
+            txtPassword.Text = dgvUsuarios.SelectedRows[0].Cells[2].Value.ToString().Trim();
         }
     }
 
