@@ -767,10 +767,17 @@ namespace SGCC___PERFIL
             this.paginas.Location = new System.Drawing.Point(230, 35);
             this.paginas.Multiline = true;
             this.paginas.Name = "paginas";
+<<<<<<< Updated upstream
             this.paginas.Page = this.definicoes;
             this.paginas.PageIndex = 10;
             this.paginas.PageName = "definicoes";
             this.paginas.PageTitle = "Definições";
+=======
+            this.paginas.Page = this.cursos;
+            this.paginas.PageIndex = 1;
+            this.paginas.PageName = "cursos";
+            this.paginas.PageTitle = "Cursos";
+>>>>>>> Stashed changes
             this.paginas.SelectedIndex = 0;
             this.paginas.Size = new System.Drawing.Size(1100, 695);
             this.paginas.TabIndex = 2;
@@ -1126,7 +1133,7 @@ namespace SGCC___PERFIL
             this.gunaElipsePanel1.Controls.Add(this.panel3);
             this.gunaElipsePanel1.Controls.Add(this.panel2);
             this.gunaElipsePanel1.Controls.Add(this.panel6);
-            this.gunaElipsePanel1.Location = new System.Drawing.Point(12, 10);
+            this.gunaElipsePanel1.Location = new System.Drawing.Point(13, 31);
             this.gunaElipsePanel1.Name = "gunaElipsePanel1";
             this.gunaElipsePanel1.Radius = 20;
             this.gunaElipsePanel1.Size = new System.Drawing.Size(969, 120);

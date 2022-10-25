@@ -870,7 +870,7 @@ namespace SGCC___PERFIL
             {
 
                 StringSQL = "select cod, usuario, senha, tipo from Conta";
-                
+
 
                 DataSet DS = new DataSet();
                 DA = new SqlDataAdapter(StringSQL, conexao);
@@ -1485,6 +1485,7 @@ namespace SGCC___PERFIL
                 Modo = "Adição";
                 btnNovoCurso.Text = "Adicionar Curso";
                 btnEliminarCurso.Text = "Cancelar";
+                HabilitarBotoes(false, "curso");
                 Campos("curso", "ativar");
             }
         }
@@ -1660,7 +1661,7 @@ namespace SGCC___PERFIL
 
         private void btnEliminarCurso_Click(object sender, EventArgs e)
         {
-           if(Modo != "Adição")
+            if (Modo != "Adição")
             {
                 if (MessageBox.Show("Deseja Eliminar Este Curso?", "Eliminar Cursos", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
@@ -1850,7 +1851,7 @@ namespace SGCC___PERFIL
                 }
                 else
                 {
-                    MessageBox.Show("Preencha todos os campos obrigatórios.", "Erro ao adicionar novo formando", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Preencha os campos correctamente! Tente: \n 1. Preencher todos espaços vazios. \n 2. Inserir um Nº de BI válido.", "Erro ao adicionar novo formando", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -1917,7 +1918,6 @@ namespace SGCC___PERFIL
 
         private void LimpaCampos()
         {
-            txtCodFormador.Text = "";
             txtIDBI.Text = "";
             txtIDPassaporte.Text = "";
             txtMoradaProv.Text = "";
@@ -2484,7 +2484,6 @@ namespace SGCC___PERFIL
             {
                 if (campos.ToLower() == "formador")
                 {
-                    txtCodFormador.Enabled = true;
                     txtNomeFormador.Enabled = true;
                     cbxCursoFormador.Enabled = true;
                     txtNumeroTlfFormador.Enabled = true;
@@ -2524,7 +2523,6 @@ namespace SGCC___PERFIL
             {
                 if (campos.ToLower() == "formador")
                 {
-                    txtCodFormador.Enabled = false;
                     txtNomeFormador.Enabled = false;
                     cbxCursoFormador.Enabled = false;
                     txtNumeroTlfFormador.Enabled = false;
@@ -3594,6 +3592,40 @@ namespace SGCC___PERFIL
         {
             txtNomeUsuario.Text = dgvUsuarios.SelectedRows[0].Cells[1].Value.ToString();
             txtPassword.Text = dgvUsuarios.SelectedRows[0].Cells[2].Value.ToString().Trim();
+        }
+
+        //Para Desabilitar os Botoões
+        private void HabilitarBotoes(bool habilitar, string botoes)
+        {
+            if (botoes == "curso")
+            {
+                if (Modo == "Adição")
+                {
+                    if (!habilitar)
+                    {
+                        btnEditarCurso.Enabled = false;
+                        btnPesquisarCurso.Enabled = false;
+                    }
+                    else
+                    {
+                        btnEditarCurso.Enabled = true;
+                        btnPesquisarCurso.Enabled = true;
+                    }
+                }
+                else if (Modo == "Edição")
+                {
+                    if (!habilitar)
+                    {
+                        btnNovoCurso.Enabled = false;
+                        btnPesquisarCurso.Enabled = false;
+                    }
+                    else
+                    {
+                        btnNovoCurso.Enabled = true;
+                        btnPesquisarCurso.Enabled = true;
+                    }
+                }
+            }
         }
     }
 
