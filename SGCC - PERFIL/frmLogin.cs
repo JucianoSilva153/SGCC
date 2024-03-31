@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Data;
 using System.IO;
 
@@ -10,11 +10,11 @@ namespace SGCC___PERFIL
 {
     public partial class frmLogin : Form
     {
-        SqlConnection conexao = new SqlConnection(Properties.Config.Default.ConexaoPadrao);
-        SqlCommand ComandoSQL;
+        MySqlConnection conexao = new MySqlConnection("server=localhost;database=centro_bd;uID=root;pwd=;");
+        MySqlCommand ComandoSQL;
         string StringSQL;
-        SqlDataAdapter DA;
-        SqlDataReader DR;
+        MySqlDataAdapter DA;
+        MySqlDataReader DR;
         string usuaro = Environment.UserName;
 
         bool Erro;
@@ -31,22 +31,10 @@ namespace SGCC___PERFIL
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            //Form form = new Perfil(txtNomeUsuario.Text, txtPassword.Text);
-            //if (Erro)
-            //{
-            //    this.Hide();
-            //    form.Show();
-            //}
-            //else
-            //{
-            //    //this.Hide();
-            //}
-
-
             try
             {
                 StringSQL = "select usuario, senha from Conta where usuario = '" + txtNomeUsuario.Text + "' and senha = '" + txtPassword.Text + "'";
-                SqlDataAdapter DA = new SqlDataAdapter(StringSQL, conexao);
+                MySqlDataAdapter DA = new MySqlDataAdapter(StringSQL, conexao);
                 DataTable DT = new DataTable();
                 DA.Fill(DT);
 

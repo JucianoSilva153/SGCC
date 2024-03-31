@@ -7,17 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace SGCC___PERFIL.Dialogs
 {
     public partial class dl_GerarRegistoSaida : Form
     {
-        SqlConnection conexao = new SqlConnection(@"Data Source=(localdb)\CentroPerfilBD;Initial Catalog=BD;Integrated Security=True");
-        SqlCommand ComandoSQL;
+        MySqlConnection conexao = new MySqlConnection("server=localhost;database=centro_bd;uID=root;pwd=;");
+        MySqlCommand ComandoSQL;
         string StringSQL;
-        SqlDataAdapter DA;
-        SqlDataReader DR;
+        MySqlDataAdapter DA;
+        MySqlDataReader DR;
 
         public dl_GerarRegistoSaida()
         {
@@ -31,7 +31,7 @@ namespace SGCC___PERFIL.Dialogs
                 if (cbx_relatar.SelectedIndex == 0)
                 {
                     StringSQL = "insert into RelatorioSaida (pagamentoEnergia, horas, data, operador) values (@pagamentoEnergia, @horas, @operador, @data)";
-                    ComandoSQL = new SqlCommand(StringSQL, conexao);
+                    ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                     ComandoSQL.Parameters.AddWithValue("@pagamentoEnergia", txtValor.Text);
                     ComandoSQL.Parameters.AddWithValue("@horas", DateTime.Now.Hour + ":" + DateTime.Now.Minute);
@@ -44,7 +44,7 @@ namespace SGCC___PERFIL.Dialogs
                 else if (cbx_relatar.SelectedIndex == 1)
                 {
                     StringSQL = "insert into RelatorioSaida (combustivelGerador, quantidade, horas, data, operador) values (@combustivelGerador, @quantidade, @horas, @operador, @data)";
-                    ComandoSQL = new SqlCommand(StringSQL, conexao);
+                    ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                     ComandoSQL.Parameters.AddWithValue("@combustivelGerador", txtValor.Text);
                     ComandoSQL.Parameters.AddWithValue("@quantidade", txtQuantidade.Text);
@@ -58,7 +58,7 @@ namespace SGCC___PERFIL.Dialogs
                 else if (cbx_relatar.SelectedIndex == 2)
                 {
                     StringSQL = "insert into RelatorioSaida (compraTinteiro, quantidade, horas, data, operador) values (@compraTinteiro, @quantidade, @horas, @operador, @data)";
-                    ComandoSQL = new SqlCommand(StringSQL, conexao);
+                    ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                     ComandoSQL.Parameters.AddWithValue("@compraTinteiro", txtValor.Text);
                     ComandoSQL.Parameters.AddWithValue("@quantidade", txtQuantidade.Text);
@@ -72,7 +72,7 @@ namespace SGCC___PERFIL.Dialogs
                 else if (cbx_relatar.SelectedIndex == 3)
                 {
                     StringSQL = "insert into RelatorioSaida (compraResmaPapeis, quantidade, horas, data, operador) values (@compraResmaPapeis, @quantidade, @horas, @operador, @data)";
-                    ComandoSQL = new SqlCommand(StringSQL, conexao);
+                    ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                     ComandoSQL.Parameters.AddWithValue("@compraResmaPapeis", txtValor.Text);
                     ComandoSQL.Parameters.AddWithValue("@quantidade", txtQuantidade.Text);
@@ -86,7 +86,7 @@ namespace SGCC___PERFIL.Dialogs
                 else if (cbx_relatar.SelectedIndex == 4)
                 {
                     StringSQL = "insert into RelatorioSaida (devolucoes, horas, data, operador) values (@devolucoes,  @horas, @operador, @data)";
-                    ComandoSQL = new SqlCommand(StringSQL, conexao);
+                    ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                     ComandoSQL.Parameters.AddWithValue("@devolucoes", txtValor.Text);
                     ComandoSQL.Parameters.AddWithValue("@horas", DateTime.Now.Hour + ":" + DateTime.Now.Minute);
@@ -99,7 +99,7 @@ namespace SGCC___PERFIL.Dialogs
                 else if (cbx_relatar.SelectedIndex == 5)
                 {
                     StringSQL = "insert into RelatorioSaida (outrasSaidasDe, horas, data, operador) values (@outrasSaidasDe, @horas, @operador, @data)";
-                    ComandoSQL = new SqlCommand(StringSQL, conexao);
+                    ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                     ComandoSQL.Parameters.AddWithValue("@outrasSaidasDe", txtValor.Text);
                     ComandoSQL.Parameters.AddWithValue("@horas", DateTime.Now.Hour + ":" + DateTime.Now.Minute);

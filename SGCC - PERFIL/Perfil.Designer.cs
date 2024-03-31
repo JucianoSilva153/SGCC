@@ -535,8 +535,7 @@ namespace SGCC___PERFIL
             // 
             // btn_logout
             // 
-            this.btn_logout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_logout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_logout.AnimationHoverSpeed = 0.07F;
             this.btn_logout.AnimationSpeed = 0.03F;
             this.btn_logout.BackColor = System.Drawing.Color.Transparent;
@@ -767,17 +766,10 @@ namespace SGCC___PERFIL
             this.paginas.Location = new System.Drawing.Point(230, 35);
             this.paginas.Multiline = true;
             this.paginas.Name = "paginas";
-<<<<<<< Updated upstream
-            this.paginas.Page = this.definicoes;
-            this.paginas.PageIndex = 10;
-            this.paginas.PageName = "definicoes";
-            this.paginas.PageTitle = "Definições";
-=======
-            this.paginas.Page = this.cursos;
-            this.paginas.PageIndex = 1;
-            this.paginas.PageName = "cursos";
-            this.paginas.PageTitle = "Cursos";
->>>>>>> Stashed changes
+            this.paginas.Page = this.status;
+            this.paginas.PageIndex = 0;
+            this.paginas.PageName = "status";
+            this.paginas.PageTitle = "Status";
             this.paginas.SelectedIndex = 0;
             this.paginas.Size = new System.Drawing.Size(1100, 695);
             this.paginas.TabIndex = 2;
@@ -828,8 +820,7 @@ namespace SGCC___PERFIL
             // 
             // gunaShadowPanel3
             // 
-            this.gunaShadowPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaShadowPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaShadowPanel3.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel3.BaseColor = System.Drawing.Color.White;
             this.gunaShadowPanel3.Controls.Add(this.label15);
@@ -842,19 +833,17 @@ namespace SGCC___PERFIL
             this.gunaShadowPanel3.ShadowColor = System.Drawing.Color.DodgerBlue;
             this.gunaShadowPanel3.ShadowDepth = 70;
             this.gunaShadowPanel3.ShadowShift = 6;
-            this.gunaShadowPanel3.Size = new System.Drawing.Size(520, 290);
+            this.gunaShadowPanel3.Size = new System.Drawing.Size(594, 290);
             this.gunaShadowPanel3.TabIndex = 8;
             // 
             // label15
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.label15.Location = new System.Drawing.Point(468, 14);
+            this.label15.Location = new System.Drawing.Point(437, 7);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 35);
+            this.label15.Size = new System.Drawing.Size(136, 35);
             this.label15.TabIndex = 8;
             this.label15.Text = "Recentes";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -867,9 +856,7 @@ namespace SGCC___PERFIL
             this.dgvStatsformandos.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvStatsformandos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvStatsformandos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvStatsformandos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvStatsformandos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStatsformandos.BackgroundColor = System.Drawing.Color.White;
             this.dgvStatsformandos.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -898,7 +885,7 @@ namespace SGCC___PERFIL
             this.dgvStatsformandos.Name = "dgvStatsformandos";
             this.dgvStatsformandos.RowHeadersVisible = false;
             this.dgvStatsformandos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStatsformandos.Size = new System.Drawing.Size(483, 217);
+            this.dgvStatsformandos.Size = new System.Drawing.Size(557, 217);
             this.dgvStatsformandos.TabIndex = 7;
             this.dgvStatsformandos.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvStatsformandos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -947,8 +934,7 @@ namespace SGCC___PERFIL
             // 
             // gunaShadowPanel2
             // 
-            this.gunaShadowPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaShadowPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaShadowPanel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel2.BaseColor = System.Drawing.Color.White;
             this.gunaShadowPanel2.Controls.Add(this.label14);
@@ -961,19 +947,17 @@ namespace SGCC___PERFIL
             this.gunaShadowPanel2.ShadowColor = System.Drawing.Color.DodgerBlue;
             this.gunaShadowPanel2.ShadowDepth = 70;
             this.gunaShadowPanel2.ShadowShift = 6;
-            this.gunaShadowPanel2.Size = new System.Drawing.Size(520, 241);
+            this.gunaShadowPanel2.Size = new System.Drawing.Size(594, 241);
             this.gunaShadowPanel2.TabIndex = 7;
             // 
             // label14
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.label14.Location = new System.Drawing.Point(465, 7);
+            this.label14.Location = new System.Drawing.Point(437, 11);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(28, 35);
+            this.label14.Size = new System.Drawing.Size(136, 35);
             this.label14.TabIndex = 6;
             this.label14.Text = "Recentes";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -986,9 +970,7 @@ namespace SGCC___PERFIL
             this.dgvStatsCursos.AllowUserToResizeRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dgvStatsCursos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvStatsCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvStatsCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvStatsCursos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStatsCursos.BackgroundColor = System.Drawing.Color.White;
             this.dgvStatsCursos.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1013,11 +995,11 @@ namespace SGCC___PERFIL
             this.dgvStatsCursos.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvStatsCursos.EnableHeadersVisualStyles = false;
             this.dgvStatsCursos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvStatsCursos.Location = new System.Drawing.Point(22, 49);
+            this.dgvStatsCursos.Location = new System.Drawing.Point(23, 49);
             this.dgvStatsCursos.Name = "dgvStatsCursos";
             this.dgvStatsCursos.RowHeadersVisible = false;
             this.dgvStatsCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStatsCursos.Size = new System.Drawing.Size(471, 174);
+            this.dgvStatsCursos.Size = new System.Drawing.Size(545, 174);
             this.dgvStatsCursos.TabIndex = 5;
             this.dgvStatsCursos.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvStatsCursos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -1124,8 +1106,7 @@ namespace SGCC___PERFIL
             // 
             // gunaElipsePanel1
             // 
-            this.gunaElipsePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaElipsePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaElipsePanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel1.BaseColor = System.Drawing.Color.DodgerBlue;
             this.gunaElipsePanel1.Controls.Add(this.panel5);
@@ -1136,7 +1117,7 @@ namespace SGCC___PERFIL
             this.gunaElipsePanel1.Location = new System.Drawing.Point(13, 31);
             this.gunaElipsePanel1.Name = "gunaElipsePanel1";
             this.gunaElipsePanel1.Radius = 20;
-            this.gunaElipsePanel1.Size = new System.Drawing.Size(969, 120);
+            this.gunaElipsePanel1.Size = new System.Drawing.Size(1042, 120);
             this.gunaElipsePanel1.TabIndex = 5;
             // 
             // panel5
@@ -1144,18 +1125,19 @@ namespace SGCC___PERFIL
             this.panel5.Controls.Add(this.lblStatsCursos);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.imgStatsCursos);
-            this.panel5.Location = new System.Drawing.Point(844, 4);
+            this.panel5.Location = new System.Drawing.Point(842, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(202, 113);
+            this.panel5.Size = new System.Drawing.Size(180, 113);
             this.panel5.TabIndex = 13;
             // 
             // lblStatsCursos
             // 
+            this.lblStatsCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.lblStatsCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatsCursos.ForeColor = System.Drawing.Color.White;
             this.lblStatsCursos.Location = new System.Drawing.Point(4, 63);
             this.lblStatsCursos.Name = "lblStatsCursos";
-            this.lblStatsCursos.Size = new System.Drawing.Size(194, 33);
+            this.lblStatsCursos.Size = new System.Drawing.Size(173, 33);
             this.lblStatsCursos.TabIndex = 9;
             this.lblStatsCursos.Text = "11";
             this.lblStatsCursos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1189,9 +1171,9 @@ namespace SGCC___PERFIL
             this.panel4.Controls.Add(this.lblStatsFormadores);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.imgStatsFormadores);
-            this.panel4.Location = new System.Drawing.Point(636, 4);
+            this.panel4.Location = new System.Drawing.Point(634, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(202, 113);
+            this.panel4.Size = new System.Drawing.Size(180, 113);
             this.panel4.TabIndex = 12;
             // 
             // lblStatsFormadores
@@ -1200,7 +1182,7 @@ namespace SGCC___PERFIL
             this.lblStatsFormadores.ForeColor = System.Drawing.Color.White;
             this.lblStatsFormadores.Location = new System.Drawing.Point(3, 63);
             this.lblStatsFormadores.Name = "lblStatsFormadores";
-            this.lblStatsFormadores.Size = new System.Drawing.Size(194, 33);
+            this.lblStatsFormadores.Size = new System.Drawing.Size(173, 33);
             this.lblStatsFormadores.TabIndex = 9;
             this.lblStatsFormadores.Text = "11";
             this.lblStatsFormadores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1234,9 +1216,9 @@ namespace SGCC___PERFIL
             this.panel3.Controls.Add(this.lblStatsFormandos);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.imgStatsFormandos);
-            this.panel3.Location = new System.Drawing.Point(430, 4);
+            this.panel3.Location = new System.Drawing.Point(428, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 112);
+            this.panel3.Size = new System.Drawing.Size(180, 113);
             this.panel3.TabIndex = 11;
             // 
             // lblStatsFormandos
@@ -1245,7 +1227,7 @@ namespace SGCC___PERFIL
             this.lblStatsFormandos.ForeColor = System.Drawing.Color.White;
             this.lblStatsFormandos.Location = new System.Drawing.Point(3, 63);
             this.lblStatsFormandos.Name = "lblStatsFormandos";
-            this.lblStatsFormandos.Size = new System.Drawing.Size(194, 33);
+            this.lblStatsFormandos.Size = new System.Drawing.Size(173, 33);
             this.lblStatsFormandos.TabIndex = 9;
             this.lblStatsFormandos.Text = "28";
             this.lblStatsFormandos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1279,9 +1261,9 @@ namespace SGCC___PERFIL
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.lblStatsSaida);
             this.panel2.Controls.Add(this.imgStatsSaida);
-            this.panel2.Location = new System.Drawing.Point(224, 4);
+            this.panel2.Location = new System.Drawing.Point(222, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 112);
+            this.panel2.Size = new System.Drawing.Size(180, 113);
             this.panel2.TabIndex = 9;
             // 
             // label8
@@ -1301,7 +1283,7 @@ namespace SGCC___PERFIL
             this.lblStatsSaida.ForeColor = System.Drawing.Color.White;
             this.lblStatsSaida.Location = new System.Drawing.Point(3, 63);
             this.lblStatsSaida.Name = "lblStatsSaida";
-            this.lblStatsSaida.Size = new System.Drawing.Size(194, 33);
+            this.lblStatsSaida.Size = new System.Drawing.Size(173, 33);
             this.lblStatsSaida.TabIndex = 9;
             this.lblStatsSaida.Text = "5.000KZ";
             this.lblStatsSaida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1310,6 +1292,7 @@ namespace SGCC___PERFIL
             // 
             this.imgStatsSaida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgStatsSaida.BaseColor = System.Drawing.Color.Transparent;
+            this.imgStatsSaida.Image = global::SGCC___PERFIL.Properties.Resources.Mensalidade_branco;
             this.imgStatsSaida.Location = new System.Drawing.Point(9, 17);
             this.imgStatsSaida.Name = "imgStatsSaida";
             this.imgStatsSaida.Size = new System.Drawing.Size(30, 30);
@@ -1323,9 +1306,9 @@ namespace SGCC___PERFIL
             this.panel6.Controls.Add(this.lblStatsEntrada);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.imgStatsEntrada);
-            this.panel6.Location = new System.Drawing.Point(18, 4);
+            this.panel6.Location = new System.Drawing.Point(16, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 112);
+            this.panel6.Size = new System.Drawing.Size(180, 113);
             this.panel6.TabIndex = 5;
             // 
             // lblStatsEntrada
@@ -1334,7 +1317,7 @@ namespace SGCC___PERFIL
             this.lblStatsEntrada.ForeColor = System.Drawing.Color.White;
             this.lblStatsEntrada.Location = new System.Drawing.Point(3, 62);
             this.lblStatsEntrada.Name = "lblStatsEntrada";
-            this.lblStatsEntrada.Size = new System.Drawing.Size(194, 33);
+            this.lblStatsEntrada.Size = new System.Drawing.Size(173, 33);
             this.lblStatsEntrada.TabIndex = 8;
             this.lblStatsEntrada.Text = "5.000KZ";
             this.lblStatsEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1354,6 +1337,7 @@ namespace SGCC___PERFIL
             // 
             this.imgStatsEntrada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.imgStatsEntrada.BaseColor = System.Drawing.Color.Transparent;
+            this.imgStatsEntrada.Image = global::SGCC___PERFIL.Properties.Resources.Mensalidade_branco;
             this.imgStatsEntrada.Location = new System.Drawing.Point(9, 17);
             this.imgStatsEntrada.Name = "imgStatsEntrada";
             this.imgStatsEntrada.Size = new System.Drawing.Size(30, 30);
@@ -1424,9 +1408,7 @@ namespace SGCC___PERFIL
             // 
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             this.dgvVistaCursos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvVistaCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvVistaCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVistaCursos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVistaCursos.BackgroundColor = System.Drawing.Color.White;
             this.dgvVistaCursos.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1555,9 +1537,7 @@ namespace SGCC___PERFIL
             // 
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
             this.dgvVistaFormandos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dgvVistaFormandos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvVistaFormandos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVistaFormandos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVistaFormandos.BackgroundColor = System.Drawing.Color.White;
             this.dgvVistaFormandos.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1674,9 +1654,7 @@ namespace SGCC___PERFIL
             // 
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
             this.dgvVistaFormadores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.dgvVistaFormadores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvVistaFormadores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVistaFormadores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVistaFormadores.BackgroundColor = System.Drawing.Color.White;
             this.dgvVistaFormadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1748,9 +1726,7 @@ namespace SGCC___PERFIL
             // 
             dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
             this.dgvVistaMensalidade.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.dgvVistaMensalidade.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvVistaMensalidade.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVistaMensalidade.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVistaMensalidade.BackgroundColor = System.Drawing.Color.White;
             this.dgvVistaMensalidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -2265,20 +2241,7 @@ namespace SGCC___PERFIL
             this.txtMoradaProv.ForeColor = System.Drawing.Color.DodgerBlue;
             this.txtMoradaProv.FormattingEnabled = true;
             this.txtMoradaProv.ItemHeight = 42;
-            this.txtMoradaProv.Items.AddRange(new object[] {
-            "Luanda",
-            "Benguela",
-            "Uíge",
-            "Cuanza Norte",
-            "Cuanza Sul",
-            "Lunda Sul",
-            "Lunda Norte",
-            "Zaire",
-            "Cabinda",
-            "Malanje",
-            "Huambo",
-            "Cunene",
-            "Moxico"});
+            this.txtMoradaProv.Items.AddRange(new object[] { "Luanda", "Benguela", "Uíge", "Cuanza Norte", "Cuanza Sul", "Lunda Sul", "Lunda Norte", "Zaire", "Cabinda", "Malanje", "Huambo", "Cunene", "Moxico" });
             this.txtMoradaProv.Location = new System.Drawing.Point(459, 448);
             this.txtMoradaProv.Name = "txtMoradaProv";
             this.txtMoradaProv.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -2467,18 +2430,7 @@ namespace SGCC___PERFIL
             this.cbxHorario.ForeColor = System.Drawing.Color.DodgerBlue;
             this.cbxHorario.FormattingEnabled = true;
             this.cbxHorario.ItemHeight = 42;
-            this.cbxHorario.Items.AddRange(new object[] {
-            "7h30",
-            "8h30",
-            "9h30",
-            "10h30",
-            "11h30",
-            "12h30",
-            "13h30",
-            "14h30",
-            "15h30",
-            "16h30",
-            "17h30"});
+            this.cbxHorario.Items.AddRange(new object[] { "7h30", "8h30", "9h30", "10h30", "11h30", "12h30", "13h30", "14h30", "15h30", "16h30", "17h30" });
             this.cbxHorario.Location = new System.Drawing.Point(787, 442);
             this.cbxHorario.Name = "cbxHorario";
             this.cbxHorario.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -2509,10 +2461,7 @@ namespace SGCC___PERFIL
             this.cbxPeriodo.ForeColor = System.Drawing.Color.DodgerBlue;
             this.cbxPeriodo.FormattingEnabled = true;
             this.cbxPeriodo.ItemHeight = 42;
-            this.cbxPeriodo.Items.AddRange(new object[] {
-            "Manhã",
-            "Tarde",
-            "Noite"});
+            this.cbxPeriodo.Items.AddRange(new object[] { "Manhã", "Tarde", "Noite" });
             this.cbxPeriodo.Location = new System.Drawing.Point(787, 370);
             this.cbxPeriodo.Name = "cbxPeriodo";
             this.cbxPeriodo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -3320,19 +3269,7 @@ namespace SGCC___PERFIL
             this.txtMensalidadeMesPago.ForeColor = System.Drawing.Color.DodgerBlue;
             this.txtMensalidadeMesPago.FormattingEnabled = true;
             this.txtMensalidadeMesPago.ItemHeight = 42;
-            this.txtMensalidadeMesPago.Items.AddRange(new object[] {
-            "Janeiro",
-            "Fevereiro",
-            "Março",
-            "Abril",
-            "Maio",
-            "Junho",
-            "Julho",
-            "Agosto",
-            "Setembro",
-            "Outubro",
-            "Novembro",
-            "Dezembro"});
+            this.txtMensalidadeMesPago.Items.AddRange(new object[] { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" });
             this.txtMensalidadeMesPago.Location = new System.Drawing.Point(612, 32);
             this.txtMensalidadeMesPago.Name = "txtMensalidadeMesPago";
             this.txtMensalidadeMesPago.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -3652,8 +3589,7 @@ namespace SGCC___PERFIL
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(286, 62);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Gerenciamento das contas dentro do sistema, poderá fazer isso apenas se tiver pre" +
-    "vilégios elevados.";
+            this.label4.Text = "Gerenciamento das contas dentro do sistema, poderá fazer isso apenas se tiver pre" + "vilégios elevados.";
             // 
             // btnGerenUsuarios
             // 
@@ -3801,8 +3737,7 @@ namespace SGCC___PERFIL
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(286, 62);
             this.label38.TabIndex = 12;
-            this.label38.Text = "Faça a Gestão de todos os formadores que lecionam no centro. Poderá adicionar, el" +
-    "iminar e editar todos os cursos.";
+            this.label38.Text = "Faça a Gestão de todos os formadores que lecionam no centro. Poderá adicionar, el" + "iminar e editar todos os cursos.";
             // 
             // btnGerenFormadores
             // 
@@ -3876,8 +3811,7 @@ namespace SGCC___PERFIL
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(286, 62);
             this.label10.TabIndex = 12;
-            this.label10.Text = "Faça a Gestão de todos os cursos lecionados no centro. Poderá adicionar, eliminar" +
-    " e editar todos os cursos.\r\n";
+            this.label10.Text = "Faça a Gestão de todos os cursos lecionados no centro. Poderá adicionar, eliminar" + " e editar todos os cursos.\r\n";
             // 
             // btnGerenCursos
             // 
@@ -3951,8 +3885,7 @@ namespace SGCC___PERFIL
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(286, 62);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Faça a gestão de formandos que estudam no centro. Poderá fazer também a inscrição" +
-    " de formandos";
+            this.label6.Text = "Faça a gestão de formandos que estudam no centro. Poderá fazer também a inscrição" + " de formandos";
             // 
             // btnGerenFormandos
             // 
@@ -5075,7 +5008,6 @@ namespace SGCC___PERFIL
             this.relatorioSaida.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorioSaida)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

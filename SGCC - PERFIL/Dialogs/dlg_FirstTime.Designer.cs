@@ -247,7 +247,6 @@ namespace SGCC___PERFIL.Dialogs
             this.btnConfigPers.FadeWhenInactive = false;
             this.btnConfigPers.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
             this.btnConfigPers.Image = global::SGCC___PERFIL.Properties.Resources.Editar;
-            this.btnConfigPers.ImageActive = null;
             this.btnConfigPers.ImageLocation = null;
             this.btnConfigPers.ImageMargin = 40;
             this.btnConfigPers.ImageSize = new System.Drawing.Size(160, 160);
@@ -264,7 +263,6 @@ namespace SGCC___PERFIL.Dialogs
             this.btnConfigPers.TabIndex = 0;
             this.btnConfigPers.ToolTipText = "";
             this.btnConfigPers.WaitOnLoad = false;
-            this.btnConfigPers.Zoom = 40;
             this.btnConfigPers.ZoomSpeed = 10;
             this.btnConfigPers.Click += new System.EventHandler(this.btnConfigPers_Click);
             // 
@@ -283,7 +281,6 @@ namespace SGCC___PERFIL.Dialogs
             this.btnConfigDefault.FadeWhenInactive = false;
             this.btnConfigDefault.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
             this.btnConfigDefault.Image = global::SGCC___PERFIL.Properties.Resources.Config1;
-            this.btnConfigDefault.ImageActive = null;
             this.btnConfigDefault.ImageLocation = null;
             this.btnConfigDefault.ImageMargin = 40;
             this.btnConfigDefault.ImageSize = new System.Drawing.Size(160, 160);
@@ -300,7 +297,6 @@ namespace SGCC___PERFIL.Dialogs
             this.btnConfigDefault.TabIndex = 0;
             this.btnConfigDefault.ToolTipText = "";
             this.btnConfigDefault.WaitOnLoad = false;
-            this.btnConfigDefault.Zoom = 40;
             this.btnConfigDefault.ZoomSpeed = 10;
             this.btnConfigDefault.Click += new System.EventHandler(this.btnConfigDefault_Click);
             // 

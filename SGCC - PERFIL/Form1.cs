@@ -1,16 +1,16 @@
 ﻿using System;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace SGCC___PERFIL
 {
     public partial class Form1 : Form
     {
-        SqlCommand comandoSQL;
-        SqlConnection conexao;
-        SqlDataAdapter DA;
-        SqlDataReader DR;
-        string STRConexao = @"Data Source=(localdb)\CENTRO_BD;Initial Catalog=BD CENTRO;Integrated Security=True";
+        MySqlCommand comandoSQL;
+        MySqlConnection conexao;
+        MySqlDataAdapter DA;
+        MySqlDataReader DR;
+        string STRConexao = @"server=localhost;database=centro_bd;uID=root;pwd=;";
         string strSQL = string.Empty;
 
         public Form1()
@@ -22,9 +22,9 @@ namespace SGCC___PERFIL
         {
             try
             {
-                conexao = new SqlConnection(STRConexao);
+                conexao = new MySqlConnection(STRConexao);
                 strSQL = "insert into Formando (cod, formando, curso, numero_tlf) values(@cod, @formando, @curso, @numero_tlf)";
-                comandoSQL = new SqlCommand(strSQL, conexao);
+                comandoSQL = new MySqlCommand(strSQL, conexao);
 
                 comandoSQL.Parameters.AddWithValue("@cod", txt_cod.Text);
                 comandoSQL.Parameters.AddWithValue("@formando", txt_nome.Text);
@@ -57,9 +57,9 @@ namespace SGCC___PERFIL
             {
                 try
                 {
-                    conexao = new SqlConnection(STRConexao);
+                    conexao = new MySqlConnection(STRConexao);
                     strSQL = "select * from Formando where cod = @cod";
-                    comandoSQL = new SqlCommand(strSQL, conexao);
+                    comandoSQL = new MySqlCommand(strSQL, conexao);
 
                     comandoSQL.Parameters.AddWithValue("@cod", txt_cod.Text);
 

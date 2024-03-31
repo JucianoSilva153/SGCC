@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using MySql.Data.MySqlClient;
 
 
 namespace SGCC___PERFIL
@@ -31,11 +32,12 @@ namespace SGCC___PERFIL
 
         Form login = new Form();
 
-        SqlConnection conexao = new SqlConnection(Properties.Config.Default.ConexaoPadrao);
-        SqlCommand ComandoSQL;
+        MySqlConnection conexao = new MySqlConnection("server=localhost;database=centro_bd;uID=root;pwd=;");
+        MySqlCommand ComandoSQL;
         string StringSQL;
-        SqlDataAdapter DA;
-        SqlDataReader DR;
+        MySqlDataAdapter DA;
+        MySqlDataReader DR;
+
         public Perfil(string usuario)
         {
             InitializeComponent();
@@ -50,10 +52,7 @@ namespace SGCC___PERFIL
             {
                 lbl_nomeConta.Text = usuario;
             }
-
         }
-
-
 
 
         private void AcessoAoSistema(string user)
@@ -61,7 +60,7 @@ namespace SGCC___PERFIL
             try
             {
                 StringSQL = "select tipo from Conta where usuario = '" + user + "'";
-                SqlDataAdapter DA = new SqlDataAdapter(StringSQL, conexao);
+                MySqlDataAdapter DA = new MySqlDataAdapter(StringSQL, conexao);
                 DataTable DT = new DataTable();
                 DA.Fill(DT);
 
@@ -102,7 +101,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select inscricoes from RelatorioEntrada";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -113,12 +112,9 @@ namespace SGCC___PERFIL
                 }
 
                 ValoresInscricao = lst.ToArray();
-
-
             }
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message);
             }
             finally
@@ -132,7 +128,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select mensalidade from RelatorioEntrada";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -143,12 +139,9 @@ namespace SGCC___PERFIL
                 }
 
                 valorMensalidade = lst.ToArray();
-
-
             }
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message);
             }
             finally
@@ -162,7 +155,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select cartao from RelatorioEntrada";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -173,12 +166,9 @@ namespace SGCC___PERFIL
                 }
 
                 valorCartao = lst.ToArray();
-
-
             }
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message);
             }
             finally
@@ -192,7 +182,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select certficado from RelatorioEntrada";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -203,12 +193,9 @@ namespace SGCC___PERFIL
                 }
 
                 valorCertificado = lst.ToArray();
-
-
             }
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message);
             }
             finally
@@ -225,7 +212,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select pagamentoEnergia from RelatorioSaida";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -236,12 +223,9 @@ namespace SGCC___PERFIL
                 }
 
                 valorEnergia = lst.ToArray();
-
-
             }
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message);
             }
             finally
@@ -255,7 +239,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select combustivelGerador from RelatorioSaida";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -266,12 +250,9 @@ namespace SGCC___PERFIL
                 }
 
                 valorCombustivel = lst.ToArray();
-
-
             }
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message);
             }
             finally
@@ -285,7 +266,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select compraTinteiro from RelatorioSaida";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -296,12 +277,9 @@ namespace SGCC___PERFIL
                 }
 
                 valorTinteiro = lst.ToArray();
-
-
             }
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message);
             }
             finally
@@ -315,7 +293,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select compraResmaPapeis from RelatorioSaida";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -326,12 +304,9 @@ namespace SGCC___PERFIL
                 }
 
                 valorPapel = lst.ToArray();
-
-
             }
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message);
             }
             finally
@@ -345,7 +320,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select devolucoes from RelatorioSaida";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -356,20 +331,17 @@ namespace SGCC___PERFIL
                 }
 
                 valorDevolucoes = lst.ToArray();
-
-
             }
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message);
             }
             finally
             {
                 conexao.Close();
             }
-
         }
+
         private void SetarDadosGerais()
         {
             SetarDadosDGV_Cursos();
@@ -387,7 +359,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select formando, curso, mensalidade, mensalidadeAt from Formandos";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -396,7 +368,8 @@ namespace SGCC___PERFIL
                 for (int i = 0; i < dgvVistaMensalidade.Columns.Count; i++)
                 {
                     dgvVistaMensalidade.Columns[i].Resizable = DataGridViewTriState.False;
-                    dgvVistaMensalidade.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                    dgvVistaMensalidade.Columns[i].HeaderCell.Style.BackColor =
+                        Color.FromKnownColor(KnownColor.DodgerBlue);
                     //dgvVistaMensalidade.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                     dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToAddRows = false;
                     dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -432,7 +405,6 @@ namespace SGCC___PERFIL
             finally
             {
                 conexao.Close();
-
             }
         }
 
@@ -443,7 +415,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select formando, curso, mensalidade, mensalidadeAt from Formandos";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -452,7 +424,8 @@ namespace SGCC___PERFIL
                 for (int i = 0; i < dgvEditMensalidade.Columns.Count; i++)
                 {
                     dgvEditMensalidade.Columns[i].Resizable = DataGridViewTriState.False;
-                    dgvEditMensalidade.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                    dgvEditMensalidade.Columns[i].HeaderCell.Style.BackColor =
+                        Color.FromKnownColor(KnownColor.DodgerBlue);
                     //dgvEditMensalidade.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                     dgvEditMensalidade.Columns[i].DataGridView.AllowUserToAddRows = false;
                     dgvEditMensalidade.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -498,7 +471,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select * from Cursos";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -550,10 +523,10 @@ namespace SGCC___PERFIL
         {
             try
             {
-                StringSQL = "select cod_formando, formando, curso, numero_tlf, data from Formandos";
+                StringSQL = "select cod_formando, formando, curso, numero_tlf from Formandos";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
                 dgvVistaFormandos.DataSource = DS.Tables[0];
@@ -562,7 +535,8 @@ namespace SGCC___PERFIL
                 for (int i = 0; i < dgvVistaFormandos.Columns.Count; i++)
                 {
                     dgvVistaFormandos.Columns[i].Resizable = DataGridViewTriState.False;
-                    dgvVistaFormandos.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                    dgvVistaFormandos.Columns[i].HeaderCell.Style.BackColor =
+                        Color.FromKnownColor(KnownColor.DodgerBlue);
                     //dgvVistaFormandos.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                     dgvVistaFormandos.Columns[i].DataGridView.AllowUserToAddRows = false;
                     dgvVistaFormandos.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -609,7 +583,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select * from Cursos";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -664,7 +638,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select * from Formadores";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -673,7 +647,8 @@ namespace SGCC___PERFIL
                 for (int i = 0; i < dgvVistaFormadores.Columns.Count; i++)
                 {
                     dgvVistaFormadores.Columns[i].Resizable = DataGridViewTriState.False;
-                    dgvVistaFormadores.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                    dgvVistaFormadores.Columns[i].HeaderCell.Style.BackColor =
+                        Color.FromKnownColor(KnownColor.DodgerBlue);
                     //dgvVistaFormadores.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                     dgvVistaFormadores.Columns[i].DataGridView.AllowUserToAddRows = false;
                     dgvVistaFormadores.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -717,10 +692,10 @@ namespace SGCC___PERFIL
             try
             {
                 string data = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
-                StringSQL = "select * from RelatorioEntrada";
+                StringSQL = "SELECT codRelatorio, inscricoes, mensalidade, cartao, certficado, curso, hora, operador, data, valorEntrada FROM RelatorioEntrada";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -730,7 +705,8 @@ namespace SGCC___PERFIL
                 for (int i = 0; i < dgvRelatorioEntrada.Columns.Count; i++)
                 {
                     dgvRelatorioEntrada.Columns[i].Resizable = DataGridViewTriState.False;
-                    dgvRelatorioEntrada.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                    dgvRelatorioEntrada.Columns[i].HeaderCell.Style.BackColor =
+                        Color.FromKnownColor(KnownColor.DodgerBlue);
                     //dgvRelatorioEntrada.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                     dgvRelatorioEntrada.Columns[i].DataGridView.AllowUserToAddRows = false;
                     dgvRelatorioEntrada.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -793,7 +769,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select * from RelatorioSaida";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -802,7 +778,8 @@ namespace SGCC___PERFIL
                 for (int i = 0; i < dgvRelatorioSaida.Columns.Count; i++)
                 {
                     dgvRelatorioSaida.Columns[i].Resizable = DataGridViewTriState.False;
-                    dgvRelatorioSaida.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                    dgvRelatorioSaida.Columns[i].HeaderCell.Style.BackColor =
+                        Color.FromKnownColor(KnownColor.DodgerBlue);
                     //dgvRelatorioSaida.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                     dgvRelatorioSaida.Columns[i].DataGridView.AllowUserToAddRows = false;
                     dgvRelatorioSaida.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -864,16 +841,16 @@ namespace SGCC___PERFIL
                 conexao.Close();
             }
         }
+
         private void SetarDadosDGV_Usuarios()
         {
             try
             {
-
                 StringSQL = "select cod, usuario, senha, tipo from Conta";
 
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -925,7 +902,7 @@ namespace SGCC___PERFIL
                 StringSQL = "select * from Formadores";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -979,16 +956,16 @@ namespace SGCC___PERFIL
             try
             {
                 StringSQL = "select cod_formando, formando, curso, sexo, numero_tlf, " +
-                    "numeroBI, " +
-                    "numeroPassaporte, " +
-                    "naturalidade, " +
-                    "moradaProvincia, " +
-                    "periodo, " +
-                    "horario " +
-                    "from Formandos";
+                            "numeroBI, " +
+                            "numeroPassaporte, " +
+                            "naturalidade, " +
+                            "moradaProvincia, " +
+                            "periodo, " +
+                            "horario " +
+                            "from Formandos";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -1062,17 +1039,14 @@ namespace SGCC___PERFIL
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void PaginaStats_Click(object sender, EventArgs e)
         {
-
         }
 
         private void gunaCirclePictureBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btn_stats_Click(object sender, EventArgs e)
@@ -1122,7 +1096,6 @@ namespace SGCC___PERFIL
             //{
             //    btn_stats.Image = Properties.Resources.status;
             //}
-
         }
 
         private void btn_cursos_Click(object sender, EventArgs e)
@@ -1251,7 +1224,6 @@ namespace SGCC___PERFIL
             btn_settings.Image = Properties.Resources.Config;
 
             paginas.SelectedTab = formadores;
-
         }
 
         private void btn_mensalidade_Click(object sender, EventArgs e)
@@ -1396,12 +1368,10 @@ namespace SGCC___PERFIL
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
-
         }
 
         private void gunaTextBox5_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void btnGerenFormandos_Click(object sender, EventArgs e)
@@ -1429,8 +1399,8 @@ namespace SGCC___PERFIL
         {
             SetarDadosDGVEdit_Mensalidade();
             paginas.SelectedTab = gestao_mensalidade;
-            SetarMesAPagarMensalidade();
-
+            if (dgvEditMensalidade.Rows.Count > 0)
+                SetarMesAPagarMensalidade();
         }
 
         private void btnNovoCurso_Click(object sender, EventArgs e)
@@ -1443,10 +1413,9 @@ namespace SGCC___PERFIL
                 {
                     try
                     {
-
                         StringSQL = "insert into Cursos (curso, n_formandos, formador, data_inicio) " +
-                            "values (@curso, @n_formandos, @formador, @data_inicio)";
-                        ComandoSQL = new SqlCommand(StringSQL, conexao);
+                                    "values (@curso, @n_formandos, @formador, @data_inicio)";
+                        ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                         //ComandoSQL.Parameters.AddWithValue("@cod", txtNumeroCurso.Text);
                         ComandoSQL.Parameters.AddWithValue("@curso", txtNomeCurso.Text);
@@ -1459,13 +1428,13 @@ namespace SGCC___PERFIL
                     }
                     catch (Exception E)
                     {
-
                         MessageBox.Show(E.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
                         conexao.Close();
-                        MessageBox.Show("Novo Curso Adicionado Com Sucesso!", "Novo Curso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Novo Curso Adicionado Com Sucesso!", "Novo Curso", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                         LimpaCampos();
                         SetarDadosDGVEdit_Cursos();
                         SetarDadosGerais();
@@ -1477,7 +1446,8 @@ namespace SGCC___PERFIL
                 }
                 else
                 {
-                    MessageBox.Show("Preencha todos os campos obrigatórios.", "Falha ao inserir novo curso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Preencha todos os campos obrigatórios.", "Falha ao inserir novo curso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -1485,7 +1455,7 @@ namespace SGCC___PERFIL
                 Modo = "Adição";
                 btnNovoCurso.Text = "Adicionar Curso";
                 btnEliminarCurso.Text = "Cancelar";
-                HabilitarBotoes(false, "curso");
+                //HabilitarBotoes(false, "curso");
                 Campos("curso", "ativar");
             }
         }
@@ -1501,8 +1471,8 @@ namespace SGCC___PERFIL
                     try
                     {
                         StringSQL = "insert into Formadores (formador, curso, numero_tlf, numero_BI) " +
-                            "values (@formador, @curso, @numero_tlf, @numero_BI)";
-                        ComandoSQL = new SqlCommand(StringSQL, conexao);
+                                    "values (@formador, @curso, @numero_tlf, @numero_BI)";
+                        ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                         //ComandoSQL.Parameters.AddWithValue("@cod", txtCodFormador.Text);
                         ComandoSQL.Parameters.AddWithValue("@formador", txtNomeFormador.Text);
@@ -1515,14 +1485,14 @@ namespace SGCC___PERFIL
                     }
                     catch (Exception E)
                     {
-
                         MessageBox.Show(E.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
                         conexao.Close();
                         StringSQL = null;
-                        MessageBox.Show("Novo Formador Adicionado Com Sucesso!", "Novo formador", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Novo Formador Adicionado Com Sucesso!", "Novo formador", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                         LimpaCampos();
                         SetarDadosGerais();
                         SetarDadosDGVEdit_Formadores();
@@ -1533,7 +1503,8 @@ namespace SGCC___PERFIL
                 }
                 else
                 {
-                    MessageBox.Show("Preencha todos os campos obrigatórios", "Erro ao adicionar novo formador", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Preencha todos os campos obrigatórios", "Erro ao adicionar novo formador",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -1546,7 +1517,6 @@ namespace SGCC___PERFIL
 
         private void gunaDataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void SetarMesAPagarMensalidade()
@@ -1600,6 +1570,7 @@ namespace SGCC___PERFIL
                 txtMensalidadeMesPago.SelectedIndex = 0;
             }
         }
+
         private void SetarComboBox(Guna.UI.WinForms.GunaComboBox cbx)
         {
             try
@@ -1607,9 +1578,9 @@ namespace SGCC___PERFIL
                 if (cbx.Name == "cbxFormador")
                 {
                     StringSQL = "select * from Formadores";
-                    ComandoSQL = new SqlCommand(StringSQL, conexao);
+                    ComandoSQL = new MySqlCommand(StringSQL, conexao);
                     DataSet DS = new DataSet();
-                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    DA = new MySqlDataAdapter(StringSQL, conexao);
                     conexao.Open();
                     DA.Fill(DS);
 
@@ -1621,12 +1592,13 @@ namespace SGCC___PERFIL
 
                     cbx.DataSource = lst;
                 }
-                else if (cbx.Name == "cbxCursoFormador" || cbx.Name == "cbxCursoFormando" || cbx.Name == "cbxMensalidadeCurso")
+                else if (cbx.Name == "cbxCursoFormador" || cbx.Name == "cbxCursoFormando" ||
+                         cbx.Name == "cbxMensalidadeCurso")
                 {
                     StringSQL = "select * from Cursos";
-                    ComandoSQL = new SqlCommand(StringSQL, conexao);
+                    ComandoSQL = new MySqlCommand(StringSQL, conexao);
                     DataSet DS = new DataSet();
-                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    DA = new MySqlDataAdapter(StringSQL, conexao);
                     conexao.Open();
                     DA.Fill(DS);
 
@@ -1656,19 +1628,19 @@ namespace SGCC___PERFIL
 
         private void gestao_fomandos_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnEliminarCurso_Click(object sender, EventArgs e)
         {
             if (Modo != "Adição")
             {
-                if (MessageBox.Show("Deseja Eliminar Este Curso?", "Eliminar Cursos", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja Eliminar Este Curso?", "Eliminar Cursos", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     try
                     {
                         StringSQL = "delete from Cursos where cod=@cod";
-                        ComandoSQL = new SqlCommand(StringSQL, conexao);
+                        ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                         ComandoSQL.Parameters.AddWithValue("@cod", dgvEditCurso.SelectedCells[0].Value);
                         conexao.Open();
@@ -1681,7 +1653,8 @@ namespace SGCC___PERFIL
                     finally
                     {
                         conexao.Close();
-                        MessageBox.Show("Curso Eliminado com Sucesso!", "Eliminar curso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Curso Eliminado com Sucesso!", "Eliminar curso", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                         SetarDadosDGVEdit_Cursos();
                     }
                 }
@@ -1703,7 +1676,11 @@ namespace SGCC___PERFIL
             {
                 //Campos de Gerenciamento dos Formandos
 
-                if (txtNomeFormando.Text.Contains("0") || txtNomeFormando.Text.Contains("1") || txtNomeFormando.Text.Contains("2") || txtNomeFormando.Text.Contains("3") || txtNomeFormando.Text.Contains("4") || txtNomeFormando.Text.Contains("5") || txtNomeFormando.Text.Contains("6") || txtNomeFormando.Text.Contains("7") || txtNomeFormando.Text.Contains("8") || txtNomeFormando.Text.Contains("9"))
+                if (txtNomeFormando.Text.Contains("0") || txtNomeFormando.Text.Contains("1") ||
+                    txtNomeFormando.Text.Contains("2") || txtNomeFormando.Text.Contains("3") ||
+                    txtNomeFormando.Text.Contains("4") || txtNomeFormando.Text.Contains("5") ||
+                    txtNomeFormando.Text.Contains("6") || txtNomeFormando.Text.Contains("7") ||
+                    txtNomeFormando.Text.Contains("8") || txtNomeFormando.Text.Contains("9"))
                 {
                     erro = true;
                 }
@@ -1719,14 +1696,16 @@ namespace SGCC___PERFIL
 
                             //}
 
-                            if (txtIDBI.Text[i] == '0' || txtIDBI.Text[i] == '1' || txtIDBI.Text[i] == '2' || txtIDBI.Text[i] == '3' || txtIDBI.Text[i] == '4' || txtIDBI.Text[i] == '5' || txtIDBI.Text[i] == '6' || txtIDBI.Text[i] == '7' || txtIDBI.Text[i] == '8' || txtIDBI.Text[i] == '9')
+                            if (txtIDBI.Text[i] == '0' || txtIDBI.Text[i] == '1' || txtIDBI.Text[i] == '2' ||
+                                txtIDBI.Text[i] == '3' || txtIDBI.Text[i] == '4' || txtIDBI.Text[i] == '5' ||
+                                txtIDBI.Text[i] == '6' || txtIDBI.Text[i] == '7' || txtIDBI.Text[i] == '8' ||
+                                txtIDBI.Text[i] == '9')
                             {
                                 erro = true;
                             }
                         }
                     }
                 }
-
             }
 
 
@@ -1737,8 +1716,8 @@ namespace SGCC___PERFIL
         {
             try
             {
-                StringSQL = "update Cursos set n_formandos += 1 where curso = " + cbxCursoFormando.Text;
-                ComandoSQL = new SqlCommand(StringSQL, conexao);
+                StringSQL = $"update Cursos set n_formandos = n_formandos + 1 where curso = '{cbxCursoFormando.Text}'";
+                ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                 conexao.Open();
                 ComandoSQL.ExecuteNonQuery();
@@ -1756,8 +1735,6 @@ namespace SGCC___PERFIL
 
         private void btnNovoFormando_Click(object sender, EventArgs e)
         {
-
-
             if (Modo == "Adição")
             {
                 if (!ErroCampos("formandos") && !ValidacaoCampos("formandos"))
@@ -1765,57 +1742,73 @@ namespace SGCC___PERFIL
                     try
                     {
                         StringSQL = "insert into Formandos (" +
-                            "formando, " +
-                            "curso, " +
-                            "numero_tlf, " +
-                            "sexo, " +
-                            "numeroBI, " +
-                            "numeroPassaporte, " +
-                            "naturalidade, " +
-                            "moradaProvincia, " +
-                            "periodo, " +
-                            "data, " +
-                            "horario, " +
-                            "pagamentoCert, " +
-                            "mensalidade," +
-                            "mensalidadeAt, " +
-                            "pagamentoCart)" +
-                            "values (" +
-                            "@formando, " +
-                            "@curso, " +
-                            "@numero_tlf, " +
-                            "@sexo, " +
-                            "@numeroBI, " +
-                            "@numeroPassaporte, " +
-                            "@naturalidade, " +
-                            "@moradaProvincia, " +
-                            "@periodo, " +
-                            "@data, " +
-                            "@horario, " +
-                            "@pagamentoCert, " +
-                            "@mensalidade, " +
-                            "@mensalidadeAt, " +
-                            "@pagamentoCart)";
+                                    "formando, " +
+                                    "curso, " +
+                                    "numero_tlf, " +
+                                    "sexo, " +
+                                    "numeroBI, " +
+                                    "numeroPassaporte, " +
+                                    "naturalidade, " +
+                                    "moradaProvincia, " +
+                                    "periodo, " +
+                                    "data, " +
+                                    "horario, " +
+                                    "pagamentoCert, " +
+                                    "mensalidade," +
+                                    "mensalidadeAt, " +
+                                    "pagamentoCart)" +
+                                    "values (" +
+                                    "@formando, " +
+                                    "@curso, " +
+                                    "@numero_tlf, " +
+                                    "@sexo, " +
+                                    "@numeroBI, " +
+                                    "@numeroPassaporte, " +
+                                    "@naturalidade, " +
+                                    "@moradaProvincia, " +
+                                    "@periodo, " +
+                                    "@data, " +
+                                    "@horario, " +
+                                    "@pagamentoCert, " +
+                                    "@mensalidade, " +
+                                    "@mensalidadeAt, " +
+                                    "@pagamentoCart)";
 
-                        ComandoSQL = new SqlCommand(StringSQL, conexao);
+                        ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                         //ComandoSQL.Parameters.AddWithValue("@cod_formando", txtCodFormando.Text);
                         ComandoSQL.Parameters.AddWithValue("@formando", txtNomeFormando.Text);
                         ComandoSQL.Parameters.AddWithValue("@curso", cbxCursoFormando.Text);
                         ComandoSQL.Parameters.AddWithValue("@numero_tlf", txtNumeroTlfFormando.Text);
-                        ComandoSQL.Parameters.AddWithValue("sexo", rbtnSexoMasculinoFormando.Checked ? "Masculino" : "Femenino");
+                        ComandoSQL.Parameters.AddWithValue("sexo",
+                            rbtnSexoMasculinoFormando.Checked ? "Masculino" : "Femenino");
                         string IDBI = string.Empty;
                         string IDPASS = string.Empty;
-                        if (rbtnIDBI.Checked) { IDBI = txtIDBI.Text; } else if (rbtnIDPassaporte.Checked) { IDPASS = txtIDPassaporte.Text; } else { IDBI = "Outro"; IDPASS = "Outro"; }
+                        if (rbtnIDBI.Checked)
+                        {
+                            IDBI = txtIDBI.Text;
+                        }
+                        else if (rbtnIDPassaporte.Checked)
+                        {
+                            IDPASS = txtIDPassaporte.Text;
+                        }
+                        else
+                        {
+                            IDBI = "Outro";
+                            IDPASS = "Outro";
+                        }
+
                         ComandoSQL.Parameters.AddWithValue("@numeroBI", IDBI);
                         ComandoSQL.Parameters.AddWithValue("@numeroPassaporte", IDPASS);
                         ComandoSQL.Parameters.AddWithValue("@naturalidade", txtNaturalidade.Text);
                         ComandoSQL.Parameters.AddWithValue("@moradaProvincia", txtMoradaProv.Text);
                         ComandoSQL.Parameters.AddWithValue("@periodo", cbxPeriodo.Text);
-                        ComandoSQL.Parameters.AddWithValue("@data", DateTime.Now.Day + "-" + DateTime.Now.Month + "-" + DateTime.Now.Year);
+                        ComandoSQL.Parameters.AddWithValue("@data",DateTime.Now.ToString("yyyy-MM-dd"));
                         ComandoSQL.Parameters.AddWithValue("@horario", cbxHorario.Text);
-                        ComandoSQL.Parameters.AddWithValue("@pagamentoCert", chbxPagamentoCertificado.Checked ? "Sim" : "Não");
-                        ComandoSQL.Parameters.AddWithValue("@pagamentoCart", chbxPagamentoCartao.Checked ? "Sim" : "Não");
+                        ComandoSQL.Parameters.AddWithValue("@pagamentoCert",
+                            chbxPagamentoCertificado.Checked ? "Sim" : "Não");
+                        ComandoSQL.Parameters.AddWithValue("@pagamentoCart",
+                            chbxPagamentoCartao.Checked ? "Sim" : "Não");
                         //string mes = Mes(DateTime.Now.Month);
                         //string nMes = Mes(DateTime.Now.Month);
                         //string mesPagamento = "";
@@ -1835,10 +1828,14 @@ namespace SGCC___PERFIL
                     {
                         conexao.Close();
                         StringSQL = string.Empty;
-                        MessageBox.Show("Novo Formando Adicionado Com Sucesso!", "Novo Formando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Novo Formando Adicionado Com Sucesso!", "Novo Formando", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
 
                         //Gerar Relatório
-                        RelatorioEntrada(Properties.Precario.Default.inscricao.ToString(), "", chbxPagamentoCartao.Checked ? Properties.Precario.Default.cartao_formando.ToString() : "", chbxPagamentoCertificado.Checked ? Properties.Precario.Default.certificado.ToString() : "", cbxCursoFormando.Text, "Juciano Silva");
+                        RelatorioEntrada(Properties.Precario.Default.inscricao.ToString(), "",
+                            chbxPagamentoCartao.Checked ? Properties.Precario.Default.cartao_formando.ToString() : "",
+                            chbxPagamentoCertificado.Checked ? Properties.Precario.Default.certificado.ToString() : "",
+                            cbxCursoFormando.Text, lbl_nomeConta.Text);
 
                         LimpaCampos();
                         SetarDadosGerais();
@@ -1851,7 +1848,9 @@ namespace SGCC___PERFIL
                 }
                 else
                 {
-                    MessageBox.Show("Preencha os campos correctamente! Tente: \n 1. Preencher todos espaços vazios. \n 2. Inserir um Nº de BI válido.", "Erro ao adicionar novo formando", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(
+                        "Preencha os campos correctamente! Tente: \n 1. Preencher todos espaços vazios. \n 2. Inserir um Nº de BI válido.",
+                        "Erro ao adicionar novo formando", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -1864,12 +1863,13 @@ namespace SGCC___PERFIL
 
         private void btnEliminarFormandos_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja eliminar este formando?", "Eliminar formando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja eliminar este formando?", "Eliminar formando", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 try
                 {
                     StringSQL = "delete from Formandos where cod_formando=@cod_formando";
-                    ComandoSQL = new SqlCommand(StringSQL, conexao);
+                    ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                     ComandoSQL.Parameters.AddWithValue("@cod_formando", dgvEditFormando.SelectedCells[0].Value);
                     conexao.Open();
@@ -1882,7 +1882,8 @@ namespace SGCC___PERFIL
                 finally
                 {
                     conexao.Close();
-                    MessageBox.Show("Formando Eliminado Com Sucesso!", "Eliminar Formando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Formando Eliminado Com Sucesso!", "Eliminar Formando", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                     LimpaCampos();
                     SetarDadosDGVEdit_Formandos();
                 }
@@ -1891,12 +1892,13 @@ namespace SGCC___PERFIL
 
         private void btnEliminarFormador_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja eliminar este formador?", "Eliminar Formador", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja eliminar este formador?", "Eliminar Formador", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 try
                 {
                     StringSQL = "delete from Formadores where cod=@cod";
-                    ComandoSQL = new SqlCommand(StringSQL, conexao);
+                    ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                     ComandoSQL.Parameters.AddWithValue("@cod", dgvEditFormador.SelectedCells[0].Value);
                     conexao.Open();
@@ -1909,7 +1911,8 @@ namespace SGCC___PERFIL
                 finally
                 {
                     conexao.Close();
-                    MessageBox.Show("Formador Eliminado com SUcesso", "Eliminar formador", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Formador Eliminado com SUcesso", "Eliminar formador", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                     LimpaCampos();
                     SetarDadosDGVEdit_Formadores();
                 }
@@ -1947,7 +1950,7 @@ namespace SGCC___PERFIL
             try
             {
                 StringSQL = "truncate table Cursos";
-                ComandoSQL = new SqlCommand(StringSQL, conexao);
+                ComandoSQL = new MySqlCommand(StringSQL, conexao);
                 conexao.Open();
                 ComandoSQL.ExecuteNonQuery();
             }
@@ -1964,7 +1967,7 @@ namespace SGCC___PERFIL
             try
             {
                 StringSQL = "truncate table Formandos";
-                ComandoSQL = new SqlCommand(StringSQL, conexao);
+                ComandoSQL = new MySqlCommand(StringSQL, conexao);
                 conexao.Open();
                 ComandoSQL.ExecuteNonQuery();
             }
@@ -1981,7 +1984,7 @@ namespace SGCC___PERFIL
             try
             {
                 StringSQL = "truncate table Formadores";
-                ComandoSQL = new SqlCommand(StringSQL, conexao);
+                ComandoSQL = new MySqlCommand(StringSQL, conexao);
                 conexao.Open();
                 ComandoSQL.ExecuteNonQuery();
             }
@@ -1997,7 +2000,6 @@ namespace SGCC___PERFIL
 
         private void button1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void SetarUltimoPagamento()
@@ -2005,8 +2007,8 @@ namespace SGCC___PERFIL
             try
             {
                 StringSQL = "update Formandos set mensalidadeAt = Propinas.mesPago " +
-                    "where Formandos.formando = Propinas.formando";
-                ComandoSQL = new SqlCommand(StringSQL, conexao);
+                            "where Formandos.formando = Propinas.formando";
+                ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                 conexao.Open();
                 ComandoSQL.ExecuteNonQuery();
@@ -2024,7 +2026,6 @@ namespace SGCC___PERFIL
 
         private void btnNovoPagamento_Click(object sender, EventArgs e)
         {
-
             if (ModoMensalidade == "Pagar")
             {
                 if (!ErroCampos("mensalidade"))
@@ -2032,9 +2033,9 @@ namespace SGCC___PERFIL
                     try
                     {
                         StringSQL = "update Formandos set mensalidadeAt = @mensalidadeAt" +
-                            " where formando = @formando";
+                                    " where formando = @formando";
 
-                        ComandoSQL = new SqlCommand(StringSQL, conexao);
+                        ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                         //ComandoSQL.Parameters.AddWithValue("@periodo", cbxMensalidadePeriodo.Text);
                         ComandoSQL.Parameters.AddWithValue("@formando", txtMensalidadeFormando.Text);
@@ -2043,7 +2044,6 @@ namespace SGCC___PERFIL
 
                         conexao.Open();
                         ComandoSQL.ExecuteNonQuery();
-
                     }
                     catch (Exception erro)
                     {
@@ -2052,7 +2052,8 @@ namespace SGCC___PERFIL
                     finally
                     {
                         conexao.Close();
-                        MessageBox.Show("Pagamento Efeito", "Pagamento de Mensalidade", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Pagamento Efeito", "Pagamento de Mensalidade", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                         SetarDadosGerais();
                         SetarDadosDGVEdit_Mensalidade();
                         Modo = string.Empty;
@@ -2060,12 +2061,14 @@ namespace SGCC___PERFIL
                         txtMensalidadeMesPago.Enabled = false;
 
                         //Gerar Relatório
-                        RelatorioEntrada("", Properties.Precario.Default.mensalidade.ToString(), "", "", "", "Juciano Silva");
+                        RelatorioEntrada("", Properties.Precario.Default.mensalidade.ToString(), "", "", "",
+                            "Juciano Silva");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Preencha todos os campos obrigatórios.", "Erro fazer o pagamento", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Preencha todos os campos obrigatórios.", "Erro fazer o pagamento",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -2075,8 +2078,6 @@ namespace SGCC___PERFIL
                 txtMensalidadeMesPago.Enabled = true;
                 btnNovoPagamento.Text = "Efetuar Pagamento";
             }
-
-
         }
 
         private void dgvEditMensalidade_Click(object sender, EventArgs e)
@@ -2138,13 +2139,11 @@ namespace SGCC___PERFIL
             }
 
 
-
             return ReturnMes;
         }
 
         private void Perfil_Load(object sender, EventArgs e)
         {
-
             date = DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
             SetarDadosGerais();
             Campos("formador", "desativar");
@@ -2157,7 +2156,6 @@ namespace SGCC___PERFIL
             SetarDados_Grafico();
 
             this.WindowState = FormWindowState.Maximized;
-
         }
 
         private void SetarDados_Grafico()
@@ -2281,11 +2279,11 @@ namespace SGCC___PERFIL
         {
             try
             {
-                StringSQL = "select top 10 curso, formador from Cursos " +
-                    "order by cod desc";
+                StringSQL = "select curso, formador from Cursos " +
+                            "order by cod desc Limit 10";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -2313,7 +2311,8 @@ namespace SGCC___PERFIL
             }
             catch (Exception e)
             {
-                MessageBox.Show("Falha ao carregar dados da Base de Dados - " + e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Falha ao carregar dados da Base de Dados - " + e.Message, "Erro", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
             finally
             {
@@ -2325,11 +2324,10 @@ namespace SGCC___PERFIL
         {
             try
             {
-                StringSQL = "select top 8 formando, curso from Formandos " +
-                    "order by cod_formando desc";
+                StringSQL = "SELECT formando, curso FROM Formandos ORDER BY cod_formando DESC LIMIT 8";
 
                 DataSet DS = new DataSet();
-                DA = new SqlDataAdapter(StringSQL, conexao);
+                DA = new MySqlDataAdapter(StringSQL, conexao);
                 conexao.Open();
                 DA.Fill(DS);
 
@@ -2338,7 +2336,8 @@ namespace SGCC___PERFIL
                 for (int i = 0; i < dgvStatsformandos.Columns.Count; i++)
                 {
                     dgvStatsformandos.Columns[i].Resizable = DataGridViewTriState.False;
-                    dgvStatsformandos.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                    dgvStatsformandos.Columns[i].HeaderCell.Style.BackColor =
+                        Color.FromKnownColor(KnownColor.DodgerBlue);
                     //dgvStatsformandos.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                     dgvStatsformandos.Columns[i].DataGridView.AllowUserToAddRows = false;
                     dgvStatsformandos.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -2357,7 +2356,8 @@ namespace SGCC___PERFIL
             }
             catch (Exception e)
             {
-                MessageBox.Show("Falha ao carregar dados da Base de Dados - " + e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Falha ao carregar dados da Base de Dados - " + e.Message, "Erro", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
             finally
             {
@@ -2367,7 +2367,6 @@ namespace SGCC___PERFIL
 
         private void gunaButton8_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnEditarCurso_Click(object sender, EventArgs e)
@@ -2379,10 +2378,10 @@ namespace SGCC___PERFIL
                     try
                     {
                         StringSQL = "update Cursos set curso = @curso, " +
-                            "formador = @formador, " +
-                            "data_inicio = @data_inicio " +
-                            "where cod = @cod";
-                        ComandoSQL = new SqlCommand(StringSQL, conexao);
+                                    "formador = @formador, " +
+                                    "data_inicio = @data_inicio " +
+                                    "where cod = @cod";
+                        ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                         ComandoSQL.Parameters.AddWithValue("@cod", dgvEditCurso.SelectedRows[0].Cells[0].Value);
                         ComandoSQL.Parameters.AddWithValue("@curso", txtNomeCurso.Text);
@@ -2408,7 +2407,8 @@ namespace SGCC___PERFIL
                 }
                 else
                 {
-                    MessageBox.Show("Preencha todos os campos obrigatórios.", "Erro ao editar o curso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Preencha todos os campos obrigatórios.", "Erro ao editar o curso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -2428,10 +2428,10 @@ namespace SGCC___PERFIL
                     try
                     {
                         StringSQL = "update Formadores set formador = @formador, curso = @curso, " +
-                            "numero_tlf = @numero_tlf, " +
-                            "numero_BI = @numero_BI " +
-                            "where cod = @cod";
-                        ComandoSQL = new SqlCommand(StringSQL, conexao);
+                                    "numero_tlf = @numero_tlf, " +
+                                    "numero_BI = @numero_BI " +
+                                    "where cod = @cod";
+                        ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                         ComandoSQL.Parameters.AddWithValue("@cod", dgvEditFormador.SelectedRows[0].Cells[0].Value);
                         ComandoSQL.Parameters.AddWithValue("@formador", txtNomeFormador.Text);
@@ -2458,7 +2458,8 @@ namespace SGCC___PERFIL
                 }
                 else
                 {
-                    MessageBox.Show("Preencha todos os dados obrigatórios.", "Erro ao editar formador", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Preencha todos os dados obrigatórios.", "Erro ao editar formador",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -2475,7 +2476,6 @@ namespace SGCC___PERFIL
             txtNumeroTlfFormador.Text = dgvEditFormador.SelectedRows[0].Cells[3].Value.ToString();
             cbxCursoFormador.Text = dgvEditFormador.SelectedRows[0].Cells[2].Value.ToString();
             txtNumeroBIFormador.Text = dgvEditFormador.SelectedRows[0].Cells[4].Value.ToString();
-
         }
 
         private void Campos(string campos, string modo)
@@ -2558,7 +2558,6 @@ namespace SGCC___PERFIL
                     txtPassword.Enabled = false;
                 }
             }
-
         }
 
         private void dgvEditCurso_Click(object sender, EventArgs e)
@@ -2566,8 +2565,6 @@ namespace SGCC___PERFIL
             txtNomeCurso.Text = dgvEditCurso.SelectedRows[0].Cells[1].Value.ToString();
             cbxFormador.Text = dgvEditCurso.SelectedRows[0].Cells[3].Value.ToString();
             dtpInicioCurso.Text = dgvEditCurso.SelectedRows[0].Cells[4].Value.ToString();
-
-
         }
 
         private void btnEditarFormando_Click(object sender, EventArgs e)
@@ -2579,30 +2576,45 @@ namespace SGCC___PERFIL
                     try
                     {
                         StringSQL = "update Formandos set " +
-                            "formando = @formando, " +
-                            "curso = @curso, " +
-                            "numero_tlf = @numero_tlf, " +
-                            "sexo = @sexo, " +
-                            "numeroBI = @numeroBI, " +
-                            "numeroPassaporte = @numeroPassaporte, " +
-                            "naturalidade = @naturalidade, " +
-                            "moradaProvincia = @moradaProvincia, " +
-                            "periodo = @periodo, " +
-                            "data = @data, " +
-                            "horario = @horario " +
-                            "where cod_formando = @cod_formando";
+                                    "formando = @formando, " +
+                                    "curso = @curso, " +
+                                    "numero_tlf = @numero_tlf, " +
+                                    "sexo = @sexo, " +
+                                    "numeroBI = @numeroBI, " +
+                                    "numeroPassaporte = @numeroPassaporte, " +
+                                    "naturalidade = @naturalidade, " +
+                                    "moradaProvincia = @moradaProvincia, " +
+                                    "periodo = @periodo, " +
+                                    "data = @data, " +
+                                    "horario = @horario " +
+                                    "where cod_formando = @cod_formando";
 
-                        ComandoSQL = new SqlCommand(StringSQL, conexao);
+                        ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                         //ComandoSQL.Parameters.AddWithValue("@cod_formando", txtCodFormando.Text);
-                        ComandoSQL.Parameters.AddWithValue("@cod_formando", dgvEditFormando.SelectedRows[0].Cells[0].Value);
+                        ComandoSQL.Parameters.AddWithValue("@cod_formando",
+                            dgvEditFormando.SelectedRows[0].Cells[0].Value);
                         ComandoSQL.Parameters.AddWithValue("@formando", txtNomeFormando.Text);
                         ComandoSQL.Parameters.AddWithValue("@curso", cbxCursoFormando.Text);
                         ComandoSQL.Parameters.AddWithValue("@numero_tlf", txtNumeroTlfFormando.Text);
-                        ComandoSQL.Parameters.AddWithValue("sexo", rbtnSexoMasculinoFormando.Checked ? "Masculino" : "Femenino");
+                        ComandoSQL.Parameters.AddWithValue("sexo",
+                            rbtnSexoMasculinoFormando.Checked ? "Masculino" : "Femenino");
                         string IDBI = string.Empty;
                         string IDPASS = string.Empty;
-                        if (rbtnIDBI.Checked) { IDBI = txtIDBI.Text; } else if (rbtnIDPassaporte.Checked) { IDPASS = txtIDPassaporte.Text; } else { IDBI = "Outro"; IDPASS = "Outro"; }
+                        if (rbtnIDBI.Checked)
+                        {
+                            IDBI = txtIDBI.Text;
+                        }
+                        else if (rbtnIDPassaporte.Checked)
+                        {
+                            IDPASS = txtIDPassaporte.Text;
+                        }
+                        else
+                        {
+                            IDBI = "Outro";
+                            IDPASS = "Outro";
+                        }
+
                         ComandoSQL.Parameters.AddWithValue("@numeroBI", IDBI);
                         ComandoSQL.Parameters.AddWithValue("@numeroPassaporte", IDPASS);
                         ComandoSQL.Parameters.AddWithValue("@naturalidade", txtNaturalidade.Text);
@@ -2631,7 +2643,8 @@ namespace SGCC___PERFIL
                 }
                 else
                 {
-                    MessageBox.Show("Preencha todos os campos obrigatórios.", "Erro ao editar formando", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Preencha todos os campos obrigatórios.", "Erro ao editar formando",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -2654,6 +2667,7 @@ namespace SGCC___PERFIL
             {
                 rbtnSexoFemeninoFormando.Checked = true;
             }
+
             txtNumeroTlfFormando.Text = dgvEditFormando.SelectedRows[0].Cells[4].Value.ToString();
             if (dgvEditFormando.SelectedRows[0].Cells[5].Value.ToString().Trim() != "")
             {
@@ -2663,20 +2677,22 @@ namespace SGCC___PERFIL
             {
                 txtIDPassaporte.Text = dgvEditFormando.SelectedRows[0].Cells[6].Value.ToString();
             }
+
             txtNaturalidade.Text = dgvEditFormando.SelectedRows[0].Cells[7].Value.ToString();
             txtMoradaProv.Text = dgvEditFormando.SelectedRows[0].Cells[8].Value.ToString();
             cbxPeriodo.Text = dgvEditFormando.SelectedRows[0].Cells[9].Value.ToString().Trim();
             cbxHorario.Text = dgvEditFormando.SelectedRows[0].Cells[10].Value.ToString().Trim();
-
         }
 
-        private void RelatorioEntrada(string vInsc, string vMens, string vCart, string vCert, string Curso, string operador)
+        private void RelatorioEntrada(string vInsc, string vMens, string vCart, string vCert, string Curso,
+            string operador)
         {
             try
             {
-                StringSQL = "insert into RelatorioEntrada(inscricoes, mensalidade, cartao, certficado, curso, hora, operador, data) values (@inscricoes, @mensalidade, @cartao, @certficado, @curso, @hora, @operador, @data)";
+                StringSQL =
+                    "insert into RelatorioEntrada(inscricoes, mensalidade, cartao, certficado, curso, hora, operador, data) values (@inscricoes, @mensalidade, @cartao, @certficado, @curso, @hora, @operador, @data)";
 
-                ComandoSQL = new SqlCommand(StringSQL, conexao);
+                ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                 ComandoSQL.Parameters.AddWithValue("@inscricoes", vInsc);
                 ComandoSQL.Parameters.AddWithValue("@mensalidade", vMens);
@@ -2685,7 +2701,7 @@ namespace SGCC___PERFIL
                 ComandoSQL.Parameters.AddWithValue("@curso", Curso);
                 ComandoSQL.Parameters.AddWithValue("@operador", operador);
                 ComandoSQL.Parameters.AddWithValue("@hora", DateTime.Now.Hour + ":" + DateTime.Now.Minute);
-                ComandoSQL.Parameters.AddWithValue("@data", DateTime.Now.Day + "-" + DateTime.Now.Month + "-" + DateTime.Now.Year);
+                ComandoSQL.Parameters.AddWithValue("@data", DateTime.Now.ToString("yyyy-MM-dd"));
 
                 conexao.Open();
                 ComandoSQL.ExecuteNonQuery();
@@ -2725,7 +2741,8 @@ namespace SGCC___PERFIL
             }
             else if (campos == "formandos")
             {
-                if (txtNomeFormando.Text == "" || cbxCursoFormando.Text == "" || txtNaturalidade.Text == "" || cbxPeriodo.Text == "" || cbxHorario.Text == "")
+                if (txtNomeFormando.Text == "" || cbxCursoFormando.Text == "" || txtNaturalidade.Text == "" ||
+                    cbxPeriodo.Text == "" || cbxHorario.Text == "")
                 {
                     erro = true;
                 }
@@ -2751,6 +2768,7 @@ namespace SGCC___PERFIL
                     erro = true;
                 }
             }
+
             return erro;
         }
 
@@ -2761,8 +2779,6 @@ namespace SGCC___PERFIL
 
             paginas.SelectedTab = relatorioSaida;
             SetarDadosDGV_RelatoriosSaida();
-            CrystalReport1 cr = new CrystalReport1();
-
         }
 
         private void btnVerRelatorioEntrada_Click(object sender, EventArgs e)
@@ -2790,10 +2806,9 @@ namespace SGCC___PERFIL
                 {
                     try
                     {
-
                         StringSQL = "insert into Conta (usuario, senha, tipo) " +
-                            "values (@usuario, @senha, @tipo)";
-                        ComandoSQL = new SqlCommand(StringSQL, conexao);
+                                    "values (@usuario, @senha, @tipo)";
+                        ComandoSQL = new MySqlCommand(StringSQL, conexao);
 
                         string tipo = "";
                         if (rbtn_admin.Checked == true)
@@ -2822,7 +2837,6 @@ namespace SGCC___PERFIL
                         Mensagem = new Dialogs.Mensagens(E.Message, "Erro");
                         Mensagem.Show();
                         Mensagem.Dispose();
-
                     }
                     finally
                     {
@@ -2841,11 +2855,10 @@ namespace SGCC___PERFIL
                 }
                 else
                 {
-
-                    Mensagem = new Dialogs.Mensagens("Preencha todos os campos obrigatórios.", "Falha ao adicionar usuário.");
+                    Mensagem = new Dialogs.Mensagens("Preencha todos os campos obrigatórios.",
+                        "Falha ao adicionar usuário.");
                     Mensagem.Show();
                     Mensagem.Dispose();
-
                 }
             }
             else
@@ -2861,157 +2874,183 @@ namespace SGCC___PERFIL
             if (txtNumeroTlfFormando.Text.Contains("a") || txtNumeroTlfFormando.Text.Contains("A"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("b") || txtNumeroTlfFormando.Text.Contains("B"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("c") || txtNumeroTlfFormando.Text.Contains("C"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("d") || txtNumeroTlfFormando.Text.Contains("D"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("e") || txtNumeroTlfFormando.Text.Contains("E"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("f") || txtNumeroTlfFormando.Text.Contains("F"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("g") || txtNumeroTlfFormando.Text.Contains("G"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("h") || txtNumeroTlfFormando.Text.Contains("H"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("i") || txtNumeroTlfFormando.Text.Contains("I"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("j") || txtNumeroTlfFormando.Text.Contains("J"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("k") || txtNumeroTlfFormando.Text.Contains("K"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("l") || txtNumeroTlfFormando.Text.Contains("L"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("m") || txtNumeroTlfFormando.Text.Contains("M"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("n") || txtNumeroTlfFormando.Text.Contains("N"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("o") || txtNumeroTlfFormando.Text.Contains("O"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("p") || txtNumeroTlfFormando.Text.Contains("P"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("q") || txtNumeroTlfFormando.Text.Contains("Q"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("r") || txtNumeroTlfFormando.Text.Contains("R"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("s") || txtNumeroTlfFormando.Text.Contains("S"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido ");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido ");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("t") || txtNumeroTlfFormando.Text.Contains("T"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("u") || txtNumeroTlfFormando.Text.Contains("U"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("v") || txtNumeroTlfFormando.Text.Contains("V"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("w") || txtNumeroTlfFormando.Text.Contains("W"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("x") || txtNumeroTlfFormando.Text.Contains("X"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("y") || txtNumeroTlfFormando.Text.Contains("Y"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
             else if (txtNumeroTlfFormando.Text.Contains("z") || txtNumeroTlfFormando.Text.Contains("Z"))
             {
                 txtNumeroTlfFormando.Text = "";
-                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.", "Caractere Inválido");
+                Mensagem = new Dialogs.Mensagens("Entrada de caratere inválido!! Insiria apenas números.",
+                    "Caractere Inválido");
                 Mensagem.ShowDialog();
             }
         }
@@ -3022,11 +3061,10 @@ namespace SGCC___PERFIL
             {
                 if (rbtnFiltrarCurso_nome.Checked)
                 {
-
                     StringSQL = "select * from Cursos where curso like '%" + txt_pesquisaCursos.Text + "%' ";
 
                     DataSet DS = new DataSet();
-                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    DA = new MySqlDataAdapter(StringSQL, conexao);
                     conexao.Open();
                     DA.Fill(DS);
 
@@ -3035,7 +3073,8 @@ namespace SGCC___PERFIL
                     for (int i = 0; i < dgvVistaCursos.Columns.Count; i++)
                     {
                         dgvVistaCursos.Columns[i].Resizable = DataGridViewTriState.False;
-                        dgvVistaCursos.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        dgvVistaCursos.Columns[i].HeaderCell.Style.BackColor =
+                            Color.FromKnownColor(KnownColor.DodgerBlue);
                         //dgvVistaCursos.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                         dgvVistaCursos.Columns[i].DataGridView.AllowUserToAddRows = false;
                         dgvVistaCursos.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -3069,7 +3108,7 @@ namespace SGCC___PERFIL
                     StringSQL = "select * from Cursos where formador like '%" + txt_pesquisaCursos.Text + "%' ";
 
                     DataSet DS = new DataSet();
-                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    DA = new MySqlDataAdapter(StringSQL, conexao);
                     conexao.Open();
                     DA.Fill(DS);
 
@@ -3078,7 +3117,8 @@ namespace SGCC___PERFIL
                     for (int i = 0; i < dgvVistaCursos.Columns.Count; i++)
                     {
                         dgvVistaCursos.Columns[i].Resizable = DataGridViewTriState.False;
-                        dgvVistaCursos.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        dgvVistaCursos.Columns[i].HeaderCell.Style.BackColor =
+                            Color.FromKnownColor(KnownColor.DodgerBlue);
                         //dgvVistaCursos.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                         dgvVistaCursos.Columns[i].DataGridView.AllowUserToAddRows = false;
                         dgvVistaCursos.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -3125,10 +3165,12 @@ namespace SGCC___PERFIL
             {
                 if (rbtnFiltrarFormandos_numero.Checked)
                 {
-                    StringSQL = "select cod_formando, formando, curso, numero_tlf, data from Formandos where cod_formando like '%" + txtPesquisaFormandos.Text + "%' ";
+                    StringSQL =
+                        "select cod_formando, formando, curso, numero_tlf from Formandos where cod_formando like '%" +
+                        txtPesquisaFormandos.Text + "%' ";
 
                     DataSet DS = new DataSet();
-                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    DA = new MySqlDataAdapter(StringSQL, conexao);
                     conexao.Open();
                     DA.Fill(DS);
                     dgvVistaFormandos.DataSource = DS.Tables[0];
@@ -3137,7 +3179,8 @@ namespace SGCC___PERFIL
                     for (int i = 0; i < dgvVistaFormandos.Columns.Count; i++)
                     {
                         dgvVistaFormandos.Columns[i].Resizable = DataGridViewTriState.False;
-                        dgvVistaFormandos.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        dgvVistaFormandos.Columns[i].HeaderCell.Style.BackColor =
+                            Color.FromKnownColor(KnownColor.DodgerBlue);
                         //dgvVistaFormandos.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                         dgvVistaFormandos.Columns[i].DataGridView.AllowUserToAddRows = false;
                         dgvVistaFormandos.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -3168,10 +3211,12 @@ namespace SGCC___PERFIL
                 }
                 else if (rbtnFiltrarFormandos_nome.Checked)
                 {
-                    StringSQL = "select cod_formando, formando, curso, numero_tlf, data from Formandos where formando like '%" + txtPesquisaFormandos.Text + "%' ";
+                    StringSQL =
+                        "select cod_formando, formando, curso, numero_tlf, data from Formandos where formando like '%" +
+                        txtPesquisaFormandos.Text + "%' ";
 
                     DataSet DS = new DataSet();
-                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    DA = new MySqlDataAdapter(StringSQL, conexao);
                     conexao.Open();
                     DA.Fill(DS);
                     dgvVistaFormandos.DataSource = DS.Tables[0];
@@ -3180,7 +3225,8 @@ namespace SGCC___PERFIL
                     for (int i = 0; i < dgvVistaFormandos.Columns.Count; i++)
                     {
                         dgvVistaFormandos.Columns[i].Resizable = DataGridViewTriState.False;
-                        dgvVistaFormandos.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        dgvVistaFormandos.Columns[i].HeaderCell.Style.BackColor =
+                            Color.FromKnownColor(KnownColor.DodgerBlue);
                         //dgvVistaFormandos.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                         dgvVistaFormandos.Columns[i].DataGridView.AllowUserToAddRows = false;
                         dgvVistaFormandos.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -3211,10 +3257,12 @@ namespace SGCC___PERFIL
                 }
                 else if (rbtnFiltrarFormandos_curso.Checked)
                 {
-                    StringSQL = "select cod_formando, formando, curso, numero_tlf, data from Formandos where curso like '%" + txtPesquisaFormandos.Text + "%' ";
+                    StringSQL =
+                        "select cod_formando, formando, curso, numero_tlf, data from Formandos where curso like '%" +
+                        txtPesquisaFormandos.Text + "%' ";
 
                     DataSet DS = new DataSet();
-                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    DA = new MySqlDataAdapter(StringSQL, conexao);
                     conexao.Open();
                     DA.Fill(DS);
                     dgvVistaFormandos.DataSource = DS.Tables[0];
@@ -3223,7 +3271,8 @@ namespace SGCC___PERFIL
                     for (int i = 0; i < dgvVistaFormandos.Columns.Count; i++)
                     {
                         dgvVistaFormandos.Columns[i].Resizable = DataGridViewTriState.False;
-                        dgvVistaFormandos.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        dgvVistaFormandos.Columns[i].HeaderCell.Style.BackColor =
+                            Color.FromKnownColor(KnownColor.DodgerBlue);
                         //dgvVistaFormandos.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                         dgvVistaFormandos.Columns[i].DataGridView.AllowUserToAddRows = false;
                         dgvVistaFormandos.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -3273,7 +3322,7 @@ namespace SGCC___PERFIL
                     StringSQL = "select * from Formadores where formador like '%" + txtPesquisaFormadores.Text + "%'";
 
                     DataSet DS = new DataSet();
-                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    DA = new MySqlDataAdapter(StringSQL, conexao);
                     conexao.Open();
                     DA.Fill(DS);
 
@@ -3282,7 +3331,8 @@ namespace SGCC___PERFIL
                     for (int i = 0; i < dgvVistaFormadores.Columns.Count; i++)
                     {
                         dgvVistaFormadores.Columns[i].Resizable = DataGridViewTriState.False;
-                        dgvVistaFormadores.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        dgvVistaFormadores.Columns[i].HeaderCell.Style.BackColor =
+                            Color.FromKnownColor(KnownColor.DodgerBlue);
                         //dgvVistaFormadores.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                         dgvVistaFormadores.Columns[i].DataGridView.AllowUserToAddRows = false;
                         dgvVistaFormadores.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -3316,7 +3366,7 @@ namespace SGCC___PERFIL
                     StringSQL = "select * from Formadores where curso like '%" + txtPesquisaFormadores.Text + "%'";
 
                     DataSet DS = new DataSet();
-                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    DA = new MySqlDataAdapter(StringSQL, conexao);
                     conexao.Open();
                     DA.Fill(DS);
 
@@ -3325,7 +3375,8 @@ namespace SGCC___PERFIL
                     for (int i = 0; i < dgvVistaFormadores.Columns.Count; i++)
                     {
                         dgvVistaFormadores.Columns[i].Resizable = DataGridViewTriState.False;
-                        dgvVistaFormadores.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        dgvVistaFormadores.Columns[i].HeaderCell.Style.BackColor =
+                            Color.FromKnownColor(KnownColor.DodgerBlue);
                         //dgvVistaFormadores.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                         dgvVistaFormadores.Columns[i].DataGridView.AllowUserToAddRows = false;
                         dgvVistaFormadores.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -3372,10 +3423,12 @@ namespace SGCC___PERFIL
             {
                 if (rbtnFiltrarMensalidade_numeroFormando.Checked)
                 {
-                    StringSQL = "select formando, curso, mensalidade, mensalidadeAt from Formandos where cod_formando like '%" + txtxPesquisaMensalidade.Text + "%'";
+                    StringSQL =
+                        "select formando, curso, mensalidade, mensalidadeAt from Formandos where cod_formando like '%" +
+                        txtxPesquisaMensalidade.Text + "%'";
 
                     DataSet DS = new DataSet();
-                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    DA = new MySqlDataAdapter(StringSQL, conexao);
                     conexao.Open();
                     DA.Fill(DS);
 
@@ -3384,7 +3437,8 @@ namespace SGCC___PERFIL
                     for (int i = 0; i < dgvVistaMensalidade.Columns.Count; i++)
                     {
                         dgvVistaMensalidade.Columns[i].Resizable = DataGridViewTriState.False;
-                        dgvVistaMensalidade.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        dgvVistaMensalidade.Columns[i].HeaderCell.Style.BackColor =
+                            Color.FromKnownColor(KnownColor.DodgerBlue);
                         //dgvVistaMensalidade.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                         dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToAddRows = false;
                         dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -3415,10 +3469,12 @@ namespace SGCC___PERFIL
                 }
                 else if (rbtnFiltrarMensalidade_nomeFormando.Checked)
                 {
-                    StringSQL = "select formando, curso, mensalidade, mensalidadeAt from Formandos where formando like '%" + txtxPesquisaMensalidade.Text + "%'";
+                    StringSQL =
+                        "select formando, curso, mensalidade, mensalidadeAt from Formandos where formando like '%" +
+                        txtxPesquisaMensalidade.Text + "%'";
 
                     DataSet DS = new DataSet();
-                    DA = new SqlDataAdapter(StringSQL, conexao);
+                    DA = new MySqlDataAdapter(StringSQL, conexao);
                     conexao.Open();
                     DA.Fill(DS);
 
@@ -3427,7 +3483,8 @@ namespace SGCC___PERFIL
                     for (int i = 0; i < dgvVistaMensalidade.Columns.Count; i++)
                     {
                         dgvVistaMensalidade.Columns[i].Resizable = DataGridViewTriState.False;
-                        dgvVistaMensalidade.Columns[i].HeaderCell.Style.BackColor = Color.FromKnownColor(KnownColor.DodgerBlue);
+                        dgvVistaMensalidade.Columns[i].HeaderCell.Style.BackColor =
+                            Color.FromKnownColor(KnownColor.DodgerBlue);
                         //dgvVistaMensalidade.Columns[i].DefaultCellStyle.BackColor = Color.Black;
                         dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToAddRows = false;
                         dgvVistaMensalidade.Columns[i].DataGridView.AllowUserToDeleteRows = false;
@@ -3509,12 +3566,12 @@ namespace SGCC___PERFIL
             {
                 chkbx_DefEntrada_Cartao.Checked = true;
             }
-
         }
 
         private void SetarDefinicoes()
         {
-            if (txt_precarioCartao.Text != "" || txt_precarioCertificado.Text != "" || txt_precarioInscricao.Text != "" || txt_precarioMensalidade.Text != "")
+            if (txt_precarioCartao.Text != "" || txt_precarioCertificado.Text != "" ||
+                txt_precarioInscricao.Text != "" || txt_precarioMensalidade.Text != "")
             {
                 Properties.Precario.Default.inscricao = int.Parse(txt_precarioInscricao.Text);
                 Properties.Precario.Default.mensalidade = int.Parse(txt_precarioMensalidade.Text);
@@ -3628,5 +3685,4 @@ namespace SGCC___PERFIL
             }
         }
     }
-
 }
